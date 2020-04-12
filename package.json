@@ -1,0 +1,23 @@
+{
+  "name": "gloomhaven-modifier-calculator",
+  "version": "1.0.0",
+  "description": "Tool to calculate the average outcome of a given Attack Modifier Deck in Gloomhaven",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DJ-Meyers/gloomhaven-modifier-calculator.git"
+  },
+  "keywords": [
+    "gloomhaven",
+    "hypergeometric"
+  ],
+  "author": "DJ Meyers",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DJ-Meyers/gloomhaven-modifier-calculator/issues"
+  },
+  "homepage": "https://github.com/DJ-Meyers/gloomhaven-modifier-calculator#readme"
+}
