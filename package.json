@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/DJ-Meyers/gloomhaven-modifier-calculator/issues"
   },
-  "homepage": "https://github.com/DJ-Meyers/gloomhaven-modifier-calculator#readme"
+  "homepage": "https://github.com/DJ-Meyers/gloomhaven-modifier-calculator#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
