@@ -11,10 +11,16 @@ const DeckState = props => {
   // Default deck
   const initialState = {
     deck: startingDeck,
-    deckUniques: uniques,
+    deckUniques: [],
     discardPile: [],
-    discardUniques: uniques
+    discardUniques: []
   };
+
+  //Initialize
+  uniques.forEach((u) => { 
+    initialState.deckUniques.push({ key: u.key, modifier: u.modifier, effect: u.effect, rolling: u.rolling, source: u.source, count: 0});
+    initialState.discardUniques.push({ key: u.key, modifier: u.modifier, effect: u.effect, rolling: u.rolling, source: u.source, count: 0});
+  });
 
   const [state, dispatch] = useReducer(DeckReducer, initialState);
 

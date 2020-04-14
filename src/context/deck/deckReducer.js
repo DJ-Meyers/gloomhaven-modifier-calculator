@@ -14,20 +14,6 @@ export default (state, action) => {
       });
       state.discardUniques.forEach(card => {
         card.count = 0;
-        console.log(`discard ${card.key}: ${card.count}`);
-      });
-
-      // Recalculate unique discarded cards
-      state.discardPile.forEach(card => {
-        let key = `${card.modifier}-${card.source}-${card.effect}-${card.rolling}`;
-        console.log(`discard ${key}`);
-        state.discardUniques.forEach(unique => {
-          if (key === unique.key) {
-            console.log(true);
-            unique.count += 1;
-          }
-          console.log(`discard ${unique.key} ${unique.count}`);
-        });
       });
 
       // Recalculate unique deck cards
@@ -41,9 +27,20 @@ export default (state, action) => {
         });
       });
 
-      state.discardUniques.forEach(card => {
-        console.log(`discard ${card.key}: ${card.count}`);
-      })
+      // Recalculate unique discarded cards
+      state.discardPile.forEach(card => {
+        console.log(`${JSON.stringify(card)}`);
+        let key = `${card.modifier}-${card.source}-${card.effect}-${card.rolling}`;
+        console.log(state.discardUniques);
+        state.discardUniques.forEach(unique => {
+          console.log(`${unique.key}`);
+          if (key === unique.key) {
+            console.log(`disc ${key}++`);
+            unique.count += 1;
+          }
+        });
+      });     
+
       return {
         ...state,
         deckUniques: state.deckUniques,
@@ -51,12 +48,16 @@ export default (state, action) => {
       }
     case DISCARD:
       // Remove card from deck, add it to discardPile
-      let index = state.deck.indexOf(action.payload.modifier);
+      let index = state.deck.map(function(card) { return card.modifier }).indexOf(action.payload.modifier);
 
+      let cards = {};
       if (index > -1) {
-        state.deck.splice(index, 1);
+        cards = state.deck.splice(index, 1);
+
+        state.discardPile.push(cards[0]);
+        console.log(state.discardPile);
+        console.log(state.deck);
       }
-      state.discardPile.push(action.payload);
 
       return {
         ...state,
