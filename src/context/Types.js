@@ -1,2 +1,4 @@
-// Calculator Context
-export const CALCULATE_DAMAGE = 'CALCULATE_DAMAGE';
+// Deck Context
+export const DISCARD = 'DISCARD';
+export const ADD_CARD = 'ADD_CARD';
+export const UPDATE_UNIQUES = 'UPDATE_UNIQUES';

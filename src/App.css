@@ -1,0 +1,17 @@
+p {
+  align-content: center;
+  background-color: #00b5ad;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 6em;
+}
+p > span {
+  opacity: 0.8;
+  text-align: center;
+}
+
+.ui.medium.header {
+  text-align: center;
+}

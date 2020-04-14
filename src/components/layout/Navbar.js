@@ -9,11 +9,11 @@ export default class Navbar extends React.Component {
 
   render() {
     return (
-      <Menu inverted style={{ borderRadius: '0px' }}>
+      <Menu inverted color='teal' style={{ borderRadius: '0px' }}>
         <Container>
           <Menu.Item as="span" header>
             <Link to="/">
-              <Icon name="home" /> Gloomhaven Attack Modifier Calculator
+              <Icon name="home" /> Rolling Advantage
             </Link>
           </Menu.Item>
           {/* <Menu.Item as="span">
