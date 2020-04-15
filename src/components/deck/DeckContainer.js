@@ -2,14 +2,12 @@ import React, { useContext, useEffect } from 'react';
 import { Segment, Header, Grid } from 'semantic-ui-react';
 import Deck from './Deck';
 import DeckContext from '../../context/deck/deckContext';
-import uniques from '../../context/deck/uniques';
+import Discard from './Discard'
 
 const DeckContainer = () => { 
 
   const deckContext = useContext(DeckContext);
   let {
-    deck, 
-    discardPile,
     deckUniques,
     discardUniques,
     updateUniques
@@ -30,7 +28,7 @@ const DeckContainer = () => {
         </Grid.Column>
         <Grid.Column>
           <Header size='medium'>Discard</Header>
-          <Deck cards={discardUniques} />
+          <Discard cards={discardUniques} />
         </Grid.Column>
       </Grid>
     </Segment>

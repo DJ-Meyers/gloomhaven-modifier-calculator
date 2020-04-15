@@ -1,5 +1,6 @@
 import { 
   DISCARD,
+  UNDISCARD,
   ADD_CARD,
   UPDATE_UNIQUES
  } from '../Types';
@@ -47,17 +48,21 @@ export default (state, action) => {
 
       let newDeck = state.deck.slice();
       let newDiscard = state.discardPile.slice();
-      let cards = {};
-      if (index > -1) {
-        cards = newDeck.splice(index, 1);
 
-        newDiscard.push(cards[0]);
+      if (index > -1) {
+        const card = newDeck.splice(index, 1)[0];
+        newDiscard.push(card);
       }
 
       return {
         ...state,
         deck: newDeck,
         discardPile: newDiscard
+      }
+    case UNDISCARD:
+      console.log(`Undiscarding ${action.payload}`);
+      return {
+        ...state
       }
     default:
       return state;

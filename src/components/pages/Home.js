@@ -14,7 +14,7 @@ const Home = () => {
           </p>
         </Grid.Column>
         <Grid.Column>
-          <DeckContainer />
+          <DeckContainer/>
         </Grid.Column>
         <Grid.Column>
           <p>
