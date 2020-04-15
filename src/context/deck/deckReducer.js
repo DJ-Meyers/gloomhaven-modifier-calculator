@@ -21,7 +21,6 @@ export default (state, action) => {
         let key = `${card.modifier}-${card.source}-${card.effect}-${card.rolling}`;
         state.deckUniques.forEach(unique => {
           if (key === unique.key) {
-            console.log(`deck ${key}++`);
             unique.count += 1;
           }
         });
@@ -29,13 +28,9 @@ export default (state, action) => {
 
       // Recalculate unique discarded cards
       state.discardPile.forEach(card => {
-        console.log(`${JSON.stringify(card)}`);
         let key = `${card.modifier}-${card.source}-${card.effect}-${card.rolling}`;
-        console.log(state.discardUniques);
         state.discardUniques.forEach(unique => {
-          console.log(`${unique.key}`);
           if (key === unique.key) {
-            console.log(`disc ${key}++`);
             unique.count += 1;
           }
         });
@@ -50,19 +45,19 @@ export default (state, action) => {
       // Remove card from deck, add it to discardPile
       let index = state.deck.map(function(card) { return card.modifier }).indexOf(action.payload.modifier);
 
+      let newDeck = state.deck.slice();
+      let newDiscard = state.discardPile.slice();
       let cards = {};
       if (index > -1) {
-        cards = state.deck.splice(index, 1);
+        cards = newDeck.splice(index, 1);
 
-        state.discardPile.push(cards[0]);
-        console.log(state.discardPile);
-        console.log(state.deck);
+        newDiscard.push(cards[0]);
       }
 
       return {
         ...state,
-        deck: state.deck,
-        discardPile: state.discardPile
+        deck: newDeck,
+        discardPile: newDiscard
       }
     default:
       return state;
