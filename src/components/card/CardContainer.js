@@ -2,18 +2,18 @@ import React, { Fragment } from 'react';
 import { Item, Grid } from 'semantic-ui-react';
 import DeckCard from './DeckCard';
 
-const CardContainer = ({card}) => { 
+const CardContainer = (props) => { 
   return (
     <Fragment>
       { 
-        card.count !== 0 ? (
+        props.card.count !== 0 ? (
           <Item>
           <Grid verticalAlign='middle'>
             <Grid.Column width={12}>
-              <DeckCard card={card} />
+              {props.childCard}
             </Grid.Column>
             <Grid.Column width={4}>
-              <Item.Header >X{card.count}</Item.Header>
+              <Item.Header >X{props.card.count}</Item.Header>
             </Grid.Column>
           </Grid>
         </Item>)

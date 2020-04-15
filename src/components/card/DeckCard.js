@@ -2,7 +2,7 @@ import React, { Fragment, useContext } from 'react';
 import { Image, Header } from 'semantic-ui-react';
 import DeckContext from '../../context/deck/deckContext'
 
-const CardContainer = ({card}) => { 
+const DeckCard = ({card}) => { 
 
   const deckContext = useContext(DeckContext);
   const {
@@ -19,4 +19,4 @@ const CardContainer = ({card}) => {
   );
 };
 
-export default CardContainer;
+export default DeckCard;

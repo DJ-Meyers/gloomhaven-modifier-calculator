@@ -44,25 +44,36 @@ export default (state, action) => {
       }
     case DISCARD:
       // Remove card from deck, add it to discardPile
-      let index = state.deck.map(function(card) { return card.modifier }).indexOf(action.payload.modifier);
+      let discardIndex = state.deck.map(function(card) { return card.modifier }).indexOf(action.payload.modifier);
 
-      let newDeck = state.deck.slice();
-      let newDiscard = state.discardPile.slice();
+      let discardDeck = state.deck.slice();
+      let discardDiscard = state.discardPile.slice();
 
-      if (index > -1) {
-        const card = newDeck.splice(index, 1)[0];
-        newDiscard.push(card);
+      if (discardIndex > -1) {
+        const card = discardDeck.splice(discardIndex, 1)[0];
+        discardDiscard.push(card);
       }
 
       return {
         ...state,
-        deck: newDeck,
-        discardPile: newDiscard
+        deck: discardDeck,
+        discardPile: discardDiscard
       }
     case UNDISCARD:
-      console.log(`Undiscarding ${action.payload}`);
+      let undiscardIndex = state.discardPile.map(function(card) { return card.modifier }).indexOf(action.payload.modifier);
+
+      let undiscardDeck = state.deck.slice();
+      let undiscardDiscard = state.discardPile.slice();
+
+      if (undiscardIndex > -1) {
+        const card = undiscardDiscard.splice(undiscardIndex, 1)[0];
+        undiscardDeck.push(card);
+      }
+
       return {
-        ...state
+        ...state,
+        deck: undiscardDeck,
+        discardPile: undiscardDiscard
       }
     default:
       return state;
