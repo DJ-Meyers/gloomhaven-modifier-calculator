@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import Title from '../layout/Title';
-import DeckContainer from '../deck/DeckContainer';
+import DeckContainer from '../layout/DeckContainer';
 import { Grid } from 'semantic-ui-react';
 
 const Home = () => {

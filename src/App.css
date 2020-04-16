@@ -15,3 +15,11 @@ p > span {
 .ui.medium.header {
   text-align: center;
 }
+
+.ui.container {
+  height: 100%;
+}
+
+.segment {
+  overflow-y: scroll;
+}

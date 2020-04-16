@@ -44,6 +44,7 @@ export default (state, action) => {
       }
     case DISCARD:
       // Remove card from deck, add it to discardPile
+      console.log(action.payload);
       let discardIndex = state.deck.map(function(card) { return card.modifier }).indexOf(action.payload.modifier);
 
       let discardDeck = state.deck.slice();
