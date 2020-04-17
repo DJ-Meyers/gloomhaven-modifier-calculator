@@ -12,7 +12,7 @@ p > span {
   text-align: center;
 }
 
-.ui.medium.header {
+.ui.header {
   text-align: center;
 }
 
@@ -20,6 +20,6 @@ p > span {
   height: 100%;
 }
 
-.segment {
+#DeckContainer {
   overflow-y: scroll;
 }

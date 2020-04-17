@@ -1,17 +1,16 @@
 import React, { Fragment } from 'react';
-import Title from '../layout/Title';
-import DeckContainer from '../layout/DeckContainer';
 import { Grid } from 'semantic-ui-react';
+import Title from '../layout/Title';
+import DeckContainer from '../cards/DeckContainer';
+import AttackContainer from '../attack/AttackContainer';
 
 const Home = () => {
   return (
     <Fragment>
       <Title title={'Gloomhaven Attack Modifier Calculator'} />
-      <Grid columns='3'>
+      <Grid columns='3' stackable>
         <Grid.Column>
-          <p>
-            <span>Todo: Attack/Enemy Container</span>
-          </p>
+          <AttackContainer />
         </Grid.Column>
         <Grid.Column>
           <DeckContainer/>
