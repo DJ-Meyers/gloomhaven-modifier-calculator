@@ -18,6 +18,7 @@ p > span {
 
 .item > .image {
   float: left;
+  vertical-align: center;
   width: 30px !important;
   max-height: 30px !important;
   object-fit: contain;

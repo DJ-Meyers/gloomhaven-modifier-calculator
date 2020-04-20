@@ -11,3 +11,6 @@ export const SET_DAMAGE = 'SET_DAMAGE';
 export const SET_PIERCE = 'SET_PIERCE';
 export const SET_HP = 'SET_HP';
 export const SET_SHIELD = 'SET_SHIELD';
+
+// Calculator Context
+export const UPDATE_RESULTS = 'UPDATE_RESULTS';

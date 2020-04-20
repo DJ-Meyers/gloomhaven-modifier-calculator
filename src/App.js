@@ -13,6 +13,7 @@ import { Container } from 'semantic-ui-react';
 import DeckState from './context/deck/deckState';
 import AttackState from './context/attack/attackState';
 import PerksState from './context/perks/perksState';
+import CalculatorState from './context/calculator/calculatorState';
 
 // Other
 import './App.css';
@@ -23,17 +24,19 @@ function App() {
     <DeckState>
       <AttackState>
         <PerksState>
-          <Router>
-            <div className="App">
-              <Navbar />
-              <Container style={{ marginTop: '2rem' }}>
-                <Switch>
-                  <Route exact path="/" component={Home} />
-                  {/* <Route exact path="/About" component={About} /> */}
-                </Switch>
-              </Container>
-            </div>
-          </Router>
+          <CalculatorState>
+            <Router>
+              <div className="App">
+                <Navbar />
+                <Container style={{ marginTop: '2rem' }}>
+                  <Switch>
+                    <Route exact path="/" component={Home} />
+                    {/* <Route exact path="/About" component={About} /> */}
+                  </Switch>
+                </Container>
+              </div>
+            </Router>
+          </CalculatorState>
         </PerksState>
       </AttackState>
     </DeckState>

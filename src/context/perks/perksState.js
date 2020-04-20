@@ -13,8 +13,6 @@ const PerksState = props => {
 
   const [state, dispatch] = useReducer(PerksReducer, initialState);
 
-  console.log(state.classes);
-
   return (
     <PerksContext.Provider
       value={{
