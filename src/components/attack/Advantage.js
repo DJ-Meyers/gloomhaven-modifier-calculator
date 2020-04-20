@@ -8,11 +8,11 @@ const Advantage = ({advantage, disadvantage, toggle}) => {
     <Fragment>
       <Header size='small'>Advantage</Header>
       <Grid columns='equal'>
-        <Grid.Column>
-          <Checkbox value={advantage} label='Advantage' onChange={() => toggle(advantage, 'advantage')}/>
+        <Grid.Column className='adv'>
+          <Checkbox checked={advantage} label='Advantage' onChange={() => toggle(advantage, 'advantage')}/>
         </Grid.Column>
-        <Grid.Column>
-          <Checkbox value={disadvantage} label='Disadvantage' onChange={() => toggle(disadvantage, 'disadvantage')}/>
+        <Grid.Column className='adv'>
+          <Checkbox checked={disadvantage} label='Disadvantage' onChange={() => toggle(disadvantage, 'disadvantage')}/>
         </Grid.Column>
       </Grid>
     </Fragment>
