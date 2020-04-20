@@ -1,7 +1,7 @@
 import React, { useReducer } from 'react';
 import AttackContext from './attackContext';
 import attackReducer from './attackReducer';
-import { UPDATE_DAMAGE, TOGGLE_ADV, TOGGLE_DISADV } from '../Types';
+import { SET_DAMAGE, SET_PIERCE, TOGGLE_ADV, TOGGLE_DISADV } from '../Types';
 
 const AttackState = props => {
 
@@ -15,13 +15,6 @@ const AttackState = props => {
   };
 
   const [state, dispatch] = useReducer(attackReducer, initialState);
-
-  const updateDamage = (damage) => {
-    dispatch({
-      type: UPDATE_DAMAGE,
-      payload: damage
-    });
-  };
 
   const toggle = (value, name) => {
     if (name === 'advantage') {
@@ -38,6 +31,20 @@ const AttackState = props => {
     }
   };
 
+  const setDamage = (damage) => {
+    dispatch({
+      type: SET_DAMAGE,
+      payload: damage
+    });
+  };
+
+  const setPierce = (pierce) => {
+    dispatch({
+      type: SET_PIERCE,
+      payload: pierce
+    });
+  }
+
   return (
     <AttackContext.Provider
       value={{
@@ -46,8 +53,9 @@ const AttackState = props => {
         enemyShield: state.enemyShield,
         advantage: state.advantage,
         disadvantage: state.disadvantage,
-        updateDamage,
-        toggle
+        toggle,
+        setDamage,
+        setPierce
       }}>
         {props.children}
     </AttackContext.Provider>

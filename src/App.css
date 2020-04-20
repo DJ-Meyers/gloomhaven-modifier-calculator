@@ -12,9 +12,13 @@ p > span {
   text-align: center;
 }
 
-.ui.header, .adv {
+.ui.header, .atk {
   text-align: center;
 }
+
+/* .ui.labeled.input > input {
+  width: 60px;
+} */
 
 .ui.container {
   height: 100%;

@@ -11,7 +11,11 @@ const AttackContainer = () => {
   let {
     advantage,
     disadvantage,
-    toggle
+    toggle,
+    attackDamage,
+    attackPierce,
+    setDamage,
+    setPierce
   } = attackContext;
 
   // useEffect(() => {
@@ -26,7 +30,7 @@ const AttackContainer = () => {
       <Grid>
         <Grid.Column>
           <Advantage advantage={advantage} disadvantage={disadvantage} toggle={toggle}/>
-          <Attack />
+          <Attack damage={attackDamage} pierce={attackPierce} setDamage={setDamage} setPierce={setPierce} />
           <Enemy />
         </Grid.Column>
       </Grid>

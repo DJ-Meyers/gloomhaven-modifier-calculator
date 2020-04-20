@@ -1,4 +1,4 @@
-import { TOGGLE_ADV, TOGGLE_DISADV } from '../Types';
+import { TOGGLE_ADV, TOGGLE_DISADV, SET_DAMAGE, SET_PIERCE } from '../Types';
 
 export default (state, action) => {
   switch (action.type) {
@@ -15,6 +15,18 @@ export default (state, action) => {
         ...state,
         advantage: state.advantage && newDisadv === true ? false : state.advantage,
         disadvantage: newDisadv
+      };
+    case SET_DAMAGE:
+      console.log(action.payload);
+      return {
+        ...state,
+        attackDamage: action.payload
+      };
+    case SET_PIERCE:
+      console.log(action.payload);
+      return {
+        ...state,
+        attackPierce: action.payload
       };
     default:
       return state;

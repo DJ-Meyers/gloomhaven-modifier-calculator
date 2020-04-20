@@ -7,11 +7,11 @@ const Advantage = ({advantage, disadvantage, toggle}) => {
   return (
     <Fragment>
       <Header size='small'>Advantage</Header>
-      <Grid columns='equal'>
-        <Grid.Column className='adv'>
+      <Grid columns='equal' stackable>
+        <Grid.Column className='atk'>
           <Checkbox checked={advantage} label='Advantage' onChange={() => toggle(advantage, 'advantage')}/>
         </Grid.Column>
-        <Grid.Column className='adv'>
+        <Grid.Column className='atk'>
           <Checkbox checked={disadvantage} label='Disadvantage' onChange={() => toggle(disadvantage, 'disadvantage')}/>
         </Grid.Column>
       </Grid>
