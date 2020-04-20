@@ -1,14 +1,16 @@
 import React, { Fragment } from 'react';
-import { Grid } from 'semantic-ui-react';
+import { Grid, Header } from 'semantic-ui-react';
 import Title from '../layout/Title';
 import DeckContainer from '../cards/DeckContainer';
 import AttackContainer from '../attack/AttackContainer';
+import CalculatorContainer from '../calculator/CalculatorContainer';
+import PerksContainer from '../perks/PerksContainer';
 
 const Home = () => {
   return (
     <Fragment>
       <Title title={'Gloomhaven Attack Modifier Calculator'} />
-      <Grid columns='4' stackable>
+      <Grid columns='equal' stackable>
         <Grid.Column>
           <AttackContainer />
         </Grid.Column>
@@ -16,14 +18,10 @@ const Home = () => {
           <DeckContainer/>
         </Grid.Column>
         <Grid.Column>
-          <p>
-            <span>Todo: Perks Container</span>
-          </p>
+          <PerksContainer />
         </Grid.Column>
         <Grid.Column>
-          <p>
-            <span>Todo: Calculate</span>
-          </p>
+          <CalculatorContainer />
         </Grid.Column>
       </Grid>
     </Fragment>
