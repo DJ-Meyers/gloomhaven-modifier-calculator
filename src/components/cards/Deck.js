@@ -12,12 +12,12 @@ const Deck = ({cards, onClick}) => {
             { return card.count > 0 ? 
                <Item key={card.key}>
                  <Grid verticalAlign='middle'>
-                   <Grid.Column width={12}>
+                   <Grid.Column width={11}>
                     <Item.Content>
                       <Card card={card} onClick={onClick} />
                     </Item.Content>
                    </Grid.Column>
-                   <Grid.Column width={4}>
+                   <Grid.Column width={5}>
                     <Item.Header>
                       X{card.count}
                     </Item.Header>

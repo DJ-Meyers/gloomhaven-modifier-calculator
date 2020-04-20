@@ -30,13 +30,11 @@ export default (state, action) => {
       };
     // ==== Enemy ====================================
     case SET_HP:
-      console.log(action.payload);
       return {
         ...state,
         enemyHP: action.payload
       };
     case SET_SHIELD:
-      console.log(action.payload);
       return {
         ...state,
         enemyShield: action.payload

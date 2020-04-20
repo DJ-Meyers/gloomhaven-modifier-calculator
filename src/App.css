@@ -7,6 +7,11 @@ p {
   justify-content: center;
   min-height: 6em;
 }
+
+.App {
+  height: 100vh;
+}
+
 p > span {
   opacity: 0.8;
   text-align: center;
@@ -16,9 +21,9 @@ p > span {
   text-align: center;
 }
 
-/* .ui.labeled.input > input {
-  width: 60px;
-} */
+.ui.fluid.input > input {
+  text-align: center;
+}
 
 .ui.container {
   height: 100%;

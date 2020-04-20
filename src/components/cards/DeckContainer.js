@@ -24,7 +24,7 @@ const DeckContainer = () => {
     <Segment id='DeckContainer'>
       <Header size='medium'>Attack Modifiers</Header>
       <Grid columns='equal'>
-        <Grid.Column >
+        <Grid.Column>
           <Header size='small'>Deck</Header>
           <Deck cards={deckUniques} onClick={discard}/>
         </Grid.Column>

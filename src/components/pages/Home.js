@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <Fragment>
       <Title title={'Gloomhaven Attack Modifier Calculator'} />
-      <Grid columns='3' stackable>
+      <Grid columns='4' stackable>
         <Grid.Column>
           <AttackContainer />
         </Grid.Column>
@@ -18,6 +18,11 @@ const Home = () => {
         <Grid.Column>
           <p>
             <span>Todo: Perks Container</span>
+          </p>
+        </Grid.Column>
+        <Grid.Column>
+          <p>
+            <span>Todo: Calculate</span>
           </p>
         </Grid.Column>
       </Grid>

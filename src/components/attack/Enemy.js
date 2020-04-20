@@ -1,5 +1,5 @@
 import React, {Fragment} from 'react';
-import { Header, Grid, Input } from 'semantic-ui-react';
+import { Header, Grid, Label, Input } from 'semantic-ui-react';
 
 const Enemy = ({hp, shield, setHP, setShield}) => { 
   return (
@@ -7,14 +7,18 @@ const Enemy = ({hp, shield, setHP, setShield}) => {
       <Header size='small'>Enemy</Header>
       <Grid columns='equal' stackable>
         <Grid.Column className='atk'>
-          <Input label='HP' fluid
-          value={hp} onChange={(e, d)=>{setHP(d.value)}}
-          type='number' min='0' />
+          <Input fluid type='number' min='0'
+              value={hp} onChange={(e, d)=>{setHP(d.value)}}>
+            <Label attached='top'>HP</Label>
+            <input />
+          </Input>
         </Grid.Column>
         <Grid.Column className='atk'>
-          <Input label='Shield' fluid 
-          value={shield} onChange={(e, d)=>{setShield(d.value)}} 
-          type='number' min='0'/>
+          <Input fluid type='number' min='0'
+              value={shield} onChange={(e, d)=>{setShield(d.value)}}>
+            <Label attached='top'>Shield</Label>
+            <input />
+          </Input>
         </Grid.Column>
       </Grid>
     </Fragment>
