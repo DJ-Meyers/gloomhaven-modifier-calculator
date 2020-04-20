@@ -34,7 +34,7 @@ const CalculatorContainer = () => {
       <Grid>
         <Grid.Column>
           <Results />
-          <Button onClick={()=>{console.log('calculate');}} floated='right' primary>Calculate</Button>
+          <Button onClick={()=>{console.log('calculate');}} floated='right' >Calculate</Button>
         </Grid.Column>
       </Grid>
     </Segment>

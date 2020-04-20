@@ -1,6 +1,5 @@
 p {
   align-content: center;
-  background-color: #00b5ad;
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -17,6 +16,12 @@ p > span {
   text-align: center;
 }
 
+.item > .image {
+  float: left;
+  width: 30px !important;
+  max-height: 30px !important;
+  object-fit: contain;
+}
 .ui.header, .atk {
   text-align: center;
 }

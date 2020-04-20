@@ -9,7 +9,7 @@ export default class Navbar extends React.Component {
 
   render() {
     return (
-      <Menu inverted color='teal' style={{ borderRadius: '0px' }}>
+      <Menu inverted color='grey' style={{ borderRadius: '0px' }}>
         <Container>
           <Menu.Item as="span" header>
             <Link to="/">

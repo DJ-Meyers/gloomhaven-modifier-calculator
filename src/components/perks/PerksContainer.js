@@ -1,42 +1,21 @@
 import React, { useContext } from 'react';
-import { Segment, Header, Grid } from 'semantic-ui-react';
-// import AttackContext from '../../context/attack/attackContext';
+import { Segment, Header, Grid, Dropdown } from 'semantic-ui-react';
+import PerksContext from '../../context/perks/perksContext';
 
 const PerksContainer = () => { 
 
-  // const attackContext = useContext(AttackContext);
-  // let {
-  //   advantage,
-  //   disadvantage,
-  //   toggle,
+  const perksContext = useContext(PerksContext);
 
-  //   attackDamage,
-  //   attackPierce,
-  //   setDamage,
-  //   setPierce,
-
-  //   enemyHP,
-  //   enemyShield,
-  //   setEnemyHP,
-  //   setEnemyShield
-  // } = attackContext;
-
-  // useEffect(() => {
-  //   // Initialize
-
-  //   updateUniques();
-  // }, []);
+  let {
+    classes
+  } = perksContext;
 
   return (
     <Segment>
       <Header size='medium'>Perks</Header>
       <Grid>
         <Grid.Column>
-          <p>
-            <span>
-              Placeholder
-            </span>
-          </p>
+          <Dropdown placeholder='Select Class' fluid search selection clearable search options={classes}/>
         </Grid.Column>
       </Grid>
     </Segment>
