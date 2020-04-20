@@ -12,10 +12,16 @@ const AttackContainer = () => {
     advantage,
     disadvantage,
     toggle,
+
     attackDamage,
     attackPierce,
     setDamage,
-    setPierce
+    setPierce,
+
+    enemyHP,
+    enemyShield,
+    setEnemyHP,
+    setEnemyShield
   } = attackContext;
 
   // useEffect(() => {
@@ -31,7 +37,7 @@ const AttackContainer = () => {
         <Grid.Column>
           <Advantage advantage={advantage} disadvantage={disadvantage} toggle={toggle}/>
           <Attack damage={attackDamage} pierce={attackPierce} setDamage={setDamage} setPierce={setPierce} />
-          <Enemy />
+          <Enemy hp={enemyHP} shield={enemyShield} setHP={setEnemyHP} setShield={setEnemyShield} />
         </Grid.Column>
       </Grid>
     </Segment>

@@ -1,7 +1,7 @@
 import React, { useReducer } from 'react';
 import AttackContext from './attackContext';
 import attackReducer from './attackReducer';
-import { SET_DAMAGE, SET_PIERCE, TOGGLE_ADV, TOGGLE_DISADV } from '../Types';
+import { SET_DAMAGE, SET_PIERCE, TOGGLE_ADV, TOGGLE_DISADV, SET_HP, SET_SHIELD } from '../Types';
 
 const AttackState = props => {
 
@@ -9,6 +9,7 @@ const AttackState = props => {
   const initialState = {
     attackDamage: 3,
     attackPierce: 0,
+    enemyHP: 4,
     enemyShield: 0,
     advantage: false,
     disadvantage: false
@@ -16,6 +17,7 @@ const AttackState = props => {
 
   const [state, dispatch] = useReducer(attackReducer, initialState);
 
+  // ==== Advantage ================================
   const toggle = (value, name) => {
     if (name === 'advantage') {
       dispatch({
@@ -31,6 +33,7 @@ const AttackState = props => {
     }
   };
 
+  // ==== Attack ===================================
   const setDamage = (damage) => {
     dispatch({
       type: SET_DAMAGE,
@@ -43,19 +46,37 @@ const AttackState = props => {
       type: SET_PIERCE,
       payload: pierce
     });
-  }
+  };
+
+  // ==== Enemy ====================================
+  const setEnemyHP = (hp) => {
+    dispatch({
+      type: SET_HP,
+      payload: hp
+    });
+  };
+
+  const setEnemyShield = (shield) => {
+    dispatch({
+      type: SET_SHIELD,
+      payload: shield
+    });
+  };
 
   return (
     <AttackContext.Provider
       value={{
-        attackDamage: state.attackDamage,
-        attackPierce: state.attackPierce,
-        enemyShield: state.enemyShield,
         advantage: state.advantage,
         disadvantage: state.disadvantage,
+        attackDamage: state.attackDamage,
+        attackPierce: state.attackPierce,
+        enemyHP: state.enemyHP,
+        enemyShield: state.enemyShield,
         toggle,
         setDamage,
-        setPierce
+        setPierce,
+        setEnemyHP,
+        setEnemyShield
       }}>
         {props.children}
     </AttackContext.Provider>

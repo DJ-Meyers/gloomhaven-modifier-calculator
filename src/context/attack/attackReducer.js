@@ -1,7 +1,8 @@
-import { TOGGLE_ADV, TOGGLE_DISADV, SET_DAMAGE, SET_PIERCE } from '../Types';
+import { TOGGLE_ADV, TOGGLE_DISADV, SET_DAMAGE, SET_PIERCE, SET_HP, SET_SHIELD } from '../Types';
 
 export default (state, action) => {
   switch (action.type) {
+    // ==== Advantage ================================
     case TOGGLE_ADV:
       const newAdv = !state.advantage;
       return {
@@ -16,17 +17,29 @@ export default (state, action) => {
         advantage: state.advantage && newDisadv === true ? false : state.advantage,
         disadvantage: newDisadv
       };
+    // ==== Attack ===================================
     case SET_DAMAGE:
-      console.log(action.payload);
       return {
         ...state,
         attackDamage: action.payload
       };
     case SET_PIERCE:
-      console.log(action.payload);
       return {
         ...state,
         attackPierce: action.payload
+      };
+    // ==== Enemy ====================================
+    case SET_HP:
+      console.log(action.payload);
+      return {
+        ...state,
+        enemyHP: action.payload
+      };
+    case SET_SHIELD:
+      console.log(action.payload);
+      return {
+        ...state,
+        enemyShield: action.payload
       };
     default:
       return state;

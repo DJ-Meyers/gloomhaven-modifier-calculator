@@ -9,3 +9,5 @@ export const TOGGLE_ADV = 'TOGGLE_ADV';
 export const TOGGLE_DISADV = 'TOGGLE_DISADV';
 export const SET_DAMAGE = 'SET_DAMAGE';
 export const SET_PIERCE = 'SET_PIERCE';
+export const SET_HP = 'SET_HP';
+export const SET_SHIELD = 'SET_SHIELD';
