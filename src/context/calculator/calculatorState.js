@@ -37,11 +37,11 @@ const CalculatorState = props => {
     let dmg = attack.attackDamage;
     deck.forEach(card => {
 
-      dmg = ApplyModifier(card, attack.attackDamage);
+      dmg = ApplyModifier(card, attack);
 
       totalDamage += dmg;
       if (dmg >= attack.enemyHP) kills++;
-      if (dmg < attack.attackDamage) negativeDraws++;
+      if (dmg < Math.max(attack.attackDamage - Math.max(attack.enemyShield - attack.attackPierce, 0), 0)) negativeDraws++;
 
     });
     const averageDamage = totalDamage / deck.length;
@@ -66,16 +66,17 @@ const CalculatorState = props => {
     let newDeck = Array.from(deck);
     deck.forEach(card1 => { 
       let cardsDrawn = 2;
-      let dmg1 = ApplyModifier(card1, attack.attackDamage);
+      let dmg1 = ApplyModifier(card1, attack);
       newDeck.shift();     
 
       newDeck.forEach(card2 => {
-        let dmg2 = ApplyModifier(card2, attack.attackDamage);
+        let dmg2 = ApplyModifier(card2, attack);
 
         dmg = isAdv ? Math.max(dmg1, dmg2) : Math.min(dmg1, dmg2);
-        totalDamage += dmg;
+        totalDamage += dmg; 
+
         if (dmg >= attack.enemyHP) kills++;
-        if (dmg < attack.attackDamage) negativeDraws++;
+        if (dmg < Math.max(attack.attackDamage - Math.max(attack.enemyShield - attack.attackPierce, 0), 0)) negativeDraws++;
       });
     });
 
@@ -109,17 +110,17 @@ const CalculatorState = props => {
 
 export default CalculatorState;
 
-function ApplyModifier(card, attackDamage) {
+function ApplyModifier(card, attack) {
   let operation = card.modifier.charAt(0);
   let modifier = parseInt(card.modifier.charAt(1));
   
   switch (operation) {
     case '+':
-      return attackDamage + modifier;
+      return Math.max(attack.attackDamage + modifier - Math.max(attack.enemyShield - attack.attackPierce, 0), 0);
     case '-':
-      return attackDamage - modifier;
+      return Math.max(attack.attackDamage - modifier - Math.max(attack.enemyShield - attack.attackPierce, 0), 0);
     case '*':
-      return attackDamage * modifier;
+      return Math.max(attack.attackDamage * modifier - Math.max(attack.enemyShield - attack.attackPierce, 0), 0);
     default:
       return -1;
   }

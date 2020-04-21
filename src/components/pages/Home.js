@@ -12,13 +12,13 @@ const Home = () => {
       <Title title={'Gloomhaven Attack Modifier Calculator'} />
       <Grid columns='equal' stackable>
         <Grid.Column>
-          <AttackContainer />
+          <PerksContainer />
         </Grid.Column>
         <Grid.Column>
           <DeckContainer/>
         </Grid.Column>
         <Grid.Column>
-          <PerksContainer />
+          <AttackContainer />
         </Grid.Column>
         <Grid.Column>
           <CalculatorContainer />
