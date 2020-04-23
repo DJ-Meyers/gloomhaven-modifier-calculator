@@ -1,24 +1,26 @@
+import { plus0Base, plus1Base, minus1Base, plus2Base, minus2Base, times2Base, times0Base } from '../cards/base';
+
 const startingDeck = [
-  { modifier: '+0', effect: 'none', rolling: 'false', source: 'base' },
-  { modifier: '+0', effect: 'none', rolling: 'false', source: 'base' },
-  { modifier: '+0', effect: 'none', rolling: 'false', source: 'base' },
-  { modifier: '+0', effect: 'none', rolling: 'false', source: 'base' },
-  { modifier: '+0', effect: 'none', rolling: 'false', source: 'base' },
-  { modifier: '+0', effect: 'none', rolling: 'false', source: 'base' },
-  { modifier: '+1', effect: 'none', rolling: 'false', source: 'base' },
-  { modifier: '+1', effect: 'none', rolling: 'false', source: 'base' },
-  { modifier: '+1', effect: 'none', rolling: 'false', source: 'base' },
-  { modifier: '+1', effect: 'none', rolling: 'false', source: 'base' },
-  { modifier: '+1', effect: 'none', rolling: 'false', source: 'base' },
-  { modifier: '-1', effect: 'none', rolling: 'false', source: 'base' },
-  { modifier: '-1', effect: 'none', rolling: 'false', source: 'base' },
-  { modifier: '-1', effect: 'none', rolling: 'false', source: 'base' },
-  { modifier: '-1', effect: 'none', rolling: 'false', source: 'base' },
-  { modifier: '-1', effect: 'none', rolling: 'false', source: 'base' },
-  { modifier: '+2', effect: 'none', rolling: 'false', source: 'base' },
-  { modifier: '-2', effect: 'none', rolling: 'false', source: 'base' },
-  { modifier: '*2', effect: 'none', rolling: 'false', source: 'base' },
-  { modifier: '*0', effect: 'none', rolling: 'false', source: 'base' }
+  plus0Base,
+  plus0Base,
+  plus0Base,
+  plus0Base,
+  plus0Base,
+  plus0Base,
+  plus1Base,
+  plus1Base,
+  plus1Base,
+  plus1Base,
+  plus1Base,
+  minus1Base,
+  minus1Base,
+  minus1Base,
+  minus1Base,
+  minus1Base,
+  plus2Base,
+  minus2Base,
+  times2Base,
+  times0Base
 ];
 
 export default startingDeck;

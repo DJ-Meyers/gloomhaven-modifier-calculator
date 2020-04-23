@@ -26,11 +26,11 @@ const DeckContainer = () => {
       <Grid columns='equal'>
         <Grid.Column>
           <Header size='small'>Deck</Header>
-          <Deck cards={deckUniques} onClick={discard}/>
+          <Deck uniques={deckUniques} onClick={discard}/>
         </Grid.Column>
         <Grid.Column>
           <Header size='small'>Discard</Header>
-          <Deck cards={discardUniques} onClick={undiscard}/>
+          <Deck uniques={discardUniques} onClick={undiscard}/>
         </Grid.Column>
       </Grid>
     </Segment>

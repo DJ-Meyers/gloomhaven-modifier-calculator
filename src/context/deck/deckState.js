@@ -1,8 +1,8 @@
-import React, { useReducer } from 'react';
+import React, { useReducer, useContext, useEffect } from 'react';
 import DeckContext from './deckContext';
 import DeckReducer from './deckReducer';
 
-import { DISCARD, UNDISCARD, ADD_CARD, UPDATE_UNIQUES} from '../Types';
+import { DISCARD, UNDISCARD, UPDATE_UNIQUES, APPLY_PERKS } from '../Types';
 import startingDeck from './startingDeck';
 import uniques from './uniques';
 
@@ -12,46 +12,67 @@ const DeckState = props => {
 
   // Default deck
   const initialState = {
-    deck: startingDeck,
+    deck: startingDeck.slice(),
+    startingDeck: startingDeck,
     deckUniques: [],
     discardPile: [],
     discardUniques: []
   };
 
+  const [state, dispatch] = useReducer(DeckReducer, initialState);
+  
   //Initialize
   uniques.forEach((u) => { 
-    initialState.deckUniques.push({ key: u.key, modifier: u.modifier, effect: u.effect, rolling: u.rolling, source: u.source, count: 0});
-    initialState.discardUniques.push({ key: u.key, modifier: u.modifier, effect: u.effect, rolling: u.rolling, source: u.source, count: 0});
+    initialState.deckUniques.push({ key: u.key, card: u.card, count: 0});
+    initialState.discardUniques.push({ key: u.key, card: u.card, count: 0});
   });
-
-  const [state, dispatch] = useReducer(DeckReducer, initialState);
-
-  // Add a card for a perk or scenario effect
-  const addCard = (card) => {
-
-  }  
   
-  const discard = (card) => {
+  useEffect(() => {
+    updateUniques()
+  }, [state.deck, state.discardPile]);
+
+  const discard = (unique) => {
     dispatch({
       type: DISCARD,
-      payload: card
+      payload: unique.card
     });
-
-    updateUniques();
   }
 
-  const undiscard = (card) => {
+  const undiscard = (unique) => {
     dispatch({
       type: UNDISCARD,
-      payload: card
+      payload: unique.card
+    });
+  }
+
+  const applyPerks = (selectedClass) => {
+    let cardsToAdd = [];
+    let cardsToRemove = [];
+
+    selectedClass.perks.forEach(perk => {
+      perk.checked.forEach(check => {
+        if (check === true)
+        {
+          perk.changes.add.forEach(card => {
+            cardsToAdd.push(card);
+          });
+          perk.changes.remove.forEach(card => {
+            cardsToRemove.push(card);
+          });
+        }
+      });
     });
 
+    dispatch({
+      type: APPLY_PERKS,
+      payload: {
+        cardsToAdd,
+        cardsToRemove
+      }
+    })
+
     updateUniques();
-  }
-
-  const removeCard = (card) => {
-
-  }
+  };
 
   const updateUniques = () => {
     dispatch({
@@ -69,10 +90,9 @@ const DeckState = props => {
         deckUniques: state.deckUniques,
         discardPile: state.discardPile,
         discardUniques: state.discardUniques,
-        addCard,
         discard,
         undiscard,
-        removeCard,
+        applyPerks,
         updateUniques,
       }}>
         {props.children}

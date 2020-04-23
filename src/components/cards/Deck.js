@@ -2,30 +2,30 @@ import React, { Fragment } from 'react';
 import { Item, Grid } from 'semantic-ui-react';
 import Card from './Card';
 
-const Deck = ({cards, onClick}) => {
+const Deck = ({uniques, onClick}) => {
 
   return (
     <Grid>
       <Grid.Column>
         <Item.Group>
-          {cards.map(card => 
-            { return card.count > 0 ? 
-               <Item key={card.key}>
+          {uniques.map(unique => 
+            { return unique.count > 0 ? 
+               <Item key={unique.key}>
                  <Grid verticalAlign='middle'>
                    <Grid.Column width={11}>
                     <Item.Content>
-                      <Card card={card} onClick={onClick} />
+                      <Card unique={unique} onClick={onClick} />
                     </Item.Content>
                    </Grid.Column>
                    <Grid.Column width={5}>
                     <Item.Header>
-                      X{card.count}
+                      X{unique.count}
                     </Item.Header>
                    </Grid.Column>
                  </Grid>
               </Item> 
             : 
-              <Fragment key={card.key}/>
+              <Fragment key={unique.key}/>
             }    
           )}
         </Item.Group>
