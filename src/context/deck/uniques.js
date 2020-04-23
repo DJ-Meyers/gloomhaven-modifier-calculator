@@ -1,17 +1,24 @@
-import {plus0Base, plus1Base, plus2Base, minus1Base, minus2Base, times0Base, times2Base } from '../cards/base';
+import {plus0Base, plus1Base, plus2Base, minus1Base, minus2Base, times0Base, times2Base, baseCards } from '../cards/base';
+import { DSCards } from '../cards/ds';
 
 export const getKey = card => {
   return `${card.modifier}-${card.source}-${card.effect}-${card.rolling}`;
 }
+const addCard = (arr, card) => {
+  arr.push({ key: getKey(card), card: card, count: 0});
+}
+const addUniques = () => {
+  const u = [];
+  baseCards.forEach(card => {
+    addCard(u, card);
+  });
+  DSCards.forEach(card => {
+    addCard(u, card);
+  });
 
-const uniques = [
-  { key: getKey(times0Base), card: times0Base, count: 0},
-  { key: getKey(minus2Base), card: minus2Base, count: 0},
-  { key: getKey(minus1Base), card: minus1Base, count: 0},
-  { key: getKey(plus0Base), card: plus0Base, count: 0},
-  { key: getKey(plus1Base), card: plus1Base, count: 0},
-  { key: getKey(plus2Base), card: plus2Base, count: 0},
-  { key: getKey(times2Base), card: times2Base, count: 0},
-];
+  return u;
+};
+
+const uniques = addUniques();
 
 export default uniques;

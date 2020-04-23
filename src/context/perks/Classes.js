@@ -19,6 +19,8 @@ import TI from '../../gloomhaven/images/class-icons/TI.png';
 import EL from '../../gloomhaven/images/class-icons/EL.png';
 
 import { plus0Base, plus1Base, minus1Base, plus2Base, minus2Base, times2Base, times0Base } from '../cards/base';
+import { plus1DS, rollingPlus1DS, plus2MuddleDS, plus1PoisonDS, plus1WoundDS, plus1ImmobilizeDS, plus0StunDS, rollingAddTargetDS } from '../cards/ds';
+
 
 
 
@@ -38,10 +40,52 @@ const classes = [
       },
       { text: 'Replace two (+0) cards with two (+1) cards',
         changes: { 
-          add: [0, 0], 
-          remove: ['+0', '+0']}, 
+          add: [plus1DS, plus1DS], 
+          remove: [plus0Base, plus0Base]}, 
         checked: [false, false, false]
       },
+      { text: 'Add two rolling (+1) cards',
+        changes: { 
+          add: [rollingPlus1DS, rollingPlus1DS], 
+          remove: []}, 
+        checked: [false, false]
+      },
+      { text: 'Add one (+2) Muddle card',
+        changes: { 
+          add: [plus2MuddleDS], 
+          remove: []}, 
+        checked: [false]
+      },
+      { text: 'Add one (+1) Poison card',
+        changes: { 
+          add: [plus1PoisonDS], 
+          remove: []}, 
+        checked: [false]
+      },
+      { text: 'Add one (+1) Wound card',
+        changes: { 
+          add: [plus1WoundDS], 
+          remove: []}, 
+        checked: [false]
+      },
+      { text: 'Add one (+1) Immobilize card',
+        changes: { 
+          add: [plus1ImmobilizeDS], 
+          remove: []}, 
+        checked: [false]
+      },
+      { text: 'Add one (+0) Stun card',
+        changes: { 
+          add: [plus0StunDS], 
+          remove: []}, 
+        checked: [false]
+      },
+      { text: 'Add one rolling Add Target card',
+        changes: { 
+          add: [rollingAddTargetDS], 
+          remove: []}, 
+        checked: [false, false]
+      }
     ],
   },
   { key: 'BR', text: 'Brute', value: 'Brute', image: { avatar: false, src: BR }, 
