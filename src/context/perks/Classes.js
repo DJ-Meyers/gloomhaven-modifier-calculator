@@ -21,6 +21,7 @@ import EL from '../../gloomhaven/images/class-icons/EL.png';
 import { plus0Base, plus1Base, minus1Base, plus2Base, minus2Base, times2Base, times0Base } from '../cards/base';
 import { plus1DS, rollingPlus1DS, plus2MuddleDS, plus1PoisonDS, plus1WoundDS, plus1ImmobilizeDS, plus0StunDS, rollingAddTargetDS } from '../cards/ds';
 import { plus1BR, plus3BR, rollingPush1BR, rollingStunBR, rollingDisarmBR, rollingMuddleBR, rollingAddTargetBR, plus1Shield1SelfBR } from '../cards/br';
+import { plus1CH, minus2CH, plus2CH, plus1ImmobilizeCH, plus2MuddleCH, rollingPush2CH, rollingEarthCH, rollingAirCH } from '../cards/ch';
 
 
 
@@ -146,7 +147,58 @@ const classes = [
 
     ]
   },
-  { key: 'CH', text: 'Cragheart', value: 'Cragheart', image: { avatar: false, src: CH }},
+  { key: 'CH', text: 'Cragheart', value: 'Cragheart', image: { avatar: false, src: CH },
+    perks: [
+      { text: 'Remove four (+0) cards', 
+        changes: { 
+          add: [], 
+          remove: [plus0Base, plus0Base, plus0Base, plus0Base]}, 
+        checked: [false]
+      },
+      { text: 'Replace one (-1) card with one (+1) card', 
+        changes: { 
+          add: [plus1CH], 
+          remove: [minus1Base]}, 
+        checked: [false, false, false]
+      },
+      { text: 'Add one (-2) card and two (+2) cards', 
+        changes: { 
+          add: [minus2CH, plus2CH, plus2CH], 
+          remove: []}, 
+        checked: [false]
+      },
+      { text: 'Add one (+1) [Immobilize] card', 
+        changes: { 
+          add: [plus1ImmobilizeCH], 
+          remove: []}, 
+        checked: [false, false]
+      },
+      { text: 'Add one (+2) [Muddle] card', 
+        changes: { 
+          add: [plus2MuddleCH], 
+          remove: []}, 
+        checked: [false, false]
+      },
+      { text: 'Add two rolling [Push 2] cards', 
+        changes: { 
+          add: [rollingPush2CH, rollingPush2CH], 
+          remove: []}, 
+        checked: [false]
+      },
+      { text: 'Add two rolling [Earth] cards', 
+        changes: { 
+          add: [rollingEarthCH, rollingEarthCH], 
+          remove: []}, 
+        checked: [false, false]
+      },
+      { text: 'Add two rolling [Air] cards', 
+        changes: { 
+          add: [rollingAirCH], 
+          remove: []}, 
+        checked: [false]
+      },
+    ]
+  },
   { key: 'PH', text: 'Cthulu', value: 'Cthulu', image: { avatar: false, src: PH }},
   { key: 'DR', text: 'Diviner', value: 'Diviner', image: { avatar: false, src: DR }},
   { key: 'NS', text: 'Eclipse', value: 'Eclipse', image: { avatar: false, src: NS }},

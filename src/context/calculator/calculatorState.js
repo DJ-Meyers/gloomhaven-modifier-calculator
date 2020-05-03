@@ -56,13 +56,12 @@ const CalculatorState = props => {
   };
 
   const calculateNormal = (attack, deck) => {
-    const trials = 10000;
     let totalDamage = 0;
     let negativeDraws = 0;
     let kills = 0;
     let dmg = attack.attackDamage;
 
-    for (let i = 0; i < trials; i++) {
+    for (let i = 0; i < state.trials; i++) {
       shuffle(deck);
       let currentIndex = 0;
       let card = deck[currentIndex];
@@ -81,9 +80,9 @@ const CalculatorState = props => {
       if (dmg >= attack.enemyHP) kills++;
       if (dmg < Math.max(attack.attackDamage - Math.max(attack.enemyShield - attack.attackPierce, 0), 0)) negativeDraws++;
     }
-    const averageDamage = totalDamage / trials;
-    const negativeDrawPct = 100 * negativeDraws / trials;
-    const killPct = 100 * kills / trials;
+    const averageDamage = totalDamage / state.trials;
+    const negativeDrawPct = 100 * negativeDraws / state.trials;
+    const killPct = 100 * kills / state.trials;
 
     dispatch({
       type: UPDATE_RESULTS,
@@ -96,13 +95,12 @@ const CalculatorState = props => {
   };
 
   const calculateAdvDis = (attack, deck, isAdv) => {
-    let trials = 10000;
     let totalDamage = 0;
     let negativeDraws = 0;
     let kills = 0;
     let dmg = -1;
     
-    for (let i = 0; i < trials; i++){
+    for (let i = 0; i < state.trials; i++){
       shuffle(deck);
       dmg = 0;
       let card1 = deck[0];
@@ -138,9 +136,9 @@ const CalculatorState = props => {
       if (dmg < Math.max(attack.attackDamage - Math.max(attack.enemyShield - attack.attackPierce, 0), 0)) negativeDraws++;
     }
 
-    const averageDamage = totalDamage / trials;
-    const negativeDrawPct = 100 * negativeDraws / trials;
-    const killPct = 100 * kills / trials;
+    const averageDamage = totalDamage / state.trials;
+    const negativeDrawPct = 100 * negativeDraws / state.trials;
+    const killPct = 100 * kills / state.trials;
 
     dispatch({
       type: UPDATE_RESULTS,

@@ -3,6 +3,7 @@ export const none = 'none';
 
 // Attack Effects
 export const push1 = 'push1';
+export const push2 = 'push2';
 export const pull = 'pull';
 export const pierce1 = 'pierce1';
 export const pierce2 = 'pierce2';
@@ -24,3 +25,11 @@ export const curse = 'curse';
 export const invisible = 'invisible';
 export const strengthen = 'strengthen';
 export const bless = 'bless';
+
+// Elements
+export const fire = 'fire';
+export const ice = 'ice';
+export const air = 'air';
+export const earth = 'earth';
+export const light = 'light';
+export const dark = 'dark';

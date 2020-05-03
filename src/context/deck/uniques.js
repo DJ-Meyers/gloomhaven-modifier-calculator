@@ -1,6 +1,7 @@
 import {plus0Base, plus1Base, plus2Base, minus1Base, minus2Base, times0Base, times2Base, baseCards } from '../cards/base';
 import { DSCards } from '../cards/ds';
 import { BRCards } from '../cards/br';
+import { CHCards } from '../cards/ch';
 
 export const getKey = card => {
   return `${card.modifier}-${card.source}-${card.effect}-${card.rolling}`;
@@ -17,6 +18,9 @@ const addUniques = () => {
     addCard(u, card);
   });
   BRCards.forEach(card => {
+    addCard(u, card);
+  });
+  CHCards.forEach(card => {
     addCard(u, card);
   });
 
