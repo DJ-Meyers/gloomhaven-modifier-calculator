@@ -20,19 +20,18 @@ import EL from '../../gloomhaven/images/class-icons/EL.png';
 
 import { plus0Base, plus1Base, minus1Base, plus2Base, minus2Base, times2Base, times0Base } from '../cards/base';
 import { plus1DS, rollingPlus1DS, plus2MuddleDS, plus1PoisonDS, plus1WoundDS, plus1ImmobilizeDS, plus0StunDS, rollingAddTargetDS } from '../cards/ds';
+import { plus1BR, plus3BR, rollingPush1BR, rollingStunBR, rollingDisarmBR, rollingMuddleBR, rollingAddTargetBR, plus1Shield1SelfBR } from '../cards/br';
 
 
 
 
 const classes = [
   { key: 'base', text: 'Base', value: 'Base', image: { avatar: false, src: Base},
-    cards: [],
     perks: [],
   },
   { key: 'DS', text: 'Angry Face', value: 'Angry Face', image: { avatar: false, src: DS },
-    cards: [],
     perks: [
-      { text: 'Remove two (-1)', 
+      { text: 'Remove two (-1) cards', 
         changes: { 
           add: [], 
           remove: [minus1Base, minus1Base]}, 
@@ -50,37 +49,37 @@ const classes = [
           remove: []}, 
         checked: [false, false]
       },
-      { text: 'Add one (+2) Muddle card',
+      { text: 'Add one (+2) [Muddle] card',
         changes: { 
           add: [plus2MuddleDS], 
           remove: []}, 
         checked: [false]
       },
-      { text: 'Add one (+1) Poison card',
+      { text: 'Add one (+1) [Poison] card',
         changes: { 
           add: [plus1PoisonDS], 
           remove: []}, 
         checked: [false]
       },
-      { text: 'Add one (+1) Wound card',
+      { text: 'Add one (+1) [Wound] card',
         changes: { 
           add: [plus1WoundDS], 
           remove: []}, 
         checked: [false]
       },
-      { text: 'Add one (+1) Immobilize card',
+      { text: 'Add one (+1) [Immobilize] card',
         changes: { 
           add: [plus1ImmobilizeDS], 
           remove: []}, 
         checked: [false]
       },
-      { text: 'Add one (+0) Stun card',
+      { text: 'Add one (+0) [Stun] card',
         changes: { 
           add: [plus0StunDS], 
           remove: []}, 
         checked: [false]
       },
-      { text: 'Add one rolling Add Target card',
+      { text: 'Add one rolling [Add Target] card',
         changes: { 
           add: [rollingAddTargetDS], 
           remove: []}, 
@@ -88,16 +87,65 @@ const classes = [
       }
     ],
   },
-  { key: 'BR', text: 'Brute', value: 'Brute', image: { avatar: false, src: BR }, 
-  cards: [
-    
-  ],
-  perks: [
-    { text: 'Remove two (-1) cards', func: () => { remove('-1'); remove('-1'); }, checked: [false]},
-    { text: 'Remove one (-1) card and add one (+1) card', func: () => { remove('-1'); add('+1'); }, checked: [false]},
-    { text: 'Add two (+1) cards', func: () => { add('+1'); add('+1'); }, checked: [false, false]},
+  { key: 'BR', text: 'Brute', value: 'Brute', image: { avatar: false, src: BR },
+    perks: [
+      { text: 'Remove two (-1) cards', 
+        changes: { 
+          add: [], 
+          remove: [minus1Base, minus1Base]}, 
+        checked: [false]
+      },
+      { text: 'Replace one (-1) card with one (+1) card', 
+        changes: { 
+          add: [plus1BR], 
+          remove: [minus1Base]}, 
+        checked: [false, false]
+      },
+      { text: 'Add two (+1) cards', 
+        changes: { 
+          add: [plus1BR, plus1BR], 
+          remove: []}, 
+        checked: [false, false]
+      },
+      { text: 'Add one (+3) card', 
+        changes: { 
+          add: [plus3BR], 
+          remove: []}, 
+        checked: [false]
+      },
+      { text: 'Add three rolling [Push 1] cards', 
+        changes: { 
+          add: [rollingPush1BR, rollingPush1BR, rollingPush1BR], 
+          remove: []}, 
+        checked: [false, false]
+      },
+      { text: 'Add one rolling [Stun] card', 
+        changes: { 
+          add: [rollingStunBR], 
+          remove: []}, 
+        checked: [false, false]
+      },
+      { text: 'Add one rolling [Disarm] card and one rolling [Muddle] card', 
+        changes: { 
+          add: [rollingDisarmBR, rollingMuddleBR], 
+          remove: []}, 
+        checked: [false]
+      },
+      { text: 'Add one rolling [Add Target] card', 
+        changes: { 
+          add: [rollingAddTargetBR], 
+          remove: []}, 
+        checked: [false, false]
+      },
+      { text: 'Add one (+1) [Shield 1, Self] card', 
+        changes: { 
+          add: [plus1Shield1SelfBR], 
+          remove: []}, 
+        checked: [false]
+      },
 
-  ]},
+    ]
+  },
   { key: 'CH', text: 'Cragheart', value: 'Cragheart', image: { avatar: false, src: CH }},
   { key: 'PH', text: 'Cthulu', value: 'Cthulu', image: { avatar: false, src: PH }},
   { key: 'DR', text: 'Diviner', value: 'Diviner', image: { avatar: false, src: DR }},

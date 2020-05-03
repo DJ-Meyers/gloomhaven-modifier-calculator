@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { Grid, Header } from 'semantic-ui-react';
+import { Grid } from 'semantic-ui-react';
 import Title from '../layout/Title';
 import DeckContainer from '../cards/DeckContainer';
 import AttackContainer from '../attack/AttackContainer';

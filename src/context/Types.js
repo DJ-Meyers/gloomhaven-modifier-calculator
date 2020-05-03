@@ -18,3 +18,4 @@ export const SET_SHIELD = 'SET_SHIELD';
 
 // Calculator Context
 export const UPDATE_RESULTS = 'UPDATE_RESULTS';
+export const SET_TRIALS = 'SET_TRIALS';

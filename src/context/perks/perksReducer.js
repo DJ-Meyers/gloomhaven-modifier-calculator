@@ -1,4 +1,4 @@
-import { SET_CLASS, APPLY_PERK, TOGGLE_PERK } from '../Types';
+import { SET_CLASS, TOGGLE_PERK } from '../Types';
 
 export default (state, action) => {
   switch (action.type) {

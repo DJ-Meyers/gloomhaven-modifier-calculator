@@ -2,7 +2,7 @@ import React, { useReducer } from 'react';
 import PerksContext from './perksContext';
 import PerksReducer from './perksReducer';
 
-import { SET_CLASS, APPLY_PERK, TOGGLE_PERK } from '../Types';
+import { SET_CLASS, TOGGLE_PERK } from '../Types';
 import Classes from './Classes';
 
 const PerksState = props => {
