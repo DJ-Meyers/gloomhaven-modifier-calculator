@@ -27,6 +27,7 @@ import { minus1DarkNS, plus1DarkNS, plus1InvisibleNS, rollingMuddleNS, rollingHe
 import { plus1BE, rollingPlus2BE, rollingWoundBE, rollingPlus1DisarmBE, rollingHeal1SelfBE, plus2FireBE, rollingStunBE } from '../cards/lightning bolts';
 import { plus2MT, plus2IceMT, rollingPlus1MT, rollingPull1MT, rollingMuddleMT, rollingImmobilizeMT, rollingStunMT, rollingDisarmMT } from '../cards/mindthief';
 import { plus4SS, plus1ImmobilizeSS, plus1DisarmSS, plus2WoundSS, plus2PoisonSS, plus2CurseSS, plus3MuddleSS, rollingPlus1SS, rollingCurseSS } from '../cards/music notes';
+import { plus2SB, rollingPlus2SB, plus1ImmobilizeSB, rollingWoundSB, rollingHeal3SelfSB, refreshItemSB, rollingStunSB } from '../cards/saw';
 
 
 
@@ -505,7 +506,7 @@ const classes = [
           remove: [plus0Base]}, 
         checked: [false]
       },
-      { text: 'Replace one (-1) card with one [Stun] card',
+      { text: 'Replace one (-1) card with one (+0) [Stun] card',
         changes: { 
           add: [plus1ImmobilizeSS], 
           remove: [minus1Base]}, 
@@ -525,7 +526,64 @@ const classes = [
       }
     ]
   },
-  { key: 'SB', text: 'Saw', value: 'Saw', image: { avatar: false, src: SB }},
+  { key: 'SB', text: 'Saw', value: 'Saw', image: { avatar: false, src: SB },
+    perks: [
+      { text: 'Remove two (-1) cards', 
+        changes: { 
+          add: [], 
+          remove: [minus1Base, minus1Base]}, 
+        checked: [false, false]
+      },
+      { text: 'Remove four (+0) cards',
+        changes: { 
+          add: [], 
+          remove: [plus0Base, plus0Base, plus0Base, plus0Base]}, 
+        checked: [false]
+      },
+      { text: 'Replace one (+0) card with one (+2) card',
+        changes: { 
+          add: [plus2SB], 
+          remove: [plus0Base]}, 
+        checked: [false, false]
+      },
+      { text: 'Add one rolling (+2) card',
+        changes: { 
+          add: [rollingPlus2SB], 
+          remove: []}, 
+        checked: [false, false]
+      },
+      { text: 'Add one (+1) [Immobilize] card',
+        changes: { 
+          add: [plus1ImmobilizeSB], 
+          remove: []}, 
+        checked: [false, false]
+      },
+      { text: 'Add two rolling [Wound] cards',
+        changes: { 
+          add: [rollingWoundSB, rollingWoundSB], 
+          remove: []}, 
+        checked: [false, false]
+      },
+      { text: 'Add one rolling [Stun] card',
+        changes: { 
+          add: [rollingStunSB], 
+          remove: []}, 
+        checked: [false]
+      },
+      { text: 'Add one rolling [Heal 3 Self] card',
+        changes: { 
+          add: [rollingHeal3SelfSB], 
+          remove: []}, 
+        checked: [false, false]
+      },
+      { text: 'Add one (+0) [Refresh an Item] card',
+        changes: { 
+          add: [refreshItemSB], 
+          remove: []}, 
+        checked: [false]
+      }
+    ]
+  },
   { key: 'SC', text: 'Scoundrel', value: 'Scoundrel', image: { avatar: false, src: SC }},
   { key: 'SW', text: 'Spellweaver', value: 'Spellweaver', image: { avatar: false, src: SW }},
   { key: 'SU', text: 'Circles', value: 'Summoner', image: { avatar: false, src: SU }},

@@ -10,7 +10,9 @@ export const pierce2 = 'pierce2';
 export const pierce3 = 'pierce3';
 export const shield1Self = 'shield1Self';
 export const heal1Self = 'heal1Self';
+export const heal3Self = 'heal3Self';
 export const addTarget = 'addTarget';
+export const refreshItem = 'refreshItem';
 
 // Debuffs
 export const poison = 'poison';
