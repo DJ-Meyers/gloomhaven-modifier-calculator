@@ -21,4 +21,4 @@ export const plus1BR = { modifier: '+1', effect: none, rolling: false, source: '
 export const plus3BR = { modifier: '+3', effect: none, rolling: false, source: 'br', img: Plus3 };
 export const rollingPush1BR = { modifier: '+0', effect: push1, rolling: true, source: 'br', img: RollingPush1 };
 
-export const BRCards = [rollingPierce3BR, rollingStunBR, rollingDisarmBR, rollingMuddleBR, rollingAddTargetBR, plus1Shield1SelfBR, plus1BR, plus3BR, rollingPush1BR];
+export const BruteCards = [rollingPierce3BR, rollingStunBR, rollingDisarmBR, rollingMuddleBR, rollingAddTargetBR, plus1Shield1SelfBR, plus1BR, plus3BR, rollingPush1BR];

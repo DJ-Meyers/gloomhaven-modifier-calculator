@@ -4,7 +4,7 @@ export const none = 'none';
 // Attack Effects
 export const push1 = 'push1';
 export const push2 = 'push2';
-export const pull = 'pull';
+export const pull1 = 'pull1';
 export const pierce1 = 'pierce1';
 export const pierce2 = 'pierce2';
 export const pierce3 = 'pierce3';

@@ -18,4 +18,4 @@ export const plus1ImmobilizeDS = { modifier: '+1', effect: immobilize, rolling: 
 export const plus0StunDS = { modifier: '+0', effect: stun, rolling: false, source: 'ds', img: Stun };
 export const rollingAddTargetDS = { modifier: '+0', effect: addTarget, rolling: false, source: 'ds', img: AddTarget };
 
-export const DSCards = [plus1DS, rollingPlus1DS, plus2MuddleDS, plus1PoisonDS, plus1WoundDS, plus1ImmobilizeDS, plus0StunDS, rollingAddTargetDS];
+export const AngryFaceCards = [plus1DS, rollingPlus1DS, plus2MuddleDS, plus1PoisonDS, plus1WoundDS, plus1ImmobilizeDS, plus0StunDS, rollingAddTargetDS];

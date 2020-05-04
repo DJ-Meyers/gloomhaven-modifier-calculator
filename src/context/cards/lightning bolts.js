@@ -16,4 +16,4 @@ export const rollingHeal1SelfBE = { modifier: '+0', effect: heal1Self, rolling: 
 export const plus2FireBE = { modifier: '+2', effect: fire, rolling: false, source: 'be', img: Plus2Fire };
 export const plus1BE = { modifier: '+1', effect: none, rolling: false, source: 'be', img: Plus1 };
 
-export const BECards = [rollingPlus2BE, rollingWoundBE, rollingStunBE, rollingPlus1DisarmBE, rollingHeal1SelfBE, plus2FireBE, plus1BE];
+export const LightningBoltsCards = [rollingPlus2BE, rollingWoundBE, rollingStunBE, rollingPlus1DisarmBE, rollingHeal1SelfBE, plus2FireBE, plus1BE];

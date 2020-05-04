@@ -25,6 +25,7 @@ import { plus1CH, minus2CH, plus2CH, plus1ImmobilizeCH, plus2MuddleCH, rollingPu
 import { plus2PH, plus0PH, plus1PH, plus1AirPH, rollingPoisonPH, rollingCursePH, rollingImmobilizePH, rollingStunPH } from '../cards/cthulu';
 import { minus1DarkNS, plus1DarkNS, plus1InvisibleNS, rollingMuddleNS, rollingHeal1SelfNS, rollingCurseNS, rollingAddTargetNS } from '../cards/eclipse';
 import { plus1BE, rollingPlus2BE, rollingWoundBE, rollingPlus1DisarmBE, rollingHeal1SelfBE, plus2FireBE, rollingStunBE } from '../cards/lightning bolts';
+import { plus2MT, plus2IceMT, rollingPlus1MT, rollingPull1MT, rollingMuddleMT, rollingImmobilizeMT, rollingStunMT, rollingDisarmMT } from '../cards/mindthief';
 
 
 
@@ -383,7 +384,70 @@ const classes = [
       }
     ]
   },
-  { key: 'MT', text: 'Mindthief', value: 'Mindthief', image: { avatar: false, src: MT }},
+  { key: 'MT', text: 'Mindthief', value: 'Mindthief', image: { avatar: false, src: MT },
+    perks: [
+      { text: 'Remove two (-1) cards', 
+        changes: { 
+          add: [], 
+          remove: [minus1Base, minus1Base]}, 
+        checked: [false, false]
+      },
+      { text: 'Remove four (+0) cards',
+        changes: { 
+          add: [], 
+          remove: [plus0Base, plus0Base, plus0Base, plus0Base]}, 
+        checked: [false]
+      },
+      { text: 'Replace two (+1) cards with two (+2) cards',
+        changes: { 
+          add: [plus2MT, plus2MT], 
+          remove: [plus1Base, plus1Base]}, 
+        checked: [false]
+      },
+      { text: 'Add one (+2) [Ice] card',
+        changes: { 
+          add: [plus2IceMT], 
+          remove: []}, 
+        checked: [false, false]
+      },
+      { text: 'Add two rolling (+1) cards',
+        changes: { 
+          add: [rollingPlus1MT, rollingPlus1MT], 
+          remove: []}, 
+        checked: [false, false]
+      },
+      { text: 'Add three rolling [Pull 1] cards',
+        changes: { 
+          add: [rollingPull1MT, rollingPull1MT, rollingPull1MT], 
+          remove: []}, 
+        checked: [false]
+      },
+      { text: 'Add three rolling [Muddle] cards',
+        changes: { 
+          add: [rollingMuddleMT, rollingMuddleMT, rollingMuddleMT], 
+          remove: []}, 
+        checked: [false]
+      },
+      { text: 'Add two rolling [Immobilize] cards',
+        changes: { 
+          add: [rollingImmobilizeMT, rollingImmobilizeMT], 
+          remove: []}, 
+        checked: [false]
+      },
+      { text: 'Add one rolling [Stun] card',
+        changes: { 
+          add: [rollingStunMT], 
+          remove: []}, 
+        checked: [false]
+      },
+      { text: 'Add one rolling [Disarm] card and one rolling [Muddle] card',
+        changes: { 
+          add: [rollingDisarmMT, rollingMuddleMT], 
+          remove: []}, 
+        checked: [false]
+      }
+    ]
+  },
   { key: 'SS', text: 'Music Notes', value: 'Music Notes', image: { avatar: false, src: SS }},
   { key: 'SB', text: 'Saw', value: 'Saw', image: { avatar: false, src: SB }},
   { key: 'SC', text: 'Scoundrel', value: 'Scoundrel', image: { avatar: false, src: SC }},

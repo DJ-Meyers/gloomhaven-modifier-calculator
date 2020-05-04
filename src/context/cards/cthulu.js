@@ -18,4 +18,4 @@ export const rollingImmobilizePH = { modifier: '+0', effect: immobilize, rolling
 export const rollingStunPH = { modifier: '+0', effect: stun, rolling: true, source: 'ph', img: RollingStun };
 export const plus0PH = { modifier: '+0', effect: none, rolling: false, source: 'ph', img: Plus0 };
 
-export const PHCards = [plus1PH, plus2PH, plus1AirPH, rollingPoisonPH, rollingCursePH, rollingImmobilizePH, rollingStunPH, plus0PH];
+export const CthuluCards = [plus1PH, plus2PH, plus1AirPH, rollingPoisonPH, rollingCursePH, rollingImmobilizePH, rollingStunPH, plus0PH];

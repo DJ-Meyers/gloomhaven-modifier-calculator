@@ -18,4 +18,4 @@ export const rollingPush2CH = { modifier: '+0', effect: push2, rolling: true, so
 export const rollingEarthCH = { modifier: '+0', effect: earth, rolling: true, source: 'ch', img: RollingEarth };
 export const rollingAirCH = { modifier: '+0', effect: air, rolling: true, source: 'ch', img: RollingAir };
 
-export const CHCards = [plus1CH, minus2CH, plus2CH, plus1ImmobilizeCH, plus2MuddleCH, rollingPush2CH, rollingEarthCH, rollingAirCH];
+export const CragheartCards = [plus1CH, minus2CH, plus2CH, plus1ImmobilizeCH, plus2MuddleCH, rollingPush2CH, rollingEarthCH, rollingAirCH];
