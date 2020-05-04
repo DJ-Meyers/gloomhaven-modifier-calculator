@@ -22,6 +22,7 @@ import { plus0Base, plus1Base, minus1Base, plus2Base, minus2Base, times2Base, ti
 import { plus1DS, rollingPlus1DS, plus2MuddleDS, plus1PoisonDS, plus1WoundDS, plus1ImmobilizeDS, plus0StunDS, rollingAddTargetDS } from '../cards/ds';
 import { plus1BR, plus3BR, rollingPush1BR, rollingStunBR, rollingDisarmBR, rollingMuddleBR, rollingAddTargetBR, plus1Shield1SelfBR } from '../cards/br';
 import { plus1CH, minus2CH, plus2CH, plus1ImmobilizeCH, plus2MuddleCH, rollingPush2CH, rollingEarthCH, rollingAirCH } from '../cards/ch';
+import { plus2PH, plus0PH, plus1PH, plus1AirPH, rollingPoisonPH, rollingCursePH, rollingImmobilizePH, rollingStunPH } from '../cards/ph';
 
 
 
@@ -199,7 +200,64 @@ const classes = [
       },
     ]
   },
-  { key: 'PH', text: 'Cthulu', value: 'Cthulu', image: { avatar: false, src: PH }},
+  { key: 'PH', text: 'Cthulu', value: 'Cthulu', image: { avatar: false, src: PH },
+    perks: [
+      { text: 'Replace one (-2) card with one (+0) card', 
+        changes: { 
+          add: [plus0PH], 
+          remove: [minus2Base]}, 
+        checked: [false]
+      },
+      { text: 'Replace one (-1) card with one (+1) card', 
+        changes: { 
+          add: [plus1PH], 
+          remove: [minus1Base]}, 
+        checked: [false, false]
+      },
+      { text: 'Replace one (+0) card with one (+2) card', 
+        changes: { 
+          add: [plus2PH], 
+          remove: [plus0Base]}, 
+        checked: [false, false]
+      },
+      { text: 'Add two (+1) cards', 
+        changes: { 
+          add: [plus1PH, plus1PH], 
+          remove: []}, 
+        checked: [false]
+      },
+      { text: 'Add one (+1) [Air] card', 
+        changes: { 
+          add: [plus1AirPH], 
+          remove: []}, 
+        checked: [false, false, false]
+      },
+      { text: 'Add three rolling [Poison] cards', 
+        changes: { 
+          add: [rollingPoisonPH, rollingPoisonPH, rollingPoisonPH], 
+          remove: []}, 
+        checked: [false]
+      },
+      { text: 'Add two rolling [Curse] cards', 
+        changes: { 
+          add: [rollingCursePH, rollingCursePH], 
+          remove: []}, 
+        checked: [false]
+      },
+      { text: 'Add two rolling [Immobilize] cards', 
+        changes: { 
+          add: [rollingImmobilizePH, rollingImmobilizePH], 
+          remove: []}, 
+        checked: [false]
+      },
+      { text: 'Add one rolling [Stun] card', 
+        changes: { 
+          add: [rollingStunPH], 
+          remove: []}, 
+        checked: [false, false]
+      },
+    ]
+  },
   { key: 'DR', text: 'Diviner', value: 'Diviner', image: { avatar: false, src: DR }},
   { key: 'NS', text: 'Eclipse', value: 'Eclipse', image: { avatar: false, src: NS }},
   { key: 'BE', text: 'Lightning Bolts', value: 'Lightning Bolts', image: { avatar: false, src: BE }},

@@ -31,10 +31,6 @@ p > span {
   text-align: center;
 }
 
-.ui.container {
-  height: 100%;
-}
-
 #DeckContainer {
   overflow-y: scroll;
 }
