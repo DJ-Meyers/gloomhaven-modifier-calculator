@@ -6,6 +6,7 @@ import { CthuluCards } from '../cards/cthulu';
 import { EclipseCards } from '../cards/eclipse';
 import { LightningBoltsCards } from '../cards/lightning bolts';
 import { MindthiefCards } from '../cards/mindthief';
+import { MusicNotesCards } from '../cards/music notes';
 
 export const getKey = card => {
   return `${card.modifier}-${card.source}-${card.effect}-${card.rolling}`;
@@ -31,6 +32,7 @@ const addUniques = () => {
   addCards(u, EclipseCards);
   addCards(u, LightningBoltsCards);
   addCards(u, MindthiefCards);
+  addCards(u, MusicNotesCards);
 
   return u;
 };

@@ -26,6 +26,7 @@ import { plus2PH, plus0PH, plus1PH, plus1AirPH, rollingPoisonPH, rollingCursePH,
 import { minus1DarkNS, plus1DarkNS, plus1InvisibleNS, rollingMuddleNS, rollingHeal1SelfNS, rollingCurseNS, rollingAddTargetNS } from '../cards/eclipse';
 import { plus1BE, rollingPlus2BE, rollingWoundBE, rollingPlus1DisarmBE, rollingHeal1SelfBE, plus2FireBE, rollingStunBE } from '../cards/lightning bolts';
 import { plus2MT, plus2IceMT, rollingPlus1MT, rollingPull1MT, rollingMuddleMT, rollingImmobilizeMT, rollingStunMT, rollingDisarmMT } from '../cards/mindthief';
+import { plus4SS, plus1ImmobilizeSS, plus1DisarmSS, plus2WoundSS, plus2PoisonSS, plus2CurseSS, plus3MuddleSS, rollingPlus1SS, rollingCurseSS } from '../cards/music notes';
 
 
 
@@ -448,7 +449,82 @@ const classes = [
       }
     ]
   },
-  { key: 'SS', text: 'Music Notes', value: 'Music Notes', image: { avatar: false, src: SS }},
+  { key: 'SS', text: 'Music Notes', value: 'Music Notes', image: { avatar: false, src: SS },
+    perks: [
+      { text: 'Remove two (-1) cards', 
+        changes: { 
+          add: [], 
+          remove: [minus1Base, minus1Base]}, 
+        checked: [false, false]
+      },
+      { text: 'Remove one (-2) card',
+        changes: { 
+          add: [], 
+          remove: [minus2Base]}, 
+        checked: [false]
+      },
+      { text: 'Replace two (+1) cards with one (+4) card',
+        changes: { 
+          add: [plus4SS], 
+          remove: [plus1Base, plus1Base]}, 
+        checked: [false, false]
+      },
+      { text: 'Replace one (+0) card with one (+1) [Immobilize] card',
+        changes: { 
+          add: [plus1ImmobilizeSS], 
+          remove: [plus0Base]}, 
+        checked: [false]
+      },
+      { text: 'Replace one (+0) card with one (+1) [Disarm] card',
+        changes: { 
+          add: [plus1DisarmSS], 
+          remove: [plus0Base]}, 
+        checked: [false]
+      },
+      { text: 'Replace one (+0) card with one (+2) [Wound] card',
+        changes: { 
+          add: [plus2WoundSS], 
+          remove: [plus0Base]}, 
+        checked: [false]
+      },
+      { text: 'Replace one (+0) card with one (+2) [Poison] card',
+        changes: { 
+          add: [plus2PoisonSS], 
+          remove: [plus0Base]}, 
+        checked: [false]
+      },
+      { text: 'Replace one (+0) card with one (+2) [Curse] card',
+        changes: { 
+          add: [plus2CurseSS], 
+          remove: [plus0Base]}, 
+        checked: [false]
+      },
+      { text: 'Replace one (+0) card with one (+3) [Muddle] card',
+        changes: { 
+          add: [plus3MuddleSS], 
+          remove: [plus0Base]}, 
+        checked: [false]
+      },
+      { text: 'Replace one (-1) card with one [Stun] card',
+        changes: { 
+          add: [plus1ImmobilizeSS], 
+          remove: [minus1Base]}, 
+        checked: [false]
+      },
+      { text: 'Add three rolling (+1) cards',
+        changes: { 
+          add: [rollingPlus1SS, rollingPlus1SS, rollingPlus1SS], 
+          remove: []}, 
+        checked: [false]
+      },
+      { text: 'Add two rolling [Curse] cards',
+        changes: { 
+          add: [rollingCurseSS, rollingCurseSS], 
+          remove: []}, 
+        checked: [false, false]
+      }
+    ]
+  },
   { key: 'SB', text: 'Saw', value: 'Saw', image: { avatar: false, src: SB }},
   { key: 'SC', text: 'Scoundrel', value: 'Scoundrel', image: { avatar: false, src: SC }},
   { key: 'SW', text: 'Spellweaver', value: 'Spellweaver', image: { avatar: false, src: SW }},
