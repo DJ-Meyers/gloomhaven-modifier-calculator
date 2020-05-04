@@ -19,10 +19,12 @@ import TI from '../../gloomhaven/images/class-icons/TI.png';
 import EL from '../../gloomhaven/images/class-icons/EL.png';
 
 import { plus0Base, plus1Base, minus1Base, plus2Base, minus2Base, times2Base, times0Base } from '../cards/base';
-import { plus1DS, rollingPlus1DS, plus2MuddleDS, plus1PoisonDS, plus1WoundDS, plus1ImmobilizeDS, plus0StunDS, rollingAddTargetDS } from '../cards/ds';
-import { plus1BR, plus3BR, rollingPush1BR, rollingStunBR, rollingDisarmBR, rollingMuddleBR, rollingAddTargetBR, plus1Shield1SelfBR } from '../cards/br';
-import { plus1CH, minus2CH, plus2CH, plus1ImmobilizeCH, plus2MuddleCH, rollingPush2CH, rollingEarthCH, rollingAirCH } from '../cards/ch';
-import { plus2PH, plus0PH, plus1PH, plus1AirPH, rollingPoisonPH, rollingCursePH, rollingImmobilizePH, rollingStunPH } from '../cards/ph';
+import { plus1DS, rollingPlus1DS, plus2MuddleDS, plus1PoisonDS, plus1WoundDS, plus1ImmobilizeDS, plus0StunDS, rollingAddTargetDS } from '../cards/angry face';
+import { plus1BR, plus3BR, rollingPush1BR, rollingStunBR, rollingDisarmBR, rollingMuddleBR, rollingAddTargetBR, plus1Shield1SelfBR } from '../cards/brute';
+import { plus1CH, minus2CH, plus2CH, plus1ImmobilizeCH, plus2MuddleCH, rollingPush2CH, rollingEarthCH, rollingAirCH } from '../cards/cragheart';
+import { plus2PH, plus0PH, plus1PH, plus1AirPH, rollingPoisonPH, rollingCursePH, rollingImmobilizePH, rollingStunPH } from '../cards/cthulu';
+import { minus1DarkNS, plus1DarkNS, plus1InvisibleNS, rollingMuddleNS, rollingHeal1SelfNS, rollingCurseNS, rollingAddTargetNS } from '../cards/eclipse';
+import { plus1BE, rollingPlus2BE, rollingWoundBE, rollingPlus1DisarmBE, rollingHeal1SelfBE, plus2FireBE, rollingStunBE } from '../cards/lightning bolts';
 
 
 
@@ -259,8 +261,128 @@ const classes = [
     ]
   },
   { key: 'DR', text: 'Diviner', value: 'Diviner', image: { avatar: false, src: DR }},
-  { key: 'NS', text: 'Eclipse', value: 'Eclipse', image: { avatar: false, src: NS }},
-  { key: 'BE', text: 'Lightning Bolts', value: 'Lightning Bolts', image: { avatar: false, src: BE }},
+  { key: 'NS', text: 'Eclipse', value: 'Eclipse', image: { avatar: false, src: NS },
+    perks: [
+      { text: 'Remove two (-1) cards', 
+        changes: { 
+          add: [], 
+          remove: [minus1Base, minus1Base]}, 
+        checked: [false, false]
+      },
+      { text: 'Remove four (+0) cards',
+        changes: { 
+          add: [], 
+          remove: [plus0Base, plus0Base, plus0Base, plus0Base]}, 
+        checked: [false]
+      },
+      { text: 'Add one (-1) [Dark] card',
+        changes: { 
+          add: [minus1DarkNS], 
+          remove: []}, 
+        checked: [false, false]
+      },
+      { text: 'Replace one (-1) [Dark] card with one (+1) [Dark] card',
+        changes: { 
+          add: [plus1DarkNS], 
+          remove: [minus1DarkNS]}, 
+        checked: [false, false]
+      },
+      { text: 'Add one (+1) [Invisible] card',
+        changes: { 
+          add: [plus1InvisibleNS], 
+          remove: []}, 
+        checked: [false, false]
+      },
+      { text: 'Add one (+1) [Wound] card',
+        changes: { 
+          add: [plus1WoundDS], 
+          remove: []}, 
+        checked: [false]
+      },
+      { text: 'Add three rolling [Muddle] cards',
+        changes: { 
+          add: [rollingMuddleNS, rollingMuddleNS, rollingMuddleNS], 
+          remove: []}, 
+        checked: [false, false]
+      },
+      { text: 'Add two rolling [Heal 1 Self] card',
+        changes: { 
+          add: [rollingHeal1SelfNS, rollingHeal1SelfNS], 
+          remove: []}, 
+        checked: [false]
+      },
+      { text: 'Add two rolling [Curse] cards',
+        changes: { 
+          add: [rollingCurseNS, rollingCurseNS], 
+          remove: []}, 
+        checked: [false]
+      },
+      { text: 'Add one rolling [Add Target] card',
+        changes: { 
+          add: [rollingAddTargetNS], 
+          remove: []}, 
+        checked: [false]
+      }
+    ]
+  },
+  { key: 'BE', text: 'Lightning Bolts', value: 'Lightning Bolts', image: { avatar: false, src: BE },
+    perks: [
+      { text: 'Remove two (-1) cards', 
+        changes: { 
+          add: [], 
+          remove: [minus1Base, minus1Base]}, 
+        checked: [false]
+      },
+      { text: 'Remove four (+0) cards',
+        changes: { 
+          add: [], 
+          remove: [plus0Base, plus0Base, plus0Base, plus0Base]}, 
+        checked: [false]
+      },
+      { text: 'Replace one (-1) card with one (+1) card',
+        changes: { 
+          add: [plus1BE], 
+          remove: [minus1Base]}, 
+        checked: [false, false]
+      },
+      { text: 'Replace one (+0) card with one rolling (+2) card',
+        changes: { 
+          add: [rollingPlus2BE], 
+          remove: [plus0Base]}, 
+        checked: [false, false]
+      },
+      { text: 'Add two rolling [Wound] cards',
+        changes: { 
+          add: [rollingWoundBE, rollingWoundBE], 
+          remove: []}, 
+        checked: [false, false]
+      },
+      { text: 'Add one rolling [Stun] card',
+        changes: { 
+          add: [rollingStunBE], 
+          remove: []}, 
+        checked: [false, false]
+      },
+      { text: 'Add one rolling (+1) [Disarm] card',
+        changes: { 
+          add: [rollingPlus1DisarmBE], 
+          remove: []}, 
+        checked: [false]
+      },
+      { text: 'Add two rolling [Heal 1 Self] cards',
+        changes: { 
+          add: [rollingHeal1SelfBE, rollingHeal1SelfBE], 
+          remove: []}, 
+        checked: [false]
+      },
+      { text: 'Add one (+2) [Fire] cards',
+        changes: { 
+          add: [plus2FireBE], 
+          remove: []}, 
+        checked: [false, false]
+      }
+    ]
+  },
   { key: 'MT', text: 'Mindthief', value: 'Mindthief', image: { avatar: false, src: MT }},
   { key: 'SS', text: 'Music Notes', value: 'Music Notes', image: { avatar: false, src: SS }},
   { key: 'SB', text: 'Saw', value: 'Saw', image: { avatar: false, src: SB }},

@@ -1,8 +1,10 @@
 import {plus0Base, plus1Base, plus2Base, minus1Base, minus2Base, times0Base, times2Base, baseCards } from '../cards/base';
-import { DSCards } from '../cards/ds';
-import { BRCards } from '../cards/br';
-import { CHCards } from '../cards/ch';
-import { PHCards } from '../cards/ph';
+import { DSCards } from '../cards/angry face';
+import { BRCards } from '../cards/brute';
+import { CHCards } from '../cards/cragheart';
+import { PHCards } from '../cards/cthulu';
+import { NSCards } from '../cards/eclipse';
+import { BECards } from '../cards/lightning bolts';
 
 export const getKey = card => {
   return `${card.modifier}-${card.source}-${card.effect}-${card.rolling}`;
@@ -25,6 +27,12 @@ const addUniques = () => {
     addCard(u, card);
   });
   PHCards.forEach(card => {
+    addCard(u, card);
+  });
+  NSCards.forEach(card => {
+    addCard(u, card);
+  });
+  BECards.forEach(card => {
     addCard(u, card);
   });
 
