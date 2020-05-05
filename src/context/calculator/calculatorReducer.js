@@ -7,7 +7,9 @@ export default (state, action) => {
         ...state,
         averageDamage: action.payload.averageDamage,
         killPct: action.payload.killPct,
-        negativeDrawPct: action.payload.negativeDrawPct
+        negativeDrawPct: action.payload.negativeDrawPct,
+        dmgValues: action.payload.dmgValues,
+        maxDmg: action.payload.maxDmg
       };
     case SET_TRIALS:
       return {

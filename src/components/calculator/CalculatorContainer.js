@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Segment, Header, Grid, Button } from 'semantic-ui-react';
 import Results from './Results';
 import Trials from './Trials';
+import DetailsContainer from './DetailsContainer';
 
 import CalculatorContext from '../../context/calculator/calculatorContext';
 import DeckContext from '../../context/deck/deckContext';
@@ -41,8 +42,9 @@ const CalculatorContainer = () => {
         <Grid.Column>
           <Trials trials={trials} setTrials={setTrials} />
           <Results values={{averageDamage, killPct, negativeDrawPct}}/>
-          <Button floated='right' content='Calculate' onClick={()=>{
+          <Button compact floated='right' content='Calculate' onClick={()=>{
             calculateDamage({advantage, disadvantage, attackDamage, attackPierce, enemyHP, enemyShield}, deck)}} />
+          <DetailsContainer />
         </Grid.Column>
       </Grid>
     </Segment>

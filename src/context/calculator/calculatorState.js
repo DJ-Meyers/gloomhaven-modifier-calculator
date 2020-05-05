@@ -10,7 +10,9 @@ const CalculatorState = props => {
     averageDamage: null,
     killPct: null,
     negativeDrawPct: null,
-    trials: 10000
+    trials: 10000,
+    dmgValues: [],
+    maxDmg: 0
   };
 
   const [state, dispatch] = useReducer(CalculatorReducer, initialState);
@@ -60,6 +62,8 @@ const CalculatorState = props => {
     let negativeDraws = 0;
     let kills = 0;
     let dmg = attack.attackDamage;
+    let dmgValues = [];
+    let maxDmg = 0;
 
     for (let i = 0; i < state.trials; i++) {
       shuffle(deck);
@@ -76,6 +80,8 @@ const CalculatorState = props => {
       } while (card.rolling === true);
 
       totalDamage += dmg;
+      dmgValues.push(dmg);
+      maxDmg = Math.max(maxDmg, dmg);
 
       if (dmg >= attack.enemyHP) kills++;
       if (dmg < Math.max(attack.attackDamage - Math.max(attack.enemyShield - attack.attackPierce, 0), 0)) negativeDraws++;
@@ -89,7 +95,9 @@ const CalculatorState = props => {
       payload: {
         averageDamage: averageDamage,
         negativeDrawPct: negativeDrawPct,
-        killPct: killPct
+        killPct: killPct,
+        dmgValues: dmgValues,
+        maxDmg: maxDmg
       }
     });
   };
@@ -99,6 +107,8 @@ const CalculatorState = props => {
     let negativeDraws = 0;
     let kills = 0;
     let dmg = -1;
+    let dmgValues = [];
+    let maxDmg = 0;
     
     for (let i = 0; i < state.trials; i++){
       shuffle(deck);
@@ -129,8 +139,9 @@ const CalculatorState = props => {
         dmg = isAdv ? Math.max(dmg1, dmg2) : Math.min(dmg1, dmg2);
       }
       
-      
       totalDamage += dmg; 
+      dmgValues.push(dmg);
+      maxDmg = Math.max(maxDmg, dmg);
 
       if (dmg >= attack.enemyHP) kills++;
       if (dmg < Math.max(attack.attackDamage - Math.max(attack.enemyShield - attack.attackPierce, 0), 0)) negativeDraws++;
@@ -145,7 +156,9 @@ const CalculatorState = props => {
       payload: {
         averageDamage: averageDamage,
         negativeDrawPct: negativeDrawPct,
-        killPct: killPct
+        killPct: killPct,
+        dmgValues: dmgValues,
+        maxDmg: maxDmg
       }
     });
   };
@@ -157,6 +170,8 @@ const CalculatorState = props => {
         killPct: state.killPct,
         negativeDrawPct: state.negativeDrawPct,
         trials: state.trials,
+        dmgValues: state.dmgValues,
+        maxDmg: state.maxDmg,
         setTrials,
         calculateDamage
       }}>
