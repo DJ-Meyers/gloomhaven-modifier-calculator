@@ -1,8 +1,7 @@
-import React, { useContext } from 'react';
-import { Modal, Header, Button } from 'semantic-ui-react';
-import { Histogram, DensitySeries, BarSeries, withParentSize, XAxis, YAxis } from '@data-ui/histogram';
+import React from 'react';
+import { Header } from 'semantic-ui-react';
+import { Histogram,  BarSeries, withParentSize, XAxis, YAxis } from '@data-ui/histogram';
 
-import CalculatorContext from '../../context/calculator/calculatorContext';
 const DetailsContainer = (props) => {
 
   const ResponsiveHistogram = withParentSize(({ parentWidth, parentHeight, ...rest }) =>

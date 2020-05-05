@@ -28,6 +28,7 @@ import { plus1BE, rollingPlus2BE, rollingWoundBE, rollingPlus1DisarmBE, rollingH
 import { plus2MT, plus2IceMT, rollingPlus1MT, rollingPull1MT, rollingMuddleMT, rollingImmobilizeMT, rollingStunMT, rollingDisarmMT } from '../cards/mindthief';
 import { plus4SS, plus1ImmobilizeSS, plus1DisarmSS, plus2WoundSS, plus2PoisonSS, plus2CurseSS, plus3MuddleSS, rollingPlus1SS, rollingCurseSS } from '../cards/music notes';
 import { plus2SB, rollingPlus2SB, plus1ImmobilizeSB, rollingWoundSB, rollingHeal3SelfSB, refreshItemSB, rollingStunSB } from '../cards/saw';
+import { plus0SC, plus1SC, plus2SC, rollingPlus1SC, rollingPierce3SC, rollingPoisonSC, rollingMuddleSC, rollingInvisibleSC } from '../cards/scoundrel';
 
 
 
@@ -584,7 +585,70 @@ const classes = [
       }
     ]
   },
-  { key: 'SC', text: 'Scoundrel', value: 'Scoundrel', image: { avatar: false, src: SC }},
+  { key: 'SC', text: 'Scoundrel', value: 'Scoundrel', image: { avatar: false, src: SC },
+    perks: [
+      { text: 'Remove two (-1) cards', 
+        changes: { 
+          add: [], 
+          remove: [minus1Base, minus1Base]}, 
+        checked: [false, false]
+      },
+      { text: 'Remove four (+0) cards',
+        changes: { 
+          add: [], 
+          remove: [plus0Base, plus0Base, plus0Base, plus0Base]}, 
+        checked: [false]
+      },
+      { text: 'Replace one (-2) card with one (+0) card',
+        changes: { 
+          add: [plus0SC], 
+          remove: [minus2Base]}, 
+        checked: [false]
+      },
+      { text: 'Replace one (-1) card with one (+1) card',
+        changes: { 
+          add: [plus1SC], 
+          remove: [minus1Base]}, 
+        checked: [false]
+      },
+      { text: 'Replace one (+0) card with one (+2) card',
+        changes: { 
+          add: [plus2SC], 
+          remove: [plus0Base]}, 
+        checked: [false, false]
+      },
+      { text: 'Add two rolling (+1) cards',
+        changes: { 
+          add: [rollingPlus1SC, rollingPlus1SC], 
+          remove: []}, 
+        checked: [false, false]
+      },
+      { text: 'Add two rolling [Pierce 3] cards',
+        changes: { 
+          add: [rollingPierce3SC, rollingPierce3SC], 
+          remove: []}, 
+        checked: [false]
+      },
+      { text: 'Add two rolling [Poison] card',
+        changes: { 
+          add: [rollingPoisonSC, rollingPoisonSC], 
+          remove: []}, 
+        checked: [false, false]
+      },
+      { text: 'Add two rolling [Muddle] cards',
+        changes: { 
+          add: [rollingMuddleSC, rollingMuddleSC], 
+          remove: []}, 
+        checked: [false]
+      },
+      { text: 'Add one rolling [Invisible] card',
+        changes: { 
+          add: [rollingInvisibleSC], 
+          remove: []}, 
+        checked: [false]
+      }
+    ]
+  },
   { key: 'SW', text: 'Spellweaver', value: 'Spellweaver', image: { avatar: false, src: SW }},
   { key: 'SU', text: 'Circles', value: 'Summoner', image: { avatar: false, src: SU }},
   { key: 'SK', text: 'Sun', value: 'Sun', image: { avatar: false, src: SK }},
