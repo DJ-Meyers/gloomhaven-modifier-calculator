@@ -9,7 +9,10 @@ export default (state, action) => {
         killPct: action.payload.killPct,
         negativeDrawPct: action.payload.negativeDrawPct,
         dmgValues: action.payload.dmgValues,
-        maxDmg: action.payload.maxDmg
+        maxDmg: action.payload.maxDmg,
+        effects: action.payload.effects,
+        dmgBins: action.payload.dmgBins,
+        effectBins: action.payload.effectBins
       };
     case SET_TRIALS:
       return {

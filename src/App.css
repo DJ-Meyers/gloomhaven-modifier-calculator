@@ -23,12 +23,16 @@ p > span {
   max-height: 30px !important;
   object-fit: contain;
 }
-.ui.header, .atk {
+.ui.header, .atk, .chart {
   text-align: center;
 }
 
 .ui.fluid.input > input {
   text-align: center;
+}
+
+.chart {
+  width: 100px;
 }
 
 #DeckContainer {

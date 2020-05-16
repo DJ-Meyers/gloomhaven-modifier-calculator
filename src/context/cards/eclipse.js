@@ -7,12 +7,12 @@ import RollingAddTarget from '../../gloomhaven/images/attack-modifiers/NS/am-ns-
 import Plus1 from '../../gloomhaven/images/attack-modifiers/NS/am-ns-16.png';
 import Minus1Dark from '../../gloomhaven/images/attack-modifiers/NS/am-ns-18.png';
 
-import { none, dark, invisible, muddle, heal1Self, curse, addTarget } from './effects';
+import { none, dark, invisible, muddle, heal, curse, addTarget } from './effects';
 
 export const plus1DarkNS = { modifier: '+1', effect: dark, rolling: false, source: 'ns', img: Plus1Dark };
 export const plus1InvisibleNS = { modifier: '+1', effect: invisible, rolling: false, source: 'ns', img: Plus1Invisible };
 export const rollingMuddleNS = { modifier: '+0', effect: muddle, rolling: true, source: 'ns', img: RollingMuddle };
-export const rollingHeal1SelfNS = { modifier: '+0', effect: heal1Self, rolling: true, source: 'ns', img: RollingHeal1Self };
+export const rollingHeal1SelfNS = { modifier: '+0', effect: heal, rolling: true, source: 'ns', img: RollingHeal1Self };
 export const rollingCurseNS = { modifier: '+0', effect: curse, rolling: true, source: 'ns', img: RollingCurse };
 export const rollingAddTargetNS = { modifier: '+0', effect: addTarget, rolling: true, source: 'ns', img: RollingAddTarget };
 export const plus1NS = { modifier: '+1', effect: none, rolling: false, source: 'ns', img: Plus1 };
