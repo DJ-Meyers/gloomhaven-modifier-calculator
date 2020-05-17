@@ -30,6 +30,8 @@ import { plus4SS, plus1ImmobilizeSS, plus1DisarmSS, plus2WoundSS, plus2PoisonSS,
 import { plus2SB, rollingPlus2SB, plus1ImmobilizeSB, rollingWoundSB, rollingHeal3SelfSB, refreshItemSB, rollingStunSB } from '../cards/saw';
 import { plus0SC, plus1SC, plus2SC, rollingPlus1SC, rollingPierce3SC, rollingPoisonSC, rollingMuddleSC, rollingInvisibleSC } from '../cards/scoundrel';
 import { plus3Shield1SelfDR, plus1Shield1AllyDR, plus2DarkDR, plus2LightDR, plus3MuddleDR, plus2CurseDR, plus2RegenerateSelfDR, plus1Heal2AllyDR, rollingHeal1SelfDR, rollingCurseDR, plus1DR } from '../cards/diviner';
+import { plus1SW, plus0StunSW, plus1WoundSW, plus1ImmobilizeSW, plus1CurseSW, plus2FireSW, plus2IceSW, rollingEarthSW, rollingAirSW, rollingLightSW, rollingDarkSW } from '../cards/spellweaver';
+import { plus0SU, plus1SU, plus2SU, rollingWoundSU, rollingPoisonSU, rollingHeal1SelfSU, rollingFireSU, rollingAirSU, rollingDarkSU, rollingEarthSU } from '../cards/circles';
 
 
 
@@ -731,8 +733,140 @@ const classes = [
       }
     ]
   },
-  { key: 'SW', text: 'Spellweaver', value: 'Spellweaver', image: { avatar: false, src: SW }},
-  { key: 'SU', text: 'Circles', value: 'Summoner', image: { avatar: false, src: SU }},
+  { key: 'SW', text: 'Spellweaver', value: 'Spellweaver', image: { avatar: false, src: SW },
+    perks: [
+      { text: 'Remove four (+0) cards', 
+        changes: { 
+          add: [], 
+          remove: [plus0Base, plus0Base, plus0Base, plus0Base]}, 
+        checked: [false]
+      },
+      { text: 'Replace one (-1) card with one (+1) card',
+        changes: { 
+          add: [plus1SW], 
+          remove: [minus1Base]}, 
+        checked: [false, false]
+      },
+      { text: 'Add two (+1) cards',
+        changes: { 
+          add: [plus1SW, plus1SW], 
+          remove: []}, 
+        checked: [false, false]
+      },
+      { text: 'Add one (+0) [Stun] card',
+        changes: { 
+          add: [plus0StunSW], 
+          remove: []}, 
+        checked: [false]
+      },
+      { text: 'Replace one (+1) [Wound] card',
+        changes: { 
+          add: [plus1WoundSW], 
+          remove: []}, 
+        checked: [false]
+      },
+      { text: 'Add one (+1) [Immobilize] card',
+        changes: { 
+          add: [plus1ImmobilizeSW], 
+          remove: []}, 
+        checked: [false]
+      },
+      { text: 'Add one (+1) [Curse] card',
+        changes: { 
+          add: [plus1CurseSW], 
+          remove: []}, 
+        checked: [false]
+      },
+      { text: 'Add one (+2) [Fire] card',
+        changes: { 
+          add: [plus2FireSW], 
+          remove: []}, 
+        checked: [false, false]
+      },
+      { text: 'Add one (+2) [Ice] card',
+        changes: { 
+          add: [plus2IceSW], 
+          remove: []}, 
+        checked: [false, false]
+      },
+      { text: 'Add one rolling [Earth] card and one rolling [Air] card',
+        changes: { 
+          add: [rollingEarthSW, rollingAirSW], 
+          remove: []}, 
+        checked: [false]
+      },
+      { text: 'Add one rolling [Light] card and one rolling [Dark] card',
+        changes: { 
+          add: [rollingLightSW, rollingDarkSW], 
+          remove: []}, 
+        checked: [false]
+      },
+    ]
+  },
+  { key: 'SU', text: 'Circles', value: 'Summoner', image: { avatar: false, src: SU },
+    perks: [
+      { text: 'Remove two (-1) cards', 
+        changes: { 
+          add: [], 
+          remove: [minus1Base, minus1Base]}, 
+        checked: [false]
+      },
+      { text: 'Replace one (-2) card with one (+0) card',
+        changes: { 
+          add: [plus0SU], 
+          remove: [minus2Base]}, 
+        checked: [false]
+      },
+      { text: 'Replace one (-1) cards with one (+1) card',
+        changes: { 
+          add: [plus1SU], 
+          remove: [minus1Base]}, 
+        checked: [false, false, false]
+      },
+      { text: 'Add one (+2) card',
+        changes: { 
+          add: [plus2SU], 
+          remove: []}, 
+        checked: [false, false]
+      },
+      { text: 'Add two rolling [Wound] cards',
+        changes: { 
+          add: [rollingWoundSU, rollingWoundSU], 
+          remove: []}, 
+        checked: [false]
+      },
+      { text: 'Add two rolling [Poison] cards',
+        changes: { 
+          add: [rollingPoisonSU, rollingPoisonSU], 
+          remove: []}, 
+        checked: [false]
+      },
+      { text: 'Add two rolling [Heal 1 Self] cards',
+        changes: { 
+          add: [rollingHeal1SelfSU, rollingHeal1SelfSU], 
+          remove: []}, 
+        checked: [false, false, false]
+      },
+      { text: 'Add one rolling [Fire] card and one rolling [Air] card',
+        changes: { 
+          add: [rollingFireSU, rollingAirSU], 
+          remove: []}, 
+        checked: [false]
+      },
+      { text: 'Add one rolling [Dark] card and one rolling [Earth] card',
+        changes: { 
+          add: [rollingDarkSU, rollingEarthSU], 
+          remove: []}, 
+        checked: [false]
+      },
+      { text: 'Ignore negative scenario effects and add two (+1) cards',
+        changes: { 
+          add: [plus1SU, plus1SU], 
+          remove: []}, 
+        checked: [false]
+      }
+    ]
+  },
   { key: 'SK', text: 'Sun', value: 'Sun', image: { avatar: false, src: SK }},
   { key: 'QM', text: 'Three Spears', value: 'Three Spears', image: { avatar: false, src: QM }},
   { key: 'TI', text: 'Tinkerer', value: 'Tinkerer', image: { avatar: false, src: TI }},
