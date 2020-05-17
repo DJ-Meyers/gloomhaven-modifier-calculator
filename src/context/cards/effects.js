@@ -6,12 +6,15 @@ export const anyEffect = 'Any Effect';
 export const push = 'Push';
 export const pull = 'Pull';
 export const pierce = 'Pierce';
-export const shield = 'Shield Self';
-export const heal = 'Heal Self';
+export const shieldSelf = 'Shield Self';
+export const shieldAlly = 'Shield Ally';
+export const healSelf = 'Heal Self';
+export const healAlly = 'Heal Ally';
+export const regenerateSelf = 'Regenerate Self';
 export const addTarget = 'Add Target';
 export const refreshItem = 'Refresh Item';
 export const anyAttackEffect = 'Any Attack Effect';
-export const attackEffects = [push, pull, pierce, shield, heal, addTarget, refreshItem];
+export const attackEffects = [push, pull, pierce, shieldSelf, shieldAlly, healSelf, healAlly, regenerateSelf, addTarget, refreshItem];
 
 
 // Debuffs
@@ -49,10 +52,13 @@ export const effectsArray = [
   {id: push, bin: push, count: 0},
   {id: pull, bin: pull, count: 0}, 
   {id: pierce, bin: pierce, count: 0}, 
-  {id: shield, bin: shield, count: 0}, 
-  {id: heal, bin: heal, count: 0}, 
+  {id: shieldSelf, bin: shieldSelf, count: 0}, 
+  {id: shieldAlly, bin: shieldAlly, count: 0}, 
+  {id: healSelf, bin: healSelf, count: 0}, 
+  {id: healAlly, bin: healAlly, count: 0}, 
   {id: addTarget, bin: addTarget, count: 0}, 
   {id: refreshItem, bin: refreshItem, count: 0},
+  {id: regenerateSelf, bin: regenerateSelf, count: 0},
   {id: anyAttackEffect, bin: anyAttackEffect, count: 0},
   {id: poison, bin: poison, count: 0}, 
   {id: wound, bin: wound, count: 0}, 

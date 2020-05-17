@@ -29,6 +29,7 @@ import { plus2MT, plus2IceMT, rollingPlus1MT, rollingPull1MT, rollingMuddleMT, r
 import { plus4SS, plus1ImmobilizeSS, plus1DisarmSS, plus2WoundSS, plus2PoisonSS, plus2CurseSS, plus3MuddleSS, rollingPlus1SS, rollingCurseSS } from '../cards/music notes';
 import { plus2SB, rollingPlus2SB, plus1ImmobilizeSB, rollingWoundSB, rollingHeal3SelfSB, refreshItemSB, rollingStunSB } from '../cards/saw';
 import { plus0SC, plus1SC, plus2SC, rollingPlus1SC, rollingPierce3SC, rollingPoisonSC, rollingMuddleSC, rollingInvisibleSC } from '../cards/scoundrel';
+import { plus3Shield1SelfDR, plus1Shield1AllyDR, plus2DarkDR, plus2LightDR, plus3MuddleDR, plus2CurseDR, plus2RegenerateSelfDR, plus1Heal2AllyDR, rollingHeal1SelfDR, rollingCurseDR, plus1DR } from '../cards/diviner';
 
 
 
@@ -264,7 +265,88 @@ const classes = [
       },
     ]
   },
-  { key: 'DR', text: 'Diviner', value: 'Diviner', image: { avatar: false, src: DR }},
+  { key: 'DR', text: 'Diviner', value: 'Diviner', image: { avatar: false, src: DR },
+    perks: [
+      { text: 'Remove two (-1) cards', 
+        changes: { 
+          add: [], 
+          remove: [minus1Base, minus1Base]}, 
+        checked: [false, false]
+      },
+      { text: 'Remove one (-2) card',
+        changes: { 
+          add: [], 
+          remove: [minus2Base]}, 
+        checked: [false]
+      },
+      { text: 'Replace two (+1) cards with one (+3) [Shield 1 Self] card',
+        changes: { 
+          add: [plus3Shield1SelfDR], 
+          remove: [plus1Base, plus1Base]}, 
+        checked: [false, false]
+      },
+      { text: 'Replace one (+0) card with one (+1) [Shield 1 Ally] card',
+        changes: { 
+          add: [plus1Shield1AllyDR], 
+          remove: [plus0Base]}, 
+        checked: [false]
+      },
+      { text: 'Replace one (+0) card with one (+2) [Dark] card',
+        changes: { 
+          add: [plus2DarkDR], 
+          remove: [plus0Base]}, 
+        checked: [false]
+      },
+      { text: 'Replace one (+0) with one (+2) [Light] card',
+        changes: { 
+          add: [plus2LightDR], 
+          remove: [plus0Base]}, 
+        checked: [false]
+      },
+      { text: 'Replace one (+0) with one (+3) [Muddle] card',
+        changes: { 
+          add: [plus3MuddleDR], 
+          remove: [plus0Base]}, 
+        checked: [false]
+      },
+      { text: 'Replace one (+0) with one (+2) [Curse] card',
+        changes: { 
+          add: [plus2CurseDR], 
+          remove: [plus0Base]}, 
+        checked: [false]
+      },
+      { text: 'Replace one (+0) with one (+2) [Regenerate Self] card',
+        changes: { 
+          add: [plus2RegenerateSelfDR], 
+          remove: [plus0Base]}, 
+        checked: [false]
+      },
+      { text: 'Replace one (-1) with one (+1) [Heal Ally] card',
+        changes: { 
+          add: [plus1Heal2AllyDR], 
+          remove: [minus1Base]}, 
+        checked: [false]
+      },
+      { text: 'Add two rolling [Heal Self] cards',
+        changes: { 
+          add: [rollingHeal1SelfDR], 
+          remove: []}, 
+        checked: [false]
+      },
+      { text: 'Add two rolling [Curse] cards',
+        changes: { 
+          add: [rollingCurseDR], 
+          remove: []}, 
+        checked: [false]
+      },
+      { text: 'Ignore negative scenario effects and add two (+1) cards',
+        changes: { 
+          add: [plus1DR, plus1DR], 
+          remove: []}, 
+        checked: [false]
+      }
+    ]
+  },
   { key: 'NS', text: 'Eclipse', value: 'Eclipse', image: { avatar: false, src: NS },
     perks: [
       { text: 'Remove two (-1) cards', 

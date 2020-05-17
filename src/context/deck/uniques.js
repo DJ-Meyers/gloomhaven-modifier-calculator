@@ -9,6 +9,7 @@ import { MindthiefCards } from '../cards/mindthief';
 import { MusicNotesCards } from '../cards/music notes';
 import { SawCards } from '../cards/saw';
 import { ScoundrelCards } from '../cards/scoundrel';
+import { DivinerCards } from '../cards/diviner';
 
 export const getKey = card => {
   return `${card.modifier}-${card.source}-${card.effect}-${card.rolling}`;
@@ -37,6 +38,7 @@ const addUniques = () => {
   addCards(u, MusicNotesCards);
   addCards(u, SawCards);
   addCards(u, ScoundrelCards);
+  addCards(u, DivinerCards);
 
   return u;
 };
