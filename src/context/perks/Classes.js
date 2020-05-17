@@ -33,10 +33,10 @@ import { plus3Shield1SelfDR, plus1Shield1AllyDR, plus2DarkDR, plus2LightDR, plus
 import { plus1SW, plus0StunSW, plus1WoundSW, plus1ImmobilizeSW, plus1CurseSW, plus2FireSW, plus2IceSW, rollingEarthSW, rollingAirSW, rollingLightSW, rollingDarkSW, SpellweaverCards } from '../cards/spellweaver';
 import { plus0SU, plus1SU, plus2SU, rollingWoundSU, rollingPoisonSU, rollingHeal1SelfSU, rollingFireSU, rollingAirSU, rollingDarkSU, rollingEarthSU, CirclesCards } from '../cards/circles';
 import { plus0SK, plus2SK, rollingPlus1SK, rollingHeal1SelfSK, rollingStunSK, rollingLightSK, plus1SK, rollingShield1SelfSK, SunCards } from '../cards/sun';
-import { ThreeSpearsCards } from '../cards/three spears';
+import { ThreeSpearsCards, plus2QM, rollingPlus1QM, rollingMuddleQM, rollingPierce3QM, rollingStunQM, rollingAddTargetQM, plus1QM, plus0RefreshItemQM } from '../cards/three spears';
 import { TinkererCards, plus0TI, plus1TI, plus3TI, rollingFireTI, rollingMuddleTI, plus1WoundTI, plus1ImmobilizeTI, plus1Heal2SelfTI, plus0AddTargetTI } from '../cards/tinkerer';
-import { TrianglesCards } from '../cards/triangles';
-import { TwoMinisCards } from '../cards/two minis';
+import { TrianglesCards, plus1EL, plus2EL, plus0FireEL, plus0IceEL, plus0AirEL, plus0EarthEL, plus1PushEL, plus1WoundEL, plus0StunEL, plus0AddTargetEL } from '../cards/triangles';
+import { TwoMinisCards, plus1BT, plus2BT, plus1WoundBT, plus1ImmobilizeBT, rollingHeal1SelfBT, rollingEarthBT } from '../cards/two minis';
 
 
 
@@ -919,9 +919,198 @@ const classes = [
       }
     ]
   },
-  { key: 'QM', text: 'Three Spears', value: 'Three Spears', cards: ThreeSpearsCards, image: { avatar: false, src: QM }},
-  { key: 'EL', text: 'Triangles', value: 'Triangles', cards: TrianglesCards, image: { avatar: false, src: EL }},
-  { key: 'BT', text: 'Two Minis', value: 'Two Minis', cards: TwoMinisCards, image: { avatar: false, src: BT }},
+  { key: 'QM', text: 'Three Spears', value: 'Three Spears', cards: ThreeSpearsCards, image: { avatar: false, src: QM },
+    perks: [
+      { text: 'Remove two (-1) cards', 
+        changes: { 
+          add: [], 
+          remove: [minus1Base, minus1Base]}, 
+        checked: [false, false]
+      },
+      { text: 'Remove four (+0) cards',
+        changes: { 
+          add: [], 
+          remove: [plus0Base, plus0Base, plus0Base, plus0Base]}, 
+        checked: [false]
+      },
+      { text: 'Replace one (+0) card with one (+2) card',
+        changes: { 
+          add: [plus2QM], 
+          remove: [plus0Base]}, 
+        checked: [false, false]
+      },
+      { text: 'Add two rolling (+1) cards',
+        changes: { 
+          add: [rollingPlus1QM, rollingPlus1QM], 
+          remove: []}, 
+        checked: [false, false]
+      },
+      { text: 'Add three rolling [Muddle] cards',
+        changes: { 
+          add: [rollingMuddleQM, rollingMuddleQM, rollingMuddleQM], 
+          remove: []}, 
+        checked: [false]
+      },
+      { text: 'Add two rolling [Pierce 3] cards',
+        changes: { 
+          add: [rollingPierce3QM, rollingPierce3QM], 
+          remove: []}, 
+        checked: [false]
+      },
+      { text: 'Add one rolling [Stun] card',
+        changes: { 
+          add: [rollingStunQM], 
+          remove: []}, 
+        checked: [false]
+      },
+      { text: 'Add one rolling [Add Target] card',
+        changes: { 
+          add: [rollingAddTargetQM], 
+          remove: []}, 
+        checked: [false]
+      },
+      { text: 'Add one (+0) [Refresh Item] card',
+        changes: { 
+          add: [plus0RefreshItemQM], 
+          remove: []}, 
+        checked: [false, false, false]
+      },
+      { text: 'Ignore negative item effects and add two (+1) cards',
+        changes: { 
+          add: [plus1QM, plus1QM], 
+          remove: []}, 
+        checked: [false]
+      }
+    ]
+  },
+  { key: 'EL', text: 'Triangles', value: 'Triangles', cards: TrianglesCards, image: { avatar: false, src: EL },
+    perks: [
+      { text: 'Remove two (-1) cards', 
+        changes: { 
+          add: [], 
+          remove: [minus1Base, minus1Base]}, 
+        checked: [false, false]
+      },
+      { text: 'Replace one (-1) card with one (+1) card',
+        changes: { 
+          add: [plus1EL], 
+          remove: [minus1Base]}, 
+        checked: [false]
+      },
+      { text: 'Replace one (+0) with one (+2) card',
+        changes: { 
+          add: [plus2EL], 
+          remove: [plus0Base]}, 
+        checked: [false, false]
+      },
+      { text: 'Add three (+0) [Fire] cards',
+        changes: { 
+          add: [plus0FireEL, plus0FireEL, plus0FireEL], 
+          remove: []}, 
+        checked: [false]
+      },
+      { text: 'Add three (+0) [Ice] cards',
+        changes: { 
+          add: [plus0IceEL, plus0IceEL, plus0IceEL], 
+          remove: []}, 
+        checked: [false]
+      },
+      { text: 'Add three (+0) [Air] cards',
+        changes: { 
+          add: [plus0AirEL, plus0AirEL, plus0AirEL], 
+          remove: []}, 
+        checked: [false]
+      },
+      { text: 'Add three (+0) [Earth] cards',
+        changes: { 
+          add: [plus0EarthEL, plus0EarthEL, plus0EarthEL], 
+          remove: []}, 
+        checked: [false]
+      },
+      { text: 'Replace two (+0) cards with one (+0) [Fire] card and one (+0) [Earth]',
+        changes: { 
+          add: [plus0FireEL, plus0EarthEL], 
+          remove: [plus0Base, plus0Base]}, 
+        checked: [false]
+      },
+      { text: 'Replace two (+0) cards with one (+0) [Ice] card and one (+0) [Air]',
+        changes: { 
+          add: [plus0IceEL, plus0AirEL], 
+          remove: [plus0Base, plus0Base]}, 
+        checked: [false]
+      },
+      { text: 'Add two (+1) [Push 1] cards',
+        changes: { 
+          add: [plus1PushEL, plus1PushEL], 
+          remove: []}, 
+        checked: [false]
+      },
+      { text: 'Add one (+1) [Wound] card',
+        changes: { 
+          add: [plus1WoundEL], 
+          remove: []}, 
+        checked: [false]
+      },
+      { text: 'Add one (+0) [Stun] card',
+        changes: { 
+          add: [plus0StunEL], 
+          remove: []}, 
+        checked: [false]
+      },
+      { text: 'Add one (+0) [Add Target] card',
+        changes: { 
+          add: [plus0AddTargetEL], 
+          remove: []}, 
+        checked: [false]
+      },
+    ]
+  },
+  { key: 'BT', text: 'Two Minis', value: 'Two Minis', cards: TwoMinisCards, image: { avatar: false, src: BT },
+    perks: [
+      { text: 'Remove two (-1) cards', 
+        changes: { 
+          add: [], 
+          remove: [minus1Base, minus1Base]}, 
+        checked: [false]
+      },
+      { text: 'Replace one (-1) cards with one (+1) card',
+        changes: { 
+          add: [plus1BT], 
+          remove: [minus1Base]}, 
+        checked: [false, false, false]
+      },
+      { text: 'Replace one (+0) card with one (+2) card',
+        changes: { 
+          add: [plus2BT], 
+          remove: [plus0Base]}, 
+        checked: [false, false]
+      },
+      { text: 'Add one (+1) [Wound] card',
+        changes: { 
+          add: [plus1WoundBT], 
+          remove: []}, 
+        checked: [false, false]
+      },
+      { text: 'Add one (+1) [Immobilize] card',
+        changes: { 
+          add: [plus1ImmobilizeBT], 
+          remove: []}, 
+        checked: [false, false]
+      },
+      { text: 'Add two rolling [Heal 1 Self] cards',
+        changes: { 
+          add: [rollingHeal1SelfBT, rollingHeal1SelfBT], 
+          remove: []}, 
+        checked: [false, false, false]
+      },
+      { text: 'Add two rolling [Earth] cards',
+        changes: { 
+          add: [rollingEarthBT, rollingEarthBT], 
+          remove: []}, 
+        checked: [false]
+      }
+    ]
+  },
   { key: 'DR', text: 'Diviner', value: 'Diviner', cards: DivinerCards, image: { avatar: false, src: DR },
     perks: [
       { text: 'Remove two (-1) cards', 
