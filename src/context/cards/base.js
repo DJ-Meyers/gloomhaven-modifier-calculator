@@ -16,4 +16,4 @@ export const minus2Base = { modifier: '-2', effect: none, rolling: false, source
 export const times2Base = { modifier: '*2', effect: none, rolling: false, source: 'base', img: Times2 };
 export const times0Base = { modifier: '*0', effect: none, rolling: false, source: 'base', img: Times0 };
 
-export const baseCards = [plus0Base, plus1Base, minus1Base, plus2Base, minus2Base, times2Base, times0Base];
+export const BaseCards = [plus0Base, plus1Base, minus1Base, plus2Base, minus2Base, times2Base, times0Base];

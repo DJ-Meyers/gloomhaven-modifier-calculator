@@ -17,9 +17,9 @@ export const plus2WoundSS = { modifier: '+2', effect: wound, rolling: false, sou
 export const plus2PoisonSS = { modifier: '+2', effect: poison, rolling: false, source: 'ss', img: Plus2Poison };
 export const plus2CurseSS = { modifier: '+2', effect: curse, rolling: false, source: 'ss', img: Plus2Curse };
 export const plus3MuddleSS = { modifier: '+3', effect: muddle, rolling: false, source: 'ss', img: Plus3Muddle };
-export const stunSS = { modifier: '+0', effect: stun, rolling: false, source: 'ss', img: Stun };
+export const plus0StunSS = { modifier: '+0', effect: stun, rolling: false, source: 'ss', img: Stun };
 export const plus4SS = { modifier: '+4', effect: none, rolling: false, source: 'ss', img: Plus4 };
 export const rollingPlus1SS = { modifier: '+1', effect: none, rolling: true, source: 'ss', img: RollingPlus1 };
 export const rollingCurseSS = { modifier: '+0', effect: curse, rolling: true, source: 'ss', img: RollingCurse };
 
-export const MusicNotesCards = [plus1ImmobilizeSS, plus1DisarmSS, plus2WoundSS, plus2PoisonSS, plus2CurseSS, plus3MuddleSS, stunSS, plus4SS, rollingPlus1SS, rollingCurseSS];
+export const MusicNotesCards = [plus1ImmobilizeSS, plus1DisarmSS, plus2WoundSS, plus2PoisonSS, plus2CurseSS, plus3MuddleSS, plus0StunSS, plus4SS, rollingPlus1SS, rollingCurseSS];
