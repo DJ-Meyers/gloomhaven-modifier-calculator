@@ -476,6 +476,70 @@ const classes = [
       }
     ],
   },
+  { key: 'SU', text: 'Circles', value: 'Circles', cards: CirclesCards, image: { avatar: false, src: SU },
+    perks: [
+      { text: 'Remove two (-1) cards', 
+        changes: { 
+          add: [], 
+          remove: [minus1Base, minus1Base]}, 
+        checked: [false]
+      },
+      { text: 'Replace one (-2) card with one (+0) card',
+        changes: { 
+          add: [plus0SU], 
+          remove: [minus2Base]}, 
+        checked: [false]
+      },
+      { text: 'Replace one (-1) cards with one (+1) card',
+        changes: { 
+          add: [plus1SU], 
+          remove: [minus1Base]}, 
+        checked: [false, false, false]
+      },
+      { text: 'Add one (+2) card',
+        changes: { 
+          add: [plus2SU], 
+          remove: []}, 
+        checked: [false, false]
+      },
+      { text: 'Add two rolling [Wound] cards',
+        changes: { 
+          add: [rollingWoundSU, rollingWoundSU], 
+          remove: []}, 
+        checked: [false]
+      },
+      { text: 'Add two rolling [Poison] cards',
+        changes: { 
+          add: [rollingPoisonSU, rollingPoisonSU], 
+          remove: []}, 
+        checked: [false]
+      },
+      { text: 'Add two rolling [Heal 1 Self] cards',
+        changes: { 
+          add: [rollingHeal1SelfSU, rollingHeal1SelfSU], 
+          remove: []}, 
+        checked: [false, false, false]
+      },
+      { text: 'Add one rolling [Fire] card and one rolling [Air] card',
+        changes: { 
+          add: [rollingFireSU, rollingAirSU], 
+          remove: []}, 
+        checked: [false]
+      },
+      { text: 'Add one rolling [Dark] card and one rolling [Earth] card',
+        changes: { 
+          add: [rollingDarkSU, rollingEarthSU], 
+          remove: []}, 
+        checked: [false]
+      },
+      { text: 'Ignore negative scenario effects and add two (+1) cards',
+        changes: { 
+          add: [plus1SU, plus1SU], 
+          remove: []}, 
+        checked: [false]
+      }
+    ]
+  },
   { key: 'PH', text: 'Cthulu', value: 'Cthulu', cards: CthuluCards, image: { avatar: false, src: PH },
     perks: [
       { text: 'Replace one (-2) card with one (+0) card', 
@@ -656,7 +720,6 @@ const classes = [
       }
     ]
   },
- 
   { key: 'SS', text: 'Music Notes', value: 'Music Notes', cards: MusicNotesCards, image: { avatar: false, src: SS },
     perks: [
       { text: 'Remove two (-1) cards', 
@@ -786,70 +849,6 @@ const classes = [
       { text: 'Add one (+0) [Refresh an Item] card',
         changes: { 
           add: [refreshItemSB], 
-          remove: []}, 
-        checked: [false]
-      }
-    ]
-  },
-  { key: 'SU', text: 'Circles', value: 'Summoner', cards: CirclesCards, image: { avatar: false, src: SU },
-    perks: [
-      { text: 'Remove two (-1) cards', 
-        changes: { 
-          add: [], 
-          remove: [minus1Base, minus1Base]}, 
-        checked: [false]
-      },
-      { text: 'Replace one (-2) card with one (+0) card',
-        changes: { 
-          add: [plus0SU], 
-          remove: [minus2Base]}, 
-        checked: [false]
-      },
-      { text: 'Replace one (-1) cards with one (+1) card',
-        changes: { 
-          add: [plus1SU], 
-          remove: [minus1Base]}, 
-        checked: [false, false, false]
-      },
-      { text: 'Add one (+2) card',
-        changes: { 
-          add: [plus2SU], 
-          remove: []}, 
-        checked: [false, false]
-      },
-      { text: 'Add two rolling [Wound] cards',
-        changes: { 
-          add: [rollingWoundSU, rollingWoundSU], 
-          remove: []}, 
-        checked: [false]
-      },
-      { text: 'Add two rolling [Poison] cards',
-        changes: { 
-          add: [rollingPoisonSU, rollingPoisonSU], 
-          remove: []}, 
-        checked: [false]
-      },
-      { text: 'Add two rolling [Heal 1 Self] cards',
-        changes: { 
-          add: [rollingHeal1SelfSU, rollingHeal1SelfSU], 
-          remove: []}, 
-        checked: [false, false, false]
-      },
-      { text: 'Add one rolling [Fire] card and one rolling [Air] card',
-        changes: { 
-          add: [rollingFireSU, rollingAirSU], 
-          remove: []}, 
-        checked: [false]
-      },
-      { text: 'Add one rolling [Dark] card and one rolling [Earth] card',
-        changes: { 
-          add: [rollingDarkSU, rollingEarthSU], 
-          remove: []}, 
-        checked: [false]
-      },
-      { text: 'Ignore negative scenario effects and add two (+1) cards',
-        changes: { 
-          add: [plus1SU, plus1SU], 
           remove: []}, 
         checked: [false]
       }
