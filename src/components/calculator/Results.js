@@ -6,7 +6,7 @@ const Results = (props) => {
     <Fragment>
       <Header size='small'>Results</Header>
       <Grid>
-        <Grid.Column className='atk'>
+        <Grid.Column className='centered'>
           <Statistic value={`${props.values.averageDamage === null ? '-' : props.values.averageDamage.toFixed(2)}`} label='Average Damage' size='mini'/>
           <Divider />
           <Statistic value={`${props.values.killPct === null ? '-' : props.values.killPct.toFixed(2)}%`} label='Kill %' size='mini'/>

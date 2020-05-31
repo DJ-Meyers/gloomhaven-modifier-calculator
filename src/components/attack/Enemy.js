@@ -6,14 +6,14 @@ const Enemy = ({hp, shield, setHP, setShield}) => {
     <Fragment>
       <Header size='small'>Enemy</Header>
       <Grid columns='equal' stackable>
-        <Grid.Column className='atk'>
+        <Grid.Column className='centered'>
           <Input fluid type='number' min='0'
               value={hp} onChange={(e, d)=>{setHP(d.value)}}>
             <Label attached='top'>HP</Label>
             <input />
           </Input>
         </Grid.Column>
-        <Grid.Column className='atk'>
+        <Grid.Column className='centered'>
           <Input fluid type='number' min='0'
               value={shield} onChange={(e, d)=>{setShield(d.value)}}>
             <Label attached='top'>Shield</Label>

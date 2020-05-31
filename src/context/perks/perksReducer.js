@@ -1,4 +1,4 @@
-import { SET_CLASS, TOGGLE_PERK } from '../Types';
+import { SET_CLASS, TOGGLE_PERK, RESET_PERKS } from '../Types';
 
 export default (state, action) => {
   switch (action.type) {
@@ -21,6 +21,17 @@ export default (state, action) => {
         }
           
       }
+    case RESET_PERKS:
+      console.log('resetting perks');
+      return {
+        ...state,
+        selectedClass: 
+        {
+          ...state.selectedClass,
+          perks: state.selectedClass.perks.map((perk) => perk = {...perk, checked: perk.checked.map((check, index) => false)}
+         )
+        }          
+      };
     default:
       return state;
   }

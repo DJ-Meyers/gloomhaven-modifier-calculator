@@ -389,7 +389,7 @@ function applyModifier(card, attack) {
   
   switch (operation) {
     case '+':
-      return Math.max(attack.attackDamage + modifier - Math.max(attack.enemyShield - attack.attackPierce, 0), 0);
+      return Math.max(parseInt(attack.attackDamage) + parseInt(modifier) - Math.max(attack.enemyShield - attack.attackPierce, 0), 0);
     case '-':
       return Math.max(attack.attackDamage - modifier - Math.max(attack.enemyShield - attack.attackPierce, 0), 0);
     case '*':

@@ -6,7 +6,7 @@ const Trials = ({trials, setTrials}) => {
     <Fragment>
       <Header size='small'>Parameters</Header>
       <Grid columns='equal' stackable>
-        <Grid.Column className='atk'>
+        <Grid.Column className='centered'>
           <Input fluid type='number' min='0'
               value={trials} onChange={(e, d)=>{setTrials(d.value)}}>
             <Label attached='top'>Trials</Label>

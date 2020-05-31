@@ -15,7 +15,7 @@ const DetailsContainer = () => {
   } = calculatorContext;
 
   return (
-    <Modal trigger={<Button compact floated='right'>Show Details</Button>} >
+    <Modal trigger={<Button compact fluid >Advanced</Button>} >
       <Modal.Header>Advanced Details</Modal.Header>
       <Modal.Content className='chart' >
         <Header>Damage Histogram</Header>

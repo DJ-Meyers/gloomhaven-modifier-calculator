@@ -2,7 +2,8 @@ import {
   DISCARD,
   UNDISCARD,
   UPDATE_UNIQUES,
-  APPLY_PERKS
+  MODIFY_DECK,
+  RESET_DECK
  } from '../Types';
 
  import { getKey } from './uniques';
@@ -11,18 +12,20 @@ export default (state, action) => {
   switch (action.type) {
     case UPDATE_UNIQUES:
 
+      let uniqueDeck = state.deckUniques.slice();
+      let uniqueDiscardPile = state.discardUniques.slice();
       // Reset Counts
-      state.deckUniques.forEach(card => {
+      uniqueDeck.forEach(card => {
         card.count = 0;
       });
-      state.discardUniques.forEach(card => {
+      uniqueDiscardPile.forEach(card => {
         card.count = 0;
       });
 
       // Recalculate unique deck cards
       state.deck.forEach(card => {
         let key = getKey(card);
-        state.deckUniques.forEach(unique => {
+        uniqueDeck.forEach(unique => {
           if (key === unique.key) {
             unique.count += 1;
           }
@@ -32,7 +35,7 @@ export default (state, action) => {
       // Recalculate unique discarded cards
       state.discardPile.forEach(card => {
         let key = getKey(card);
-        state.discardUniques.forEach(unique => {
+        uniqueDiscardPile.forEach(unique => {
           if (key === unique.key) {
             unique.count += 1;
           }
@@ -41,12 +44,12 @@ export default (state, action) => {
 
       return {
         ...state,
-        deckUniques: state.deckUniques,
-        discardUniques: state.discardUniques
+        deckUniques: uniqueDeck,
+        discardUniques: uniqueDiscardPile
       }
     case DISCARD:
       // Remove card from deck, add it to discardPile
-      let discardIndex = state.deck.map(function(card) { return card.modifier }).indexOf(action.payload.modifier);
+      let discardIndex = state.deck.map(c => c).indexOf(action.payload);
 
       let discardDeck = state.deck.slice();
       let discardDiscard = state.discardPile.slice();
@@ -62,7 +65,7 @@ export default (state, action) => {
         discardPile: discardDiscard
       }
     case UNDISCARD:
-      let undiscardIndex = state.discardPile.map(function(card) { return card.modifier }).indexOf(action.payload.modifier);
+      let undiscardIndex = state.discardPile.map(c => c).indexOf(action.payload);
 
       let undiscardDeck = state.deck.slice();
       let undiscardDiscard = state.discardPile.slice();
@@ -77,21 +80,28 @@ export default (state, action) => {
         deck: undiscardDeck,
         discardPile: undiscardDiscard
       }
-    case APPLY_PERKS:
-      let deckCopy = state.startingDeck.slice();
+    case MODIFY_DECK:
+      let perksCopy = state.deck.slice();
 
       action.payload.cardsToAdd.forEach(card => {
-        deckCopy.splice(0, 0, card);
+        perksCopy.splice(0, 0, card);
       });
+      
       // remove
       action.payload.cardsToRemove.forEach(card => {
-        let index = deckCopy.findIndex(c => c.modifier === card.modifier && c.effect === card.effect && c.rolling === card.rolling && c.source === card.source);
-        deckCopy.splice(index, 1);
+        let index = perksCopy.findIndex(c => c.modifier === card.modifier && c.effect === card.effect && c.rolling === card.rolling && c.source === card.source);
+        perksCopy.splice(index, 1);
       });
 
       return {
         ...state,
-        deck: deckCopy
+        deck: perksCopy
+      };
+    case RESET_DECK:
+      return {
+        ...state,
+        deck: state.startingDeck,
+        discardPile: []
       }
     default:
       return state;

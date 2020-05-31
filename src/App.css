@@ -23,7 +23,7 @@ p > span {
   max-height: 30px !important;
   object-fit: contain;
 }
-.ui.header, .atk, .chart {
+.ui.header, .centered, .chart {
   text-align: center;
 }
 

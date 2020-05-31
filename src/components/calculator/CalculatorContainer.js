@@ -42,9 +42,15 @@ const CalculatorContainer = () => {
         <Grid.Column>
           <Trials trials={trials} setTrials={setTrials} />
           <Results values={{averageDamage, killPct, negativeDrawPct}}/>
-          <Button compact floated='right' content='Calculate' onClick={()=>{
-            calculateDamage({advantage, disadvantage, attackDamage, attackPierce, enemyHP, enemyShield}, deck)}} />
-          <DetailsContainer />
+          <Grid columns='equal'>
+            <Grid.Column className='centered'>
+              <DetailsContainer />
+            </Grid.Column>
+            <Grid.Column className='centered'>
+              <Button compact fluid content='Calculate' onClick={()=>{
+                calculateDamage({advantage, disadvantage, attackDamage, attackPierce, enemyHP, enemyShield}, deck)}} />
+            </Grid.Column>
+          </Grid>
         </Grid.Column>
       </Grid>
     </Segment>

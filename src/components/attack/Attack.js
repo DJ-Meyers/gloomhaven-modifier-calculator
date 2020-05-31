@@ -6,14 +6,14 @@ const Attack = ({damage, setDamage, pierce, setPierce}) => {
     <Fragment>
       <Header size='small'>Attack</Header>
       <Grid columns='equal' stackable>
-        <Grid.Column className='atk'>
+        <Grid.Column className='centered'>
           <Input fluid type='number' min='0'
               value={damage} onChange={(e, d)=>{setDamage(d.value)}}>
             <Label attached='top'>Damage</Label>
             <input />
           </Input>
         </Grid.Column>
-        <Grid.Column className='atk'>
+        <Grid.Column className='centered'>
           <Input fluid type='number' min='0'
               value={pierce} onChange={(e, d)=>{setPierce(d.value)}}>
             <Label attached='top'>Pierce</Label>

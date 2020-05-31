@@ -2,8 +2,10 @@ import React, { useReducer } from 'react';
 import PerksContext from './perksContext';
 import PerksReducer from './perksReducer';
 
-import { SET_CLASS, TOGGLE_PERK } from '../Types';
+import { SET_CLASS, TOGGLE_PERK, RESET_PERKS} from '../Types';
 import Classes from './Classes';
+import DeckState from '../deck/deckState';
+import deckContext from '../deck/deckContext';
 
 const PerksState = props => {
 
@@ -19,6 +21,8 @@ const PerksState = props => {
       type: SET_CLASS,
       payload: newClass
     });
+
+    
   };
 
   const togglePerk = (perk, index) => {
@@ -30,7 +34,15 @@ const PerksState = props => {
         value: perk.checked[index]
       }
     });
+  };
 
+  const resetPerks = (selectedClass) => {
+    dispatch({
+      type: RESET_PERKS,
+      payload: {
+        selectedClass
+      }
+    });
   }
 
   return (
@@ -39,9 +51,10 @@ const PerksState = props => {
         classes: state.classes,
         selectedClass: state.selectedClass,
         setClass,
-        togglePerk
+        togglePerk,
+        resetPerks
       }}>
-        {props.children}
+      {props.children}
     </PerksContext.Provider>
   );
 };

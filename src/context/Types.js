@@ -1,12 +1,16 @@
 // Perks Context
 export const SET_CLASS = 'SET_CLASS';
 export const TOGGLE_PERK = 'TOGGLE_PERK';
+export const RESET_PERKS = 'RESET_PERKS';
 
 // Deck Context
 export const DISCARD = 'DISCARD';
 export const UNDISCARD = 'UNDISCARD';
 export const UPDATE_UNIQUES = 'UPDATE_UNIQUES';
-export const APPLY_PERKS = 'APPLY_PERKS';
+export const APPLY_PERK = 'APPLY_PERK';
+export const UNDO_PERK = 'UNDO_PERK';
+export const MODIFY_DECK = 'MODIFY_DECK';
+export const RESET_DECK = 'RESET_DECK';
 
 // Attack Context
 export const TOGGLE_ADV = 'TOGGLE_ADV';

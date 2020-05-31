@@ -2,9 +2,10 @@ import React, { useReducer, useEffect } from 'react';
 import DeckContext from './deckContext';
 import DeckReducer from './deckReducer';
 
-import { DISCARD, UNDISCARD, UPDATE_UNIQUES, APPLY_PERKS } from '../Types';
+import { DISCARD, UNDISCARD, UPDATE_UNIQUES, MODIFY_DECK, RESET_DECK } from '../Types';
 import startingDeck from './startingDeck';
 import uniques from './uniques';
+import { bless, curse } from '../cards/base';
 
 
 
@@ -64,14 +65,46 @@ const DeckState = props => {
     });
 
     dispatch({
-      type: APPLY_PERKS,
+      type: MODIFY_DECK,
       payload: {
         cardsToAdd,
         cardsToRemove
       }
-    })
+    });
 
     updateUniques();
+  };
+
+  const applyPerk = (perk) => {
+
+    dispatch({
+      type: MODIFY_DECK,
+      payload: {
+        cardsToAdd: perk.changes.add,
+        cardsToRemove: perk.changes.remove
+      }
+    });
+  };
+
+  const undoPerk = (perk) => {
+
+    dispatch({
+      type: MODIFY_DECK,
+      payload: {
+        cardsToAdd: perk.changes.remove,
+        cardsToRemove: perk.changes.add
+      }
+    });
+  }
+
+  const addCard = (card) => {
+    dispatch({
+      type: MODIFY_DECK,
+      payload: {
+        cardsToAdd: [card,],
+        cardsToRemove: []
+      }
+    });
   };
 
   const updateUniques = () => {
@@ -79,7 +112,14 @@ const DeckState = props => {
       type: UPDATE_UNIQUES,
       payload: null
     })    
-  }
+  };
+
+  const resetDeck = () => {
+    dispatch({
+      type: RESET_DECK,
+      payload: null
+    })
+  };
 
   
 
@@ -93,7 +133,11 @@ const DeckState = props => {
         discard,
         undiscard,
         applyPerks,
+        applyPerk,
+        undoPerk,
         updateUniques,
+        addCard,
+        resetDeck
       }}>
         {props.children}
     </DeckContext.Provider>

@@ -1194,12 +1194,4 @@ const classes = [
   }
 ];
 
-const remove = (modifier) => {
-  console.log(modifier);
-};
-
-const add = (modifier) => {
-  console.log(modifier);
-}
-
 export default classes;
