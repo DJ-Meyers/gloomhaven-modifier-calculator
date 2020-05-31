@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Modal, Segment, Header, Grid, Button } from 'semantic-ui-react';
+import { Modal, Header, Button } from 'semantic-ui-react';
 import DamageHistogram from './DamageHistogram';
 import EffectsGraph from './EffectsGraph';
 

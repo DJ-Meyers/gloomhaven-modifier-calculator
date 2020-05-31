@@ -18,7 +18,7 @@ import QM from '../../gloomhaven/images/class-icons/QM.png';
 import TI from '../../gloomhaven/images/class-icons/TI.png';
 import EL from '../../gloomhaven/images/class-icons/EL.png';
 
-import { plus0Base, plus1Base, minus1Base, plus2Base, minus2Base, times2Base, times0Base, BaseCards } from '../cards/base';
+import { plus0Base, plus1Base, minus1Base, minus2Base, BaseCards } from '../cards/base';
 import { plus1DS, rollingPlus1DS, plus2MuddleDS, plus1PoisonDS, plus1WoundDS, plus1ImmobilizeDS, plus0StunDS, rollingAddTargetDS, AngryFaceCards } from '../cards/angry face';
 import { plus1BR, plus3BR, rollingPush1BR, rollingStunBR, rollingDisarmBR, rollingMuddleBR, rollingAddTargetBR, plus1Shield1SelfBR, BruteCards } from '../cards/brute';
 import { plus1CH, minus2CH, plus2CH, plus1ImmobilizeCH, plus2MuddleCH, rollingPush2CH, rollingEarthCH, rollingAirCH, CragheartCards } from '../cards/cragheart';

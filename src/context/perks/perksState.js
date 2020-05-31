@@ -4,8 +4,6 @@ import PerksReducer from './perksReducer';
 
 import { SET_CLASS, TOGGLE_PERK, RESET_PERKS} from '../Types';
 import Classes from './Classes';
-import DeckState from '../deck/deckState';
-import deckContext from '../deck/deckContext';
 
 const PerksState = props => {
 

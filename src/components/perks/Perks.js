@@ -1,7 +1,18 @@
 import React, { Fragment } from 'react';
-import { Header, List, Checkbox, Image } from 'semantic-ui-react';
+import { Header, List, Checkbox } from 'semantic-ui-react';
 
 const Perks = (props) => { 
+
+  const insertIcon = (text) => {
+         
+    // let effects = (text.match(/\[.+?\]/g) || [] )
+    // let effects = (text.match(/\[([^)]+)\]/g) || [] )
+    //   .map(str => console.log(str));
+  
+    return (
+    <span>{text}</span>
+    );
+  };
 
   return (
     <Fragment>
@@ -28,7 +39,7 @@ const Perks = (props) => {
                         props.undo(perk);
                       }
                     }}/>)
-                  })} {perk.text}</List.Content>
+                  })} {insertIcon(perk.text)} </List.Content>
                 </List.Item>)
             })}
           </List>

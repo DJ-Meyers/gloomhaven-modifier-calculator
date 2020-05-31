@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import { Segment, Header, Grid, Dropdown } from 'semantic-ui-react';
 import PerksContext from '../../context/perks/perksContext';
 import DeckContext from '../../context/deck/deckContext';
@@ -12,8 +12,7 @@ const PerksContainer = () => {
     classes,
     selectedClass,
     setClass,
-    togglePerk,
-    resetPerks
+    togglePerk
   } = perksContext;
 
   const deckContext = useContext(DeckContext);
@@ -33,7 +32,7 @@ const PerksContainer = () => {
       <Header size='medium'>Perks</Header>
       <Grid>
         <Grid.Column>
-          <Dropdown placeholder='Select Class' fluid search selection search options={classes} onChange={onChange}/>
+          <Dropdown placeholder='Select Class' fluid search selection options={classes} onChange={onChange}/>
           <Perks character={selectedClass} toggle={togglePerk} apply={applyPerk} undo={undoPerk} />
           <BlessCurse />
         </Grid.Column>

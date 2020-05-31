@@ -22,7 +22,6 @@ export default (state, action) => {
           
       }
     case RESET_PERKS:
-      console.log('resetting perks');
       return {
         ...state,
         selectedClass: 

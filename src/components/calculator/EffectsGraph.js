@@ -1,11 +1,9 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Header } from 'semantic-ui-react';
-import { XYPlot, XAxis, YAxis, VerticalGridLines, HorizontalGridLines, VerticalBarSeries } from 'react-vis';
+import { XYPlot, XAxis, YAxis, HorizontalGridLines, VerticalBarSeries } from 'react-vis';
 import '../../../node_modules/react-vis/dist/style.css';
 
 const EffectsGraph = (props) => {
-
-  console.log(props.bins);
 
   return (
     props === undefined || props === null || props.bins.length === 0 ?
