@@ -18,6 +18,7 @@ const DeckContainer = () => {
     // Initialize
 
     updateUniques();
+    // eslint-disable-next-line
   }, []);
 
   return (
