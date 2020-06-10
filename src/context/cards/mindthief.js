@@ -1,12 +1,12 @@
-import Plus2 from '../../gloomhaven/images/attack-modifiers/MT/am-mt-01.png';
-import Plus0 from '../../gloomhaven/images/attack-modifiers/MT/am-mt-03.png';
-import Plus2Ice from '../../gloomhaven/images/attack-modifiers/MT/am-mt-04.png';
-import RollingPlus1 from '../../gloomhaven/images/attack-modifiers/MT/am-mt-06.png';
-import RollingPull1 from '../../gloomhaven/images/attack-modifiers/MT/am-mt-10.png';
-import RollingMuddle from '../../gloomhaven/images/attack-modifiers/MT/am-mt-13.png';
-import RollingImmobilize from '../../gloomhaven/images/attack-modifiers/MT/am-mt-17.png';
-import RollingStun from '../../gloomhaven/images/attack-modifiers/MT/am-mt-19.png';
-import RollingDisarm from '../../gloomhaven/images/attack-modifiers/MT/am-mt-20.png';
+import Plus2 from '../../assets/images/attack-modifiers/Mindthief/Plus2.png';
+import Plus0 from '../../assets/images/attack-modifiers/Mindthief/Plus0.png';
+import Plus2Ice from '../../assets/images/attack-modifiers/Mindthief/Plus2Ice.png';
+import RollingPlus1 from '../../assets/images/attack-modifiers/Mindthief/RollingPlus1.png';
+import RollingPull1 from '../../assets/images/attack-modifiers/Mindthief/RollingPull1.png';
+import RollingMuddle from '../../assets/images/attack-modifiers/Mindthief/RollingMuddle.png';
+import RollingImmobilize from '../../assets/images/attack-modifiers/Mindthief/RollingImmobilize.png';
+import RollingStun from '../../assets/images/attack-modifiers/Mindthief/RollingStun.png';
+import RollingDisarm from '../../assets/images/attack-modifiers/Mindthief/RollingDisarm.png';
 
 import { none, stun, ice, muddle, immobilize, pull, disarm } from './effects';
 

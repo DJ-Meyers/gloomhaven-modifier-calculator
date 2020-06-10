@@ -1,11 +1,11 @@
-import Plus1 from '../../gloomhaven/images/attack-modifiers/PH/am-ph-01.png';
-import Plus2 from '../../gloomhaven/images/attack-modifiers/PH/am-ph-02.png';
-import Plus1Air from '../../gloomhaven/images/attack-modifiers/PH/am-ph-04.png';
-import RollingPoison from '../../gloomhaven/images/attack-modifiers/PH/am-ph-07.png';
-import RollingCurse from '../../gloomhaven/images/attack-modifiers/PH/am-ph-10.png';
-import RollingImmobilize from '../../gloomhaven/images/attack-modifiers/PH/am-ph-12.png';
-import RollingStun from '../../gloomhaven/images/attack-modifiers/PH/am-ph-14.png';
-import Plus0 from '../../gloomhaven/images/attack-modifiers/PH/am-ph-16.png';
+import Plus1 from '../../assets/images/attack-modifiers/Cthulu/Plus1.png';
+import Plus2 from '../../assets/images/attack-modifiers/Cthulu/Plus2.png';
+import Plus1Air from '../../assets/images/attack-modifiers/Cthulu/Plus1Air.png';
+import RollingPoison from '../../assets/images/attack-modifiers/Cthulu/RollingPoison.png';
+import RollingCurse from '../../assets/images/attack-modifiers/Cthulu/RollingCurse.png';
+import RollingImmobilize from '../../assets/images/attack-modifiers/Cthulu/RollingImmobilize.png';
+import RollingStun from '../../assets/images/attack-modifiers/Cthulu/RollingStun.png';
+import Plus0 from '../../assets/images/attack-modifiers/Cthulu/Plus0.png';
 
 import { none, air, poison, curse, immobilize, stun } from './effects';
 

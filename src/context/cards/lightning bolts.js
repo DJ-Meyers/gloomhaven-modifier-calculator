@@ -1,10 +1,10 @@
-import RollingPlus2 from '../../gloomhaven/images/attack-modifiers/BE/am-be-01.png';
-import RollingWound from '../../gloomhaven/images/attack-modifiers/BE/am-be-02.png';
-import RollingStun from '../../gloomhaven/images/attack-modifiers/BE/am-be-06.png';
-import RollingPlus1Disarm from '../../gloomhaven/images/attack-modifiers/BE/am-be-08.png';
-import RollingHeal1Self from '../../gloomhaven/images/attack-modifiers/BE/am-be-09.png';
-import Plus2Fire from '../../gloomhaven/images/attack-modifiers/BE/am-be-11.png';
-import Plus1 from '../../gloomhaven/images/attack-modifiers/BE/am-be-13.png';
+import RollingPlus2 from '../../assets/images/attack-modifiers/Lightning Bolts/RollingPlus2.png';
+import RollingWound from '../../assets/images/attack-modifiers/Lightning Bolts/RollingWound.png';
+import RollingStun from '../../assets/images/attack-modifiers/Lightning Bolts/RollingStun.png';
+import RollingPlus1Disarm from '../../assets/images/attack-modifiers/Lightning Bolts/RollingPlus1Disarm.png';
+import RollingHeal1Self from '../../assets/images/attack-modifiers/Lightning Bolts/RollingHeal1Self.png';
+import Plus2Fire from '../../assets/images/attack-modifiers/Lightning Bolts/Plus2Fire.png';
+import Plus1 from '../../assets/images/attack-modifiers/Lightning Bolts/Plus1.png';
 
 import { none, wound, stun, fire, disarm, healSelf } from './effects';
 

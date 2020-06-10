@@ -3,8 +3,8 @@ import { Button, Grid, Image } from 'semantic-ui-react';
 import DeckContext from '../../context/deck/deckContext';
 import PerksContext from '../../context/perks/perksContext';
 
-import Bless from '../../gloomhaven/images/status-icons/Bless.png';
-import Curse from '../../gloomhaven/images/status-icons/Curse.png';
+import Bless from '../../assets/images/icons/Effects/Bless.png';
+import Curse from '../../assets/images/icons/Effects/Curse.png';
 import { bless, curse } from '../../context/cards/base';
 
 const BlessCurse = () => { 

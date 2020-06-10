@@ -1,12 +1,12 @@
-import Plus0 from '../../gloomhaven/images/attack-modifiers/TI/am-ti-01.png';
-import Plus1 from '../../gloomhaven/images/attack-modifiers/TI/am-ti-02.png';
-import Plus3 from '../../gloomhaven/images/attack-modifiers/TI/am-ti-04.png';
-import RollingFire from '../../gloomhaven/images/attack-modifiers/TI/am-ti-05.png';
-import RollingMuddle from '../../gloomhaven/images/attack-modifiers/TI/am-ti-07.png';
-import Plus1Wound from '../../gloomhaven/images/attack-modifiers/TI/am-ti-10.png';
-import Plus1Immobilize from '../../gloomhaven/images/attack-modifiers/TI/am-ti-12.png';
-import Plus1Heal2Self from '../../gloomhaven/images/attack-modifiers/TI/am-ti-14.png';
-import Plus0AddTarget from '../../gloomhaven/images/attack-modifiers/TI/am-ti-16.png';
+import Plus0 from '../../assets/images/attack-modifiers/Tinkerer/Plus0.png';
+import Plus1 from '../../assets/images/attack-modifiers/Tinkerer/Plus1.png';
+import Plus3 from '../../assets/images/attack-modifiers/Tinkerer/Plus3.png';
+import RollingFire from '../../assets/images/attack-modifiers/Tinkerer/RollingFire.png';
+import RollingMuddle from '../../assets/images/attack-modifiers/Tinkerer/RollingMuddle.png';
+import Plus1Wound from '../../assets/images/attack-modifiers/Tinkerer/Plus1Wound.png';
+import Plus1Immobilize from '../../assets/images/attack-modifiers/Tinkerer/Plus1Immobilize.png';
+import Plus1Heal2Self from '../../assets/images/attack-modifiers/Tinkerer/Plus1Heal2Self.png';
+import Plus0AddTarget from '../../assets/images/attack-modifiers/Tinkerer/Plus0AddTarget.png';
 
 import { none, fire, muddle, wound, immobilize, healSelf, addTarget } from './effects';
 

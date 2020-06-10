@@ -1,11 +1,11 @@
-import Plus1Dark from '../../gloomhaven/images/attack-modifiers/NS/am-ns-01.png';
-import Plus1Invisible from '../../gloomhaven/images/attack-modifiers/NS/am-ns-03.png';
-import RollingMuddle from '../../gloomhaven/images/attack-modifiers/NS/am-ns-05.png';
-import RollingHeal1Self from '../../gloomhaven/images/attack-modifiers/NS/am-ns-11.png';
-import RollingCurse from '../../gloomhaven/images/attack-modifiers/NS/am-ns-13.png';
-import RollingAddTarget from '../../gloomhaven/images/attack-modifiers/NS/am-ns-15.png';
-import Plus1 from '../../gloomhaven/images/attack-modifiers/NS/am-ns-16.png';
-import Minus1Dark from '../../gloomhaven/images/attack-modifiers/NS/am-ns-18.png';
+import Plus1Dark from '../../assets/images/attack-modifiers/Eclipse/Plus1Dark.png';
+import Plus1Invisible from '../../assets/images/attack-modifiers/Eclipse/Plus1Invisible.png';
+import RollingMuddle from '../../assets/images/attack-modifiers/Eclipse/RollingMuddle.png';
+import RollingHeal1Self from '../../assets/images/attack-modifiers/Eclipse/RollingHeal1Self.png';
+import RollingCurse from '../../assets/images/attack-modifiers/Eclipse/RollingCurse.png';
+import RollingAddTarget from '../../assets/images/attack-modifiers/Eclipse/RollingAddTarget.png';
+import Plus1 from '../../assets/images/attack-modifiers/Eclipse/Plus1.png';
+import Minus1Dark from '../../assets/images/attack-modifiers/Eclipse/Minus1Dark.png';
 
 import { none, dark, invisible, muddle, healSelf, curse, addTarget } from './effects';
 

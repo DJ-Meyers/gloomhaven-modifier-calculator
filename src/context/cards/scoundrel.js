@@ -1,11 +1,11 @@
-import Plus0 from '../../gloomhaven/images/attack-modifiers/SC/am-sc-01.png';
-import Plus1 from '../../gloomhaven/images/attack-modifiers/SC/am-sc-02.png';
-import Plus2 from '../../gloomhaven/images/attack-modifiers/SC/am-sc-03.png';
-import RollingPlus1 from '../../gloomhaven/images/attack-modifiers/SC/am-sc-05.png';
-import RollingPierce3 from '../../gloomhaven/images/attack-modifiers/SC/am-sc-09.png';
-import RollingPoison from '../../gloomhaven/images/attack-modifiers/SC/am-sc-11.png';
-import RollingMuddle from '../../gloomhaven/images/attack-modifiers/SC/am-sc-15.png';
-import RollingInvisible from '../../gloomhaven/images/attack-modifiers/SC/am-sc-17.png';
+import Plus0 from '../../assets/images/attack-modifiers/Scoundrel/Plus0.png';
+import Plus1 from '../../assets/images/attack-modifiers/Scoundrel/Plus1.png';
+import Plus2 from '../../assets/images/attack-modifiers/Scoundrel/Plus2.png';
+import RollingPlus1 from '../../assets/images/attack-modifiers/Scoundrel/RollingPlus1.png';
+import RollingPierce3 from '../../assets/images/attack-modifiers/Scoundrel/RollingPierce3.png';
+import RollingPoison from '../../assets/images/attack-modifiers/Scoundrel/RollingPoison.png';
+import RollingMuddle from '../../assets/images/attack-modifiers/Scoundrel/RollingMuddle.png';
+import RollingInvisible from '../../assets/images/attack-modifiers/Scoundrel/RollingInvisible.png';
 
 import { none, pierce, poison, muddle, invisible } from './effects';
 

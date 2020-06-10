@@ -1,11 +1,11 @@
-import RollingPlus1 from '../../gloomhaven/images/attack-modifiers/QM/am-qm-01.png';
-import RollingMuddle from '../../gloomhaven/images/attack-modifiers/QM/am-qm-03.png';
-import RollingPierce3 from '../../gloomhaven/images/attack-modifiers/QM/am-qm-06.png';
-import RollingStun from '../../gloomhaven/images/attack-modifiers/QM/am-qm-08.png';
-import RollingAddTarget from '../../gloomhaven/images/attack-modifiers/QM/am-qm-09.png';
-import Plus0RefreshItem from '../../gloomhaven/images/attack-modifiers/QM/am-qm-11.png';
-import Plus1 from '../../gloomhaven/images/attack-modifiers/QM/am-qm-13.png';
-import Plus2 from '../../gloomhaven/images/attack-modifiers/QM/am-qm-15.png';
+import RollingPlus1 from '../../assets/images/attack-modifiers/Three Spears/RollingPlus1.png';
+import RollingMuddle from '../../assets/images/attack-modifiers/Three Spears/RollingMuddle.png';
+import RollingPierce3 from '../../assets/images/attack-modifiers/Three Spears/RollingPierce3.png';
+import RollingStun from '../../assets/images/attack-modifiers/Three Spears/RollingStun.png';
+import RollingAddTarget from '../../assets/images/attack-modifiers/Three Spears/RollingAddTarget.png';
+import Plus0RefreshItem from '../../assets/images/attack-modifiers/Three Spears/Plus0RefreshItem.png';
+import Plus1 from '../../assets/images/attack-modifiers/Three Spears/Plus1.png';
+import Plus2 from '../../assets/images/attack-modifiers/Three Spears/Plus2.png';
 
 import { none, muddle, pierce, stun, addTarget, refreshItem } from './effects';
 

@@ -1,9 +1,9 @@
-import Plus2 from '../../gloomhaven/images/attack-modifiers/BT/am-bt-01.png';
-import Plus1Wound from '../../gloomhaven/images/attack-modifiers/BT/am-bt-02.png';
-import Plus1Immobilize from '../../gloomhaven/images/attack-modifiers/BT/am-bt-03.png';
-import RollingHeal1Self from '../../gloomhaven/images/attack-modifiers/BT/am-bt-06.png';
-import RollingEarth from '../../gloomhaven/images/attack-modifiers/BT/am-bt-12.png';
-import Plus1 from '../../gloomhaven/images/attack-modifiers/BT/am-bt-14.png';
+import Plus2 from '../../assets/images/attack-modifiers/Two Minis/Plus2.png';
+import Plus1Wound from '../../assets/images/attack-modifiers/Two Minis/Plus1Wound.png';
+import Plus1Immobilize from '../../assets/images/attack-modifiers/Two Minis/Plus1Immobilize.png';
+import RollingHeal1Self from '../../assets/images/attack-modifiers/Two Minis/RollingHeal1Self.png';
+import RollingEarth from '../../assets/images/attack-modifiers/Two Minis/RollingEarth.png';
+import Plus1 from '../../assets/images/attack-modifiers/Two Minis/Plus1.png';
 
 import { none, wound, immobilize, healSelf, earth } from './effects';
 

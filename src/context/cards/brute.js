@@ -1,12 +1,12 @@
-import RollingPierce3 from '../../gloomhaven/images/attack-modifiers/BR/am-br-01.png';
-import RollingStun from '../../gloomhaven/images/attack-modifiers/BR/am-br-02.png';
-import RollingDisarm from '../../gloomhaven/images/attack-modifiers/BR/am-br-04.png';
-import RollingMuddle from '../../gloomhaven/images/attack-modifiers/BR/am-br-05.png';
-import RollingAddTarget from '../../gloomhaven/images/attack-modifiers/BR/am-br-06.png';
-import Plus1Shield1Self from '../../gloomhaven/images/attack-modifiers/BR/am-br-08.png';
-import Plus1 from '../../gloomhaven/images/attack-modifiers/BR/am-br-09.png';
-import Plus3 from '../../gloomhaven/images/attack-modifiers/BR/am-br-15.png';
-import RollingPush1 from '../../gloomhaven/images/attack-modifiers/BR/am-br-16.png';
+import RollingPierce3 from '../../assets/images/attack-modifiers/Brute/RollingPierce3.png';
+import RollingStun from '../../assets/images/attack-modifiers/Brute/RollingStun.png';
+import RollingDisarm from '../../assets/images/attack-modifiers/Brute/RollingDisarm.png';
+import RollingMuddle from '../../assets/images/attack-modifiers/Brute/RollingMuddle.png';
+import RollingAddTarget from '../../assets/images/attack-modifiers/Brute/RollingAddTarget.png';
+import Plus1Shield1Self from '../../assets/images/attack-modifiers/Brute/Plus1Shield1Self.png';
+import Plus1 from '../../assets/images/attack-modifiers/Brute/Plus1.png';
+import Plus3 from '../../assets/images/attack-modifiers/Brute/Plus3.png';
+import RollingPush1 from '../../assets/images/attack-modifiers/Brute/RollingPush1.png';
 
 
 import { none, muddle, stun, disarm, addTarget, pierce, shieldSelf, push } from './effects';

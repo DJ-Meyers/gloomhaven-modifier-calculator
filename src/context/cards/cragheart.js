@@ -1,11 +1,11 @@
-import Plus1 from '../../gloomhaven/images/attack-modifiers/CH/am-ch-01.png';
-import Minus2 from '../../gloomhaven/images/attack-modifiers/CH/am-ch-04.png';
-import Plus2 from '../../gloomhaven/images/attack-modifiers/CH/am-ch-05.png';
-import Plus1Immobilize from '../../gloomhaven/images/attack-modifiers/CH/am-ch-07.png';
-import Plus2Muddle from '../../gloomhaven/images/attack-modifiers/CH/am-ch-09.png';
-import RollingPush2 from '../../gloomhaven/images/attack-modifiers/CH/am-ch-11.png';
-import RollingEarth from '../../gloomhaven/images/attack-modifiers/CH/am-ch-13.png';
-import RollingAir from '../../gloomhaven/images/attack-modifiers/CH/am-ch-17.png';
+import Plus1 from '../../assets/images/attack-modifiers/Cragheart/Plus1.png';
+import Minus2 from '../../assets/images/attack-modifiers/Cragheart/Minus2.png';
+import Plus2 from '../../assets/images/attack-modifiers/Cragheart/Plus2.png';
+import Plus1Immobilize from '../../assets/images/attack-modifiers/Cragheart/Plus1Immobilize.png';
+import Plus2Muddle from '../../assets/images/attack-modifiers/Cragheart/Plus2Muddle.png';
+import RollingPush2 from '../../assets/images/attack-modifiers/Cragheart/RollingPush2.png';
+import RollingEarth from '../../assets/images/attack-modifiers/Cragheart/RollingEarth.png';
+import RollingAir from '../../assets/images/attack-modifiers/Cragheart/RollingAir.png';
 
 import { none, immobilize, muddle, push, earth, air } from './effects';
 

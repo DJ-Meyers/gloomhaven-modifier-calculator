@@ -1,19 +1,19 @@
-import Plus1 from '../../gloomhaven/images/attack-modifiers/SW/am-sw-01.png';
-import Stun from '../../gloomhaven/images/attack-modifiers/SW/am-sw-07.png';
-import Plus1Wound from '../../gloomhaven/images/attack-modifiers/SW/am-sw-08.png';
-import Plus1Immobilize from '../../gloomhaven/images/attack-modifiers/SW/am-sw-09.png';
-import Plus1Curse from '../../gloomhaven/images/attack-modifiers/SW/am-sw-10.png';
-import Plus2Fire from '../../gloomhaven/images/attack-modifiers/SW/am-sw-11.png';
-import Plus2Ice from '../../gloomhaven/images/attack-modifiers/SW/am-sw-13.png';
-import RollingEarth from '../../gloomhaven/images/attack-modifiers/SW/am-sw-15.png';
-import RollingAir from '../../gloomhaven/images/attack-modifiers/SW/am-sw-16.png';
-import RollingLight from '../../gloomhaven/images/attack-modifiers/SW/am-sw-17.png';
-import RollingDark from '../../gloomhaven/images/attack-modifiers/SW/am-sw-18.png';
+import Plus1 from '../../assets/images/attack-modifiers/Spellweaver/Plus1.png';
+import Plus0Stun from '../../assets/images/attack-modifiers/Spellweaver/Plus0Stun.png';
+import Plus1Wound from '../../assets/images/attack-modifiers/Spellweaver/Plus1Wound.png';
+import Plus1Immobilize from '../../assets/images/attack-modifiers/Spellweaver/Plus1Immobilize.png';
+import Plus1Curse from '../../assets/images/attack-modifiers/Spellweaver/Plus1Curse.png';
+import Plus2Fire from '../../assets/images/attack-modifiers/Spellweaver/Plus2Fire.png';
+import Plus2Ice from '../../assets/images/attack-modifiers/Spellweaver/Plus2Ice.png';
+import RollingEarth from '../../assets/images/attack-modifiers/Spellweaver/RollingEarth.png';
+import RollingAir from '../../assets/images/attack-modifiers/Spellweaver/RollingAir.png';
+import RollingLight from '../../assets/images/attack-modifiers/Spellweaver/RollingLight.png';
+import RollingDark from '../../assets/images/attack-modifiers/Spellweaver/RollingDark.png';
 
 import { none, stun, wound, immobilize, curse, fire, ice, earth, air, light, dark } from './effects';
 
 export const plus1SW = { modifier: '+1', effect: none, rolling: false, source: 'sw', img: Plus1 };
-export const plus0StunSW = { modifier: '+0', effect: stun, rolling: false, source: 'sw', img: Stun };
+export const plus0StunSW = { modifier: '+0', effect: stun, rolling: false, source: 'sw', img: Plus0Stun };
 export const plus1WoundSW = { modifier: '+1', effect: wound, rolling: false, source: 'sw', img: Plus1Wound };
 export const plus1ImmobilizeSW = { modifier: '+1', effect: immobilize, rolling: false, source: 'sw', img: Plus1Immobilize };
 export const plus1CurseSW = { modifier: '+1', effect: curse, rolling: false, source: 'sw', img: Plus1Curse };

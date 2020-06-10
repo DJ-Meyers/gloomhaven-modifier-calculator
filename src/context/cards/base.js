@@ -1,12 +1,12 @@
-import Plus0 from '../../gloomhaven/images/attack-modifiers/base/player/am-p-01.png';
-import Plus1 from '../../gloomhaven/images/attack-modifiers/base/player/am-p-07.png';
-import Minus1 from '../../gloomhaven/images/attack-modifiers/base/player/am-p-12.png';
-import Minus2 from '../../gloomhaven/images/attack-modifiers/base/player/am-p-17.png';
-import Plus2 from '../../gloomhaven/images/attack-modifiers/base/player/am-p-18.png';
-import Times0 from '../../gloomhaven/images/attack-modifiers/base/player/am-p-19.png';
-import Times2 from '../../gloomhaven/images/attack-modifiers/base/player/am-p-20.png';
-import Bless from '../../gloomhaven/images/attack-modifiers/base/player-mod/am-pm-01.png';
-import Curse from '../../gloomhaven/images/attack-modifiers/base/player-mod/am-pm-21.png';
+import Plus0 from '../../assets/images/attack-modifiers/Base/Plus0.png';
+import Plus1 from '../../assets/images/attack-modifiers/Base/Plus1.png';
+import Minus1 from '../../assets/images/attack-modifiers/Base/Minus1.png';
+import Minus2 from '../../assets/images/attack-modifiers/Base/Minus2.png';
+import Plus2 from '../../assets/images/attack-modifiers/Base/Plus2.png';
+import Times0 from '../../assets/images/attack-modifiers/Base/Times0.png';
+import Times2 from '../../assets/images/attack-modifiers/Base/Times2.png';
+import Bless from '../../assets/images/attack-modifiers/Base/Bless.png';
+import Curse from '../../assets/images/attack-modifiers/Base/Curse.png';
 
 import { none } from './effects';
 

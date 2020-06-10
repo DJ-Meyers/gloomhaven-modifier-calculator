@@ -1,26 +1,26 @@
-import Base from '../../gloomhaven/images/class-icons/base.png';
-import DS from '../../gloomhaven/images/class-icons/DS.png';
-import BT from '../../gloomhaven/images/class-icons/BT.png';
-import BR from '../../gloomhaven/images/class-icons/BR.png';
-import CH from '../../gloomhaven/images/class-icons/CH.png';
-import PH from '../../gloomhaven/images/class-icons/PH.png';
-import DR from '../../gloomhaven/images/class-icons/DR.png';
-import NS from '../../gloomhaven/images/class-icons/NS.png';
-import BE from '../../gloomhaven/images/class-icons/BE.png';
-import MT from '../../gloomhaven/images/class-icons/MT.png';
-import SS from '../../gloomhaven/images/class-icons/SS.png';
-import SB from '../../gloomhaven/images/class-icons/SB.png';
-import SC from '../../gloomhaven/images/class-icons/SC.png';
-import SW from '../../gloomhaven/images/class-icons/SW.png';
-import SU from '../../gloomhaven/images/class-icons/SU.png';
-import SK from '../../gloomhaven/images/class-icons/SK.png';
-import QM from '../../gloomhaven/images/class-icons/QM.png';
-import TI from '../../gloomhaven/images/class-icons/TI.png';
-import EL from '../../gloomhaven/images/class-icons/EL.png';
+import Base from '../../assets/images/icons/Characters/Base.png';
+import AngryFace from '../../assets/images/icons/Characters/Angry Face.png';
+import TwoMinis from '../../assets/images/icons/Characters/Two Minis.png';
+import Brute from '../../assets/images/icons/Characters/Brute.png';
+import Cragheart from '../../assets/images/icons/Characters/Cragheart.png';
+import Cthulu from '../../assets/images/icons/Characters/Cthulu.png';
+import Diviner from '../../assets/images/icons/Characters/Diviner.png';
+import Eclipse from '../../assets/images/icons/Characters/Eclipse.png';
+import LightningBolts from '../../assets/images/icons/Characters/Lightning Bolts.png';
+import Mindthief from '../../assets/images/icons/Characters/Mindthief.png';
+import MusicNotes from '../../assets/images/icons/Characters/Music Notes.png';
+import Saw from '../../assets/images/icons/Characters/Saw.png';
+import Scoundrel from '../../assets/images/icons/Characters/Scoundrel.png';
+import Spellweaver from '../../assets/images/icons/Characters/Spellweaver.png';
+import Circles from '../../assets/images/icons/Characters/Circles.png';
+import Sun from '../../assets/images/icons/Characters/Sun.png';
+import ThreeSpears from '../../assets/images/icons/Characters/Three Spears.png';
+import Tinkerer from '../../assets/images/icons/Characters/Tinkerer.png';
+import Triangles from '../../assets/images/icons/Characters/Triangles.png';
 
 import { plus0Base, plus1Base, minus1Base, minus2Base, BaseCards } from '../cards/base';
 import { plus1DS, rollingPlus1DS, plus2MuddleDS, plus1PoisonDS, plus1WoundDS, plus1ImmobilizeDS, plus0StunDS, rollingAddTargetDS, AngryFaceCards } from '../cards/angry face';
-import { plus1BR, plus3BR, rollingPush1BR, rollingStunBR, rollingDisarmBR, rollingMuddleBR, rollingAddTargetBR, plus1Shield1SelfBR, BruteCards } from '../cards/brute';
+import { plus1BR, plus3BR, rollingPush1BR, rollingStunBR, rollingDisarmBR, rollingMuddleBR, rollingAddTargetBR, plus1Shield1SelfBR, BruteCards, rollingPierce3BR } from '../cards/brute';
 import { plus1CH, minus2CH, plus2CH, plus1ImmobilizeCH, plus2MuddleCH, rollingPush2CH, rollingEarthCH, rollingAirCH, CragheartCards } from '../cards/cragheart';
 import { plus2PH, plus0PH, plus1PH, plus1AirPH, rollingPoisonPH, rollingCursePH, rollingImmobilizePH, rollingStunPH, CthuluCards } from '../cards/cthulu';
 import { minus1DarkNS, plus1DarkNS, plus1InvisibleNS, rollingMuddleNS, rollingHeal1SelfNS, rollingCurseNS, rollingAddTargetNS, EclipseCards } from '../cards/eclipse';
@@ -45,7 +45,7 @@ const classes = [
   { key: 'base', text: 'Base', value: 'Base', cards: BaseCards, image: { avatar: false, src: Base},
     perks: [],
   },
-  { key: 'BR', text: 'Brute', value: 'Brute', cards: BruteCards, image: { avatar: false, src: BR },
+  { key: 'BR', text: 'Brute', value: 'Brute', cards: BruteCards, image: { avatar: false, src: Brute },
     perks: [
       { text: 'Remove two (-1) cards', 
         changes: { 
@@ -57,7 +57,7 @@ const classes = [
         changes: { 
           add: [plus1BR], 
           remove: [minus1Base]}, 
-        checked: [false, false]
+        checked: [false]
       },
       { text: 'Add two (+1) cards', 
         changes: { 
@@ -76,6 +76,12 @@ const classes = [
           add: [rollingPush1BR, rollingPush1BR, rollingPush1BR], 
           remove: []}, 
         checked: [false, false]
+      },
+      { text: 'Add two rolling [Pierce 3] cards', 
+        changes: { 
+          add: [rollingPierce3BR, rollingPierce3BR], 
+          remove: []}, 
+        checked: [false]
       },
       { text: 'Add one rolling [Stun] card', 
         changes: { 
@@ -101,10 +107,16 @@ const classes = [
           remove: []}, 
         checked: [false]
       },
+      { text: 'Ignore negative item effects and add one (+1) card', 
+        changes: { 
+          add: [plus1BR], 
+          remove: []}, 
+        checked: [false]
+      }
 
     ]
   },
-  { key: 'CH', text: 'Cragheart', value: 'Cragheart', cards: CragheartCards, image: { avatar: false, src: CH },
+  { key: 'CH', text: 'Cragheart', value: 'Cragheart', cards: CragheartCards, image: { avatar: false, src: Cragheart },
     perks: [
       { text: 'Remove four (+0) cards', 
         changes: { 
@@ -156,7 +168,7 @@ const classes = [
       },
     ]
   },
-  { key: 'MT', text: 'Mindthief', value: 'Mindthief', cards: MindthiefCards, image: { avatar: false, src: MT },
+  { key: 'MT', text: 'Mindthief', value: 'Mindthief', cards: MindthiefCards, image: { avatar: false, src: Mindthief },
     perks: [
       { text: 'Remove two (-1) cards', 
         changes: { 
@@ -220,7 +232,7 @@ const classes = [
       }
     ]
   },
-  { key: 'SC', text: 'Scoundrel', value: 'Scoundrel', cards: ScoundrelCards, image: { avatar: false, src: SC },
+  { key: 'SC', text: 'Scoundrel', value: 'Scoundrel', cards: ScoundrelCards, image: { avatar: false, src: Scoundrel },
     perks: [
       { text: 'Remove two (-1) cards', 
         changes: { 
@@ -284,7 +296,7 @@ const classes = [
       }
     ]
   },
-  { key: 'SW', text: 'Spellweaver', value: 'Spellweaver', cards: SpellweaverCards, image: { avatar: false, src: SW },
+  { key: 'SW', text: 'Spellweaver', value: 'Spellweaver', cards: SpellweaverCards, image: { avatar: false, src: Spellweaver },
     perks: [
       { text: 'Remove four (+0) cards', 
         changes: { 
@@ -354,7 +366,7 @@ const classes = [
       },
     ]
   },
-  { key: 'TI', text: 'Tinkerer', value: 'Tinkerer', cards: TinkererCards, image: { avatar: false, src: TI},
+  { key: 'TI', text: 'Tinkerer', value: 'Tinkerer', cards: TinkererCards, image: { avatar: false, src: Tinkerer},
     perks: [
       { text: 'Remove two (-1) cards', 
         changes: { 
@@ -418,7 +430,7 @@ const classes = [
       }
     ],
   },
-  { key: 'DS', text: 'Angry Face', value: 'Angry Face', cards: AngryFaceCards, image: { avatar: false, src: DS },
+  { key: 'DS', text: 'Angry Face', value: 'Angry Face', cards: AngryFaceCards, image: { avatar: false, src: AngryFace },
     perks: [
       { text: 'Remove two (-1) cards', 
         changes: { 
@@ -476,7 +488,7 @@ const classes = [
       }
     ],
   },
-  { key: 'SU', text: 'Circles', value: 'Circles', cards: CirclesCards, image: { avatar: false, src: SU },
+  { key: 'SU', text: 'Circles', value: 'Circles', cards: CirclesCards, image: { avatar: false, src: Circles },
     perks: [
       { text: 'Remove two (-1) cards', 
         changes: { 
@@ -540,7 +552,7 @@ const classes = [
       }
     ]
   },
-  { key: 'PH', text: 'Cthulu', value: 'Cthulu', cards: CthuluCards, image: { avatar: false, src: PH },
+  { key: 'PH', text: 'Cthulu', value: 'Cthulu', cards: CthuluCards, image: { avatar: false, src: Cthulu },
     perks: [
       { text: 'Replace one (-2) card with one (+0) card', 
         changes: { 
@@ -598,7 +610,7 @@ const classes = [
       },
     ]
   },
-  { key: 'NS', text: 'Eclipse', value: 'Eclipse', cards: EclipseCards, image: { avatar: false, src: NS },
+  { key: 'NS', text: 'Eclipse', value: 'Eclipse', cards: EclipseCards, image: { avatar: false, src: Eclipse },
     perks: [
       { text: 'Remove two (-1) cards', 
         changes: { 
@@ -662,7 +674,7 @@ const classes = [
       }
     ]
   },
-  { key: 'BE', text: 'Lightning Bolts', value: 'Lightning Bolts', cards: LightningBoltsCards, image: { avatar: false, src: BE },
+  { key: 'BE', text: 'Lightning Bolts', value: 'Lightning Bolts', cards: LightningBoltsCards, image: { avatar: false, src: LightningBolts },
     perks: [
       { text: 'Remove two (-1) cards', 
         changes: { 
@@ -720,7 +732,7 @@ const classes = [
       }
     ]
   },
-  { key: 'SS', text: 'Music Notes', value: 'Music Notes', cards: MusicNotesCards, image: { avatar: false, src: SS },
+  { key: 'SS', text: 'Music Notes', value: 'Music Notes', cards: MusicNotesCards, image: { avatar: false, src: MusicNotes },
     perks: [
       { text: 'Remove two (-1) cards', 
         changes: { 
@@ -796,7 +808,7 @@ const classes = [
       }
     ]
   },
-  { key: 'SB', text: 'Saw', value: 'Saw', cards: SawCards, image: { avatar: false, src: SB },
+  { key: 'SB', text: 'Saw', value: 'Saw', cards: SawCards, image: { avatar: false, src: Saw },
     perks: [
       { text: 'Remove two (-1) cards', 
         changes: { 
@@ -854,7 +866,7 @@ const classes = [
       }
     ]
   },
-  { key: 'SK', text: 'Sun', value: 'Sun', cards: SunCards, image: { avatar: false, src: SK },
+  { key: 'SK', text: 'Sun', value: 'Sun', cards: SunCards, image: { avatar: false, src: Sun },
     perks: [
       { text: 'Remove two (-1) cards', 
         changes: { 
@@ -918,7 +930,7 @@ const classes = [
       }
     ]
   },
-  { key: 'QM', text: 'Three Spears', value: 'Three Spears', cards: ThreeSpearsCards, image: { avatar: false, src: QM },
+  { key: 'QM', text: 'Three Spears', value: 'Three Spears', cards: ThreeSpearsCards, image: { avatar: false, src: ThreeSpears },
     perks: [
       { text: 'Remove two (-1) cards', 
         changes: { 
@@ -982,7 +994,7 @@ const classes = [
       }
     ]
   },
-  { key: 'EL', text: 'Triangles', value: 'Triangles', cards: TrianglesCards, image: { avatar: false, src: EL },
+  { key: 'EL', text: 'Triangles', value: 'Triangles', cards: TrianglesCards, image: { avatar: false, src: Triangles },
     perks: [
       { text: 'Remove two (-1) cards', 
         changes: { 
@@ -1064,7 +1076,7 @@ const classes = [
       },
     ]
   },
-  { key: 'BT', text: 'Two Minis', value: 'Two Minis', cards: TwoMinisCards, image: { avatar: false, src: BT },
+  { key: 'BT', text: 'Two Minis', value: 'Two Minis', cards: TwoMinisCards, image: { avatar: false, src: TwoMinis },
     perks: [
       { text: 'Remove two (-1) cards', 
         changes: { 
@@ -1110,7 +1122,7 @@ const classes = [
       }
     ]
   },
-  { key: 'DR', text: 'Diviner', value: 'Diviner', cards: DivinerCards, image: { avatar: false, src: DR },
+  { key: 'DR', text: 'Diviner', value: 'Diviner', cards: DivinerCards, image: { avatar: false, src: Diviner },
     perks: [
       { text: 'Remove two (-1) cards', 
         changes: { 

@@ -1,13 +1,13 @@
-import Plus1 from '../../gloomhaven/images/attack-modifiers/SU/am-su-01.png';
-import Plus2 from '../../gloomhaven/images/attack-modifiers/SU/am-su-03.png';
-import RollingWound from '../../gloomhaven/images/attack-modifiers/SU/am-su-05.png';
-import RollingPoison from '../../gloomhaven/images/attack-modifiers/SU/am-su-07.png';
-import RollingHeal1Self from '../../gloomhaven/images/attack-modifiers/SU/am-su-09.png';
-import RollingFire from '../../gloomhaven/images/attack-modifiers/SU/am-su-15.png';
-import RollingAir from '../../gloomhaven/images/attack-modifiers/SU/am-su-16.png';
-import RollingDark from '../../gloomhaven/images/attack-modifiers/SU/am-su-17.png';
-import RollingEarth from '../../gloomhaven/images/attack-modifiers/SU/am-su-18.png';
-import Plus0 from '../../gloomhaven/images/attack-modifiers/SU/am-su-19.png';
+import Plus1 from '../../assets/images/attack-modifiers/Circles/Plus1.png';
+import Plus2 from '../../assets/images/attack-modifiers/Circles/Plus2.png';
+import RollingWound from '../../assets/images/attack-modifiers/Circles/RollingWound.png';
+import RollingPoison from '../../assets/images/attack-modifiers/Circles/RollingPoison.png';
+import RollingHeal1Self from '../../assets/images/attack-modifiers/Circles/RollingHeal1Self.png';
+import RollingFire from '../../assets/images/attack-modifiers/Circles/RollingFire.png';
+import RollingAir from '../../assets/images/attack-modifiers/Circles/RollingAir.png';
+import RollingDark from '../../assets/images/attack-modifiers/Circles/RollingDark.png';
+import RollingEarth from '../../assets/images/attack-modifiers/Circles/RollingEarth.png';
+import Plus0 from '../../assets/images/attack-modifiers/Circles/Plus0.png';
 
 import { none, wound, poison, healSelf, fire, air, dark, earth } from './effects';
 

@@ -1,13 +1,13 @@
-import Plus1Immobilize from '../../gloomhaven/images/attack-modifiers/SS/am-ss-01.png';
-import Plus1Disarm from '../../gloomhaven/images/attack-modifiers/SS/am-ss-02.png';
-import Plus2Wound from '../../gloomhaven/images/attack-modifiers/SS/am-ss-03.png';
-import Plus2Poison from '../../gloomhaven/images/attack-modifiers/SS/am-ss-04.png';
-import Plus2Curse from '../../gloomhaven/images/attack-modifiers/SS/am-ss-05.png';
-import Plus3Muddle from '../../gloomhaven/images/attack-modifiers/SS/am-ss-06.png';
-import Stun from '../../gloomhaven/images/attack-modifiers/SS/am-ss-07.png';
-import RollingPlus1 from '../../gloomhaven/images/attack-modifiers/SS/am-ss-08.png';
-import RollingCurse from '../../gloomhaven/images/attack-modifiers/SS/am-ss-11.png';
-import Plus4 from '../../gloomhaven/images/attack-modifiers/SS/am-ss-15.png';
+import Plus1Immobilize from '../../assets/images/attack-modifiers/Music Notes/Plus1Immobilize.png';
+import Plus1Disarm from '../../assets/images/attack-modifiers/Music Notes/Plus1Disarm.png';
+import Plus2Wound from '../../assets/images/attack-modifiers/Music Notes/Plus2Wound.png';
+import Plus2Poison from '../../assets/images/attack-modifiers/Music Notes/Plus2Poison.png';
+import Plus2Curse from '../../assets/images/attack-modifiers/Music Notes/Plus2Curse.png';
+import Plus3Muddle from '../../assets/images/attack-modifiers/Music Notes/Plus3Muddle.png';
+import Plus0Stun from '../../assets/images/attack-modifiers/Music Notes/Plus0Stun.png';
+import RollingPlus1 from '../../assets/images/attack-modifiers/Music Notes/RollingPlus1.png';
+import RollingCurse from '../../assets/images/attack-modifiers/Music Notes/RollingCurse.png';
+import Plus4 from '../../assets/images/attack-modifiers/Music Notes/Plus4.png';
 
 import { none, immobilize, disarm, wound, poison, curse, muddle, stun  } from './effects';
 
@@ -17,7 +17,7 @@ export const plus2WoundSS = { modifier: '+2', effect: wound, rolling: false, sou
 export const plus2PoisonSS = { modifier: '+2', effect: poison, rolling: false, source: 'ss', img: Plus2Poison };
 export const plus2CurseSS = { modifier: '+2', effect: curse, rolling: false, source: 'ss', img: Plus2Curse };
 export const plus3MuddleSS = { modifier: '+3', effect: muddle, rolling: false, source: 'ss', img: Plus3Muddle };
-export const plus0StunSS = { modifier: '+0', effect: stun, rolling: false, source: 'ss', img: Stun };
+export const plus0StunSS = { modifier: '+0', effect: stun, rolling: false, source: 'ss', img: Plus0Stun };
 export const plus4SS = { modifier: '+4', effect: none, rolling: false, source: 'ss', img: Plus4 };
 export const rollingPlus1SS = { modifier: '+1', effect: none, rolling: true, source: 'ss', img: RollingPlus1 };
 export const rollingCurseSS = { modifier: '+0', effect: curse, rolling: true, source: 'ss', img: RollingCurse };
