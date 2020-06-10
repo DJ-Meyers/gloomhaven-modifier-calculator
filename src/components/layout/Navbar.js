@@ -12,7 +12,7 @@ export default class Navbar extends React.Component {
       <Menu inverted color='grey' style={{ borderRadius: '0px' }}>
         <Container>
           <Menu.Item as="span" header>
-            <Link to="/">
+            <Link to="/RollingAdvantage">
               <Icon name="home" /> Rolling Advantage
             </Link>
           </Menu.Item>

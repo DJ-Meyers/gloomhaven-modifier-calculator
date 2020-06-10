@@ -9,7 +9,7 @@ import PerksContainer from '../perks/PerksContainer';
 const Home = () => {
   return (
     <Fragment>
-      <Title title={'Gloomhaven Attack Modifier Calculator'} />
+      <Title title={'Gloomhaven Perk Calculator'} />
       <Grid columns='equal' stackable>
         <Grid.Column>
           <PerksContainer />

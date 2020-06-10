@@ -5,7 +5,8 @@ import PerksContext from '../../context/perks/perksContext';
 
 import Bless from '../../assets/images/icons/Effects/Bless.png';
 import Curse from '../../assets/images/icons/Effects/Curse.png';
-import { bless, curse } from '../../context/cards/base';
+import Minus1 from '../../assets/images/icons/Effects/Minus1.png';
+import { bless, curse, playerMinus1 } from '../../context/cards/base';
 
 const BlessCurse = () => { 
 
@@ -24,14 +25,17 @@ const BlessCurse = () => {
     <Fragment>
       <Grid columns='equal'>
         <Grid.Column className='centered'>
-          <Button.Group fluid basic widths='3'>
+          <Button.Group fluid basic widths='4'>
             <Button compact onClick={()=>{ addCard(bless); }}>
-                <Image src={Bless} avatar/>
+                <Image src={Bless} />
             </Button>
             <Button compact onClick={()=>{ addCard(curse); }}>
-                <Image src={Curse} avatar/>
+                <Image src={Curse} />
             </Button>
-            <Button compact content='Reset' onClick={()=>{ resetDeck(); resetPerks(); }} />
+            <Button compact onClick={()=>{ addCard(playerMinus1); }}>
+                <Image src={Minus1} />
+            </Button>
+            <Button compact icon='undo alternate' onClick={()=>{ resetDeck(); resetPerks(); }} />
           </Button.Group>
         </Grid.Column>
       </Grid>
