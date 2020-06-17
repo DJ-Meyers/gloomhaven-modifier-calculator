@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { Header, Image, List, Checkbox } from 'semantic-ui-react';
+import { Header, List, Checkbox } from 'semantic-ui-react';
 
 const Perks = (props) => { 
 

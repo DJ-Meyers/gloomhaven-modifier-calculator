@@ -11,7 +11,7 @@ const CalculatorState = props => {
     averageDamage: null,
     killPct: null,
     negativeDrawPct: null,
-    trials: 10000,
+    trials: 30000,
     dmgValues: [],
     maxDmg: 0,
     effects: [],
