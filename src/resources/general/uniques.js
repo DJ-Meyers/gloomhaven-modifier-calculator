@@ -1,4 +1,5 @@
-import classes from '../../context/perks/Classes';
+
+import ClassList from '../../resources/classes/All Classes';
 
 export const getKey = card => {
   return `${card.modifier}-${card.source}-${card.effect}-${card.rolling}`;
@@ -16,7 +17,7 @@ const addCards = (u, cards) => {
 const addUniques = () => {
   const u = [];
 
-  classes.forEach(c => {
+  ClassList.forEach(c => {
     addCards(u, c.cards);
   });
 

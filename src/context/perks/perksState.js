@@ -3,13 +3,13 @@ import PerksContext from './perksContext';
 import PerksReducer from './perksReducer';
 
 import { SET_CLASS, TOGGLE_PERK, RESET_PERKS} from '../Types';
-import Classes from './Classes';
+import ClassList from '../../resources/classes/All Classes';
 
 const PerksState = props => {
 
   const initialState = {
-    classes: Classes,
-    selectedClass: Classes[0]
+    classes: ClassList,
+    selectedClass: ClassList[0]
   };
 
   const [state, dispatch] = useReducer(PerksReducer, initialState);

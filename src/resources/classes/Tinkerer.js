@@ -1,16 +1,16 @@
-import Plus0 from '../../resources/images/attack-modifiers/Tinkerer/Plus0.png';
-import Plus1 from '../../resources/images/attack-modifiers/Tinkerer/Plus1.png';
-import Plus3 from '../../resources/images/attack-modifiers/Tinkerer/Plus3.png';
-import RollingFire from '../../resources/images/attack-modifiers/Tinkerer/RollingFire.png';
-import RollingMuddle from '../../resources/images/attack-modifiers/Tinkerer/RollingMuddle.png';
-import Plus1Wound from '../../resources/images/attack-modifiers/Tinkerer/Plus1Wound.png';
-import Plus1Immobilize from '../../resources/images/attack-modifiers/Tinkerer/Plus1Immobilize.png';
-import Plus1Heal2Self from '../../resources/images/attack-modifiers/Tinkerer/Plus1Heal2Self.png';
-import Plus0AddTarget from '../../resources/images/attack-modifiers/Tinkerer/Plus0AddTarget.png';
+import Plus0 from '../images/attack-modifiers/Tinkerer/Plus0.png';
+import Plus1 from '../images/attack-modifiers/Tinkerer/Plus1.png';
+import Plus3 from '../images/attack-modifiers/Tinkerer/Plus3.png';
+import RollingFire from '../images/attack-modifiers/Tinkerer/RollingFire.png';
+import RollingMuddle from '../images/attack-modifiers/Tinkerer/RollingMuddle.png';
+import Plus1Wound from '../images/attack-modifiers/Tinkerer/Plus1Wound.png';
+import Plus1Immobilize from '../images/attack-modifiers/Tinkerer/Plus1Immobilize.png';
+import Plus1Heal2Self from '../images/attack-modifiers/Tinkerer/Plus1Heal2Self.png';
+import Plus0AddTarget from '../images/attack-modifiers/Tinkerer/Plus0AddTarget.png';
 
 import TinkererIcon from '../images/icons/characters/Tinkerer.png';
 
-import { none, fire, muddle, wound, immobilize, healSelf, addTarget } from '../../resources/general/effects';
+import { none, fire, muddle, wound, immobilize, healSelf, addTarget } from '../general/effects';
 import { minus1Base, minus2Base } from './Base';
 
 export const plus0TI = { modifier: '+0', effect: none, rolling: false, source: 'ti', img: Plus0 };
