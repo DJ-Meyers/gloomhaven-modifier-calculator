@@ -6,7 +6,7 @@ import {
   RESET_DECK
  } from '../Types';
 
- import { getKey } from './uniques';
+ import { getKey } from '../../resources/general/uniques';
 
 export default (state, action) => {
   switch (action.type) {

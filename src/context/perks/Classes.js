@@ -1,493 +1,48 @@
-import Base from '../../assets/images/icons/Characters/Base.png';
-import AngryFace from '../../assets/images/icons/Characters/Angry Face.png';
-import TwoMinis from '../../assets/images/icons/Characters/Two Minis.png';
-import Brute from '../../assets/images/icons/Characters/Brute.png';
-import Cragheart from '../../assets/images/icons/Characters/Cragheart.png';
-import Cthulu from '../../assets/images/icons/Characters/Cthulu.png';
-import Diviner from '../../assets/images/icons/Characters/Diviner.png';
-import Eclipse from '../../assets/images/icons/Characters/Eclipse.png';
-import LightningBolts from '../../assets/images/icons/Characters/Lightning Bolts.png';
-import Mindthief from '../../assets/images/icons/Characters/Mindthief.png';
-import MusicNotes from '../../assets/images/icons/Characters/Music Notes.png';
-import Saw from '../../assets/images/icons/Characters/Saw.png';
-import Scoundrel from '../../assets/images/icons/Characters/Scoundrel.png';
-import Spellweaver from '../../assets/images/icons/Characters/Spellweaver.png';
-import Circles from '../../assets/images/icons/Characters/Circles.png';
-import Sun from '../../assets/images/icons/Characters/Sun.png';
-import ThreeSpears from '../../assets/images/icons/Characters/Three Spears.png';
-import Tinkerer from '../../assets/images/icons/Characters/Tinkerer.png';
-import Triangles from '../../assets/images/icons/Characters/Triangles.png';
 
-import { plus0Base, plus1Base, minus1Base, minus2Base, BaseCards } from '../cards/base';
-import { plus1DS, rollingPlus1DS, plus2MuddleDS, plus1PoisonDS, plus1WoundDS, plus1ImmobilizeDS, plus0StunDS, rollingAddTargetDS, AngryFaceCards } from '../cards/angry face';
-import { plus1BR, plus3BR, rollingPush1BR, rollingStunBR, rollingDisarmBR, rollingMuddleBR, rollingAddTargetBR, plus1Shield1SelfBR, BruteCards, rollingPierce3BR } from '../cards/brute';
-import { plus1CH, minus2CH, plus2CH, plus1ImmobilizeCH, plus2MuddleCH, rollingPush2CH, rollingEarthCH, rollingAirCH, CragheartCards } from '../cards/cragheart';
+import TwoMinis from '../../resources/images/icons/characters/Two Minis.png';
+import Cthulu from '../../resources/images/icons/characters/Cthulu.png';
+import Diviner from '../../resources/images/icons/characters/Diviner.png';
+import Eclipse from '../../resources/images/icons/characters/Eclipse.png';
+import LightningBolts from '../../resources/images/icons/characters/Lightning Bolts.png';
+import MusicNotes from '../../resources/images/icons/characters/Music Notes.png';
+import Saw from '../../resources/images/icons/characters/Saw.png';
+import Circles from '../../resources/images/icons/characters/Circles.png';
+import Sun from '../../resources/images/icons/characters/Sun.png';
+import ThreeSpears from '../../resources/images/icons/characters/Three Spears.png';
+import Triangles from '../../resources/images/icons/characters/Triangles.png';
+
+import Base from '../../resources/classes/Base';
+import Brute from '../../resources/classes/Brute';
+import Cragheart from '../../resources/classes/Cragheart';
+import Mindthief from '../../resources/classes/Mindthief';
+import Scoundrel from '../../resources/classes/Scoundrel';
+import Spellweaver from '../../resources/classes/Spellweaver';
+import Tinkerer from '../../resources/classes/Tinkerer';
+
+import AngryFace from '../../resources/classes/Angry Face';
+
+import { plus0Base, plus1Base, minus1Base, minus2Base } from '../../resources/classes/Base';
 import { plus2PH, plus0PH, plus1PH, plus1AirPH, rollingPoisonPH, rollingCursePH, rollingImmobilizePH, rollingStunPH, CthuluCards } from '../cards/cthulu';
-import { minus1DarkNS, plus1DarkNS, plus1InvisibleNS, rollingMuddleNS, rollingHeal1SelfNS, rollingCurseNS, rollingAddTargetNS, EclipseCards } from '../cards/eclipse';
+import { minus1DarkNS, plus1DarkNS, plus1NS, plus1InvisibleNS, rollingMuddleNS, rollingHeal1SelfNS, rollingCurseNS, rollingAddTargetNS, EclipseCards } from '../cards/eclipse';
 import { plus1BE, rollingPlus2BE, rollingWoundBE, rollingPlus1DisarmBE, rollingHeal1SelfBE, plus2FireBE, rollingStunBE, LightningBoltsCards } from '../cards/lightning bolts';
-import { plus2MT, plus2IceMT, rollingPlus1MT, rollingPull1MT, rollingMuddleMT, rollingImmobilizeMT, rollingStunMT, rollingDisarmMT, MindthiefCards } from '../cards/mindthief';
 import { plus4SS, plus1ImmobilizeSS, plus1DisarmSS, plus2WoundSS, plus2PoisonSS, plus2CurseSS, plus3MuddleSS, rollingPlus1SS, rollingCurseSS, MusicNotesCards } from '../cards/music notes';
 import { plus2SB, rollingPlus2SB, plus1ImmobilizeSB, rollingWoundSB, rollingHeal3SelfSB, refreshItemSB, rollingStunSB, SawCards } from '../cards/saw';
-import { plus0SC, plus1SC, plus2SC, rollingPlus1SC, rollingPierce3SC, rollingPoisonSC, rollingMuddleSC, rollingInvisibleSC, ScoundrelCards } from '../cards/scoundrel';
 import { plus3Shield1SelfDR, plus1Shield1AllyDR, plus2DarkDR, plus2LightDR, plus3MuddleDR, plus2CurseDR, plus2RegenerateSelfDR, plus1Heal2AllyDR, rollingHeal1SelfDR, rollingCurseDR, plus1DR, DivinerCards } from '../cards/diviner';
-import { plus1SW, plus0StunSW, plus1WoundSW, plus1ImmobilizeSW, plus1CurseSW, plus2FireSW, plus2IceSW, rollingEarthSW, rollingAirSW, rollingLightSW, rollingDarkSW, SpellweaverCards } from '../cards/spellweaver';
 import { plus0SU, plus1SU, plus2SU, rollingWoundSU, rollingPoisonSU, rollingHeal1SelfSU, rollingFireSU, rollingAirSU, rollingDarkSU, rollingEarthSU, CirclesCards } from '../cards/circles';
 import { plus0SK, plus2SK, rollingPlus1SK, rollingHeal1SelfSK, rollingStunSK, rollingLightSK, plus1SK, rollingShield1SelfSK, SunCards } from '../cards/sun';
 import { ThreeSpearsCards, plus2QM, rollingPlus1QM, rollingMuddleQM, rollingPierce3QM, rollingStunQM, rollingAddTargetQM, plus1QM, plus0RefreshItemQM } from '../cards/three spears';
-import { TinkererCards, plus0TI, plus1TI, plus3TI, rollingFireTI, rollingMuddleTI, plus1WoundTI, plus1ImmobilizeTI, plus1Heal2SelfTI, plus0AddTargetTI } from '../cards/tinkerer';
 import { TrianglesCards, plus1EL, plus2EL, plus0FireEL, plus0IceEL, plus0AirEL, plus0EarthEL, plus1PushEL, plus1WoundEL, plus0StunEL, plus0AddTargetEL } from '../cards/triangles';
 import { TwoMinisCards, plus1BT, plus2BT, plus1WoundBT, plus1ImmobilizeBT, rollingHeal1SelfBT, rollingEarthBT } from '../cards/two minis';
 
-
-
-
 const classes = [
-  { key: 'base', text: 'Base', value: 'Base', cards: BaseCards, image: { avatar: false, src: Base},
-    perks: [],
-  },
-  { key: 'BR', text: 'Brute', value: 'Brute', cards: BruteCards, image: { avatar: false, src: Brute },
-    perks: [
-      { text: 'Remove two (-1) cards', 
-        changes: { 
-          add: [], 
-          remove: [minus1Base, minus1Base]}, 
-        checked: [false]
-      },
-      { text: 'Replace one (-1) card with one (+1) card', 
-        changes: { 
-          add: [plus1BR], 
-          remove: [minus1Base]}, 
-        checked: [false]
-      },
-      { text: 'Add two (+1) cards', 
-        changes: { 
-          add: [plus1BR, plus1BR], 
-          remove: []}, 
-        checked: [false, false]
-      },
-      { text: 'Add one (+3) card', 
-        changes: { 
-          add: [plus3BR], 
-          remove: []}, 
-        checked: [false]
-      },
-      { text: 'Add three rolling [Push 1] cards', 
-        changes: { 
-          add: [rollingPush1BR, rollingPush1BR, rollingPush1BR], 
-          remove: []}, 
-        checked: [false, false]
-      },
-      { text: 'Add two rolling [Pierce 3] cards', 
-        changes: { 
-          add: [rollingPierce3BR, rollingPierce3BR], 
-          remove: []}, 
-        checked: [false]
-      },
-      { text: 'Add one rolling [Stun] card', 
-        changes: { 
-          add: [rollingStunBR], 
-          remove: []}, 
-        checked: [false, false]
-      },
-      { text: 'Add one rolling [Disarm] card and one rolling [Muddle] card', 
-        changes: { 
-          add: [rollingDisarmBR, rollingMuddleBR], 
-          remove: []}, 
-        checked: [false]
-      },
-      { text: 'Add one rolling [Add Target] card', 
-        changes: { 
-          add: [rollingAddTargetBR], 
-          remove: []}, 
-        checked: [false, false]
-      },
-      { text: 'Add one (+1) [Shield 1, Self] card', 
-        changes: { 
-          add: [plus1Shield1SelfBR], 
-          remove: []}, 
-        checked: [false]
-      },
-      { text: 'Ignore negative item effects and add one (+1) card', 
-        changes: { 
-          add: [plus1BR], 
-          remove: []}, 
-        checked: [false]
-      }
-
-    ]
-  },
-  { key: 'CH', text: 'Cragheart', value: 'Cragheart', cards: CragheartCards, image: { avatar: false, src: Cragheart },
-    perks: [
-      { text: 'Remove four (+0) cards', 
-        changes: { 
-          add: [], 
-          remove: [plus0Base, plus0Base, plus0Base, plus0Base]}, 
-        checked: [false]
-      },
-      { text: 'Replace one (-1) card with one (+1) card', 
-        changes: { 
-          add: [plus1CH], 
-          remove: [minus1Base]}, 
-        checked: [false, false, false]
-      },
-      { text: 'Add one (-2) card and two (+2) cards', 
-        changes: { 
-          add: [minus2CH, plus2CH, plus2CH], 
-          remove: []}, 
-        checked: [false]
-      },
-      { text: 'Add one (+1) [Immobilize] card', 
-        changes: { 
-          add: [plus1ImmobilizeCH], 
-          remove: []}, 
-        checked: [false, false]
-      },
-      { text: 'Add one (+2) [Muddle] card', 
-        changes: { 
-          add: [plus2MuddleCH], 
-          remove: []}, 
-        checked: [false, false]
-      },
-      { text: 'Add two rolling [Push 2] cards', 
-        changes: { 
-          add: [rollingPush2CH, rollingPush2CH], 
-          remove: []}, 
-        checked: [false]
-      },
-      { text: 'Add two rolling [Earth] cards', 
-        changes: { 
-          add: [rollingEarthCH, rollingEarthCH], 
-          remove: []}, 
-        checked: [false, false]
-      },
-      { text: 'Add two rolling [Air] cards', 
-        changes: { 
-          add: [rollingAirCH], 
-          remove: []}, 
-        checked: [false]
-      },
-    ]
-  },
-  { key: 'MT', text: 'Mindthief', value: 'Mindthief', cards: MindthiefCards, image: { avatar: false, src: Mindthief },
-    perks: [
-      { text: 'Remove two (-1) cards', 
-        changes: { 
-          add: [], 
-          remove: [minus1Base, minus1Base]}, 
-        checked: [false, false]
-      },
-      { text: 'Remove four (+0) cards',
-        changes: { 
-          add: [], 
-          remove: [plus0Base, plus0Base, plus0Base, plus0Base]}, 
-        checked: [false]
-      },
-      { text: 'Replace two (+1) cards with two (+2) cards',
-        changes: { 
-          add: [plus2MT, plus2MT], 
-          remove: [plus1Base, plus1Base]}, 
-        checked: [false]
-      },
-      { text: 'Add one (+2) [Ice] card',
-        changes: { 
-          add: [plus2IceMT], 
-          remove: []}, 
-        checked: [false, false]
-      },
-      { text: 'Add two rolling (+1) cards',
-        changes: { 
-          add: [rollingPlus1MT, rollingPlus1MT], 
-          remove: []}, 
-        checked: [false, false]
-      },
-      { text: 'Add three rolling [Pull 1] cards',
-        changes: { 
-          add: [rollingPull1MT, rollingPull1MT, rollingPull1MT], 
-          remove: []}, 
-        checked: [false]
-      },
-      { text: 'Add three rolling [Muddle] cards',
-        changes: { 
-          add: [rollingMuddleMT, rollingMuddleMT, rollingMuddleMT], 
-          remove: []}, 
-        checked: [false]
-      },
-      { text: 'Add two rolling [Immobilize] cards',
-        changes: { 
-          add: [rollingImmobilizeMT, rollingImmobilizeMT], 
-          remove: []}, 
-        checked: [false]
-      },
-      { text: 'Add one rolling [Stun] card',
-        changes: { 
-          add: [rollingStunMT], 
-          remove: []}, 
-        checked: [false]
-      },
-      { text: 'Add one rolling [Disarm] card and one rolling [Muddle] card',
-        changes: { 
-          add: [rollingDisarmMT, rollingMuddleMT], 
-          remove: []}, 
-        checked: [false]
-      }
-    ]
-  },
-  { key: 'SC', text: 'Scoundrel', value: 'Scoundrel', cards: ScoundrelCards, image: { avatar: false, src: Scoundrel },
-    perks: [
-      { text: 'Remove two (-1) cards', 
-        changes: { 
-          add: [], 
-          remove: [minus1Base, minus1Base]}, 
-        checked: [false, false]
-      },
-      { text: 'Remove four (+0) cards',
-        changes: { 
-          add: [], 
-          remove: [plus0Base, plus0Base, plus0Base, plus0Base]}, 
-        checked: [false]
-      },
-      { text: 'Replace one (-2) card with one (+0) card',
-        changes: { 
-          add: [plus0SC], 
-          remove: [minus2Base]}, 
-        checked: [false]
-      },
-      { text: 'Replace one (-1) card with one (+1) card',
-        changes: { 
-          add: [plus1SC], 
-          remove: [minus1Base]}, 
-        checked: [false]
-      },
-      { text: 'Replace one (+0) card with one (+2) card',
-        changes: { 
-          add: [plus2SC], 
-          remove: [plus0Base]}, 
-        checked: [false, false]
-      },
-      { text: 'Add two rolling (+1) cards',
-        changes: { 
-          add: [rollingPlus1SC, rollingPlus1SC], 
-          remove: []}, 
-        checked: [false, false]
-      },
-      { text: 'Add two rolling [Pierce 3] cards',
-        changes: { 
-          add: [rollingPierce3SC, rollingPierce3SC], 
-          remove: []}, 
-        checked: [false]
-      },
-      { text: 'Add two rolling [Poison] card',
-        changes: { 
-          add: [rollingPoisonSC, rollingPoisonSC], 
-          remove: []}, 
-        checked: [false, false]
-      },
-      { text: 'Add two rolling [Muddle] cards',
-        changes: { 
-          add: [rollingMuddleSC, rollingMuddleSC], 
-          remove: []}, 
-        checked: [false]
-      },
-      { text: 'Add one rolling [Invisible] card',
-        changes: { 
-          add: [rollingInvisibleSC], 
-          remove: []}, 
-        checked: [false]
-      }
-    ]
-  },
-  { key: 'SW', text: 'Spellweaver', value: 'Spellweaver', cards: SpellweaverCards, image: { avatar: false, src: Spellweaver },
-    perks: [
-      { text: 'Remove four (+0) cards', 
-        changes: { 
-          add: [], 
-          remove: [plus0Base, plus0Base, plus0Base, plus0Base]}, 
-        checked: [false]
-      },
-      { text: 'Replace one (-1) card with one (+1) card',
-        changes: { 
-          add: [plus1SW], 
-          remove: [minus1Base]}, 
-        checked: [false, false]
-      },
-      { text: 'Add two (+1) cards',
-        changes: { 
-          add: [plus1SW, plus1SW], 
-          remove: []}, 
-        checked: [false, false]
-      },
-      { text: 'Add one (+0) [Stun] card',
-        changes: { 
-          add: [plus0StunSW], 
-          remove: []}, 
-        checked: [false]
-      },
-      { text: 'Replace one (+1) [Wound] card',
-        changes: { 
-          add: [plus1WoundSW], 
-          remove: []}, 
-        checked: [false]
-      },
-      { text: 'Add one (+1) [Immobilize] card',
-        changes: { 
-          add: [plus1ImmobilizeSW], 
-          remove: []}, 
-        checked: [false]
-      },
-      { text: 'Add one (+1) [Curse] card',
-        changes: { 
-          add: [plus1CurseSW], 
-          remove: []}, 
-        checked: [false]
-      },
-      { text: 'Add one (+2) [Fire] card',
-        changes: { 
-          add: [plus2FireSW], 
-          remove: []}, 
-        checked: [false, false]
-      },
-      { text: 'Add one (+2) [Ice] card',
-        changes: { 
-          add: [plus2IceSW], 
-          remove: []}, 
-        checked: [false, false]
-      },
-      { text: 'Add one rolling [Earth] card and one rolling [Air] card',
-        changes: { 
-          add: [rollingEarthSW, rollingAirSW], 
-          remove: []}, 
-        checked: [false]
-      },
-      { text: 'Add one rolling [Light] card and one rolling [Dark] card',
-        changes: { 
-          add: [rollingLightSW, rollingDarkSW], 
-          remove: []}, 
-        checked: [false]
-      },
-    ]
-  },
-  { key: 'TI', text: 'Tinkerer', value: 'Tinkerer', cards: TinkererCards, image: { avatar: false, src: Tinkerer},
-    perks: [
-      { text: 'Remove two (-1) cards', 
-        changes: { 
-          add: [], 
-          remove: [minus1Base, minus1Base]}, 
-        checked: [false, false]
-      },
-      { text: 'Replace one (-2) card with one (+0) card',
-        changes: { 
-          add: [plus0TI], 
-          remove: [minus2Base]}, 
-        checked: [false]
-      },
-      { text: 'Add two (+1) cards',
-        changes: { 
-          add: [plus1TI, plus1TI], 
-          remove: []}, 
-        checked: [false]
-      },
-      { text: 'Add one (+3) card',
-        changes: { 
-          add: [plus3TI], 
-          remove: []}, 
-        checked: [false]
-      },
-      { text: 'Add two rolling [Fire] cards',
-        changes: { 
-          add: [rollingFireTI, rollingFireTI], 
-          remove: []}, 
-        checked: [false]
-      },
-      { text: 'Add three rolling [Muddle] card',
-        changes: { 
-          add: [rollingMuddleTI, rollingMuddleTI, rollingMuddleTI], 
-          remove: []}, 
-        checked: [false]
-      },
-      { text: 'Add one (+1) [Wound] card',
-        changes: { 
-          add: [plus1WoundTI], 
-          remove: []}, 
-        checked: [false, false]
-      },
-      { text: 'Add one (+1) [Immobilize] card',
-        changes: { 
-          add: [plus1ImmobilizeTI], 
-          remove: []}, 
-        checked: [false, false]
-      },
-      { text: 'Add one (+1) [Heal 2 Self] card',
-        changes: { 
-          add: [plus1Heal2SelfTI], 
-          remove: []}, 
-        checked: [false, false]
-      },
-      { text: 'Add one (+0) [Add Target] card',
-        changes: { 
-          add: [plus0AddTargetTI], 
-          remove: []}, 
-        checked: [false]
-      }
-    ],
-  },
-  { key: 'DS', text: 'Angry Face', value: 'Angry Face', cards: AngryFaceCards, image: { avatar: false, src: AngryFace },
-    perks: [
-      { text: 'Remove two (-1) cards', 
-        changes: { 
-          add: [], 
-          remove: [minus1Base, minus1Base]}, 
-        checked: [false, false]
-      },
-      { text: 'Replace two (+0) cards with two (+1) cards',
-        changes: { 
-          add: [plus1DS, plus1DS], 
-          remove: [plus0Base, plus0Base]}, 
-        checked: [false, false, false]
-      },
-      { text: 'Add two rolling (+1) cards',
-        changes: { 
-          add: [rollingPlus1DS, rollingPlus1DS], 
-          remove: []}, 
-        checked: [false, false]
-      },
-      { text: 'Add one (+2) [Muddle] card',
-        changes: { 
-          add: [plus2MuddleDS], 
-          remove: []}, 
-        checked: [false]
-      },
-      { text: 'Add one (+1) [Poison] card',
-        changes: { 
-          add: [plus1PoisonDS], 
-          remove: []}, 
-        checked: [false]
-      },
-      { text: 'Add one (+1) [Wound] card',
-        changes: { 
-          add: [plus1WoundDS], 
-          remove: []}, 
-        checked: [false]
-      },
-      { text: 'Add one (+1) [Immobilize] card',
-        changes: { 
-          add: [plus1ImmobilizeDS], 
-          remove: []}, 
-        checked: [false]
-      },
-      { text: 'Add one (+0) [Stun] card',
-        changes: { 
-          add: [plus0StunDS], 
-          remove: []}, 
-        checked: [false]
-      },
-      { text: 'Add one rolling [Add Target] card',
-        changes: { 
-          add: [rollingAddTargetDS], 
-          remove: []}, 
-        checked: [false, false]
-      }
-    ],
-  },
+  Base,
+  Brute,
+  Cragheart,
+  Mindthief,
+  Scoundrel,
+  Spellweaver,
+  Tinkerer,
+  AngryFace,
   { key: 'SU', text: 'Circles', value: 'Circles', cards: CirclesCards, image: { avatar: false, src: Circles },
     perks: [
       { text: 'Remove two (-1) cards', 
@@ -642,12 +197,6 @@ const classes = [
           remove: []}, 
         checked: [false, false]
       },
-      { text: 'Add one (+1) [Wound] card',
-        changes: { 
-          add: [plus1WoundDS], 
-          remove: []}, 
-        checked: [false]
-      },
       { text: 'Add three rolling [Muddle] cards',
         changes: { 
           add: [rollingMuddleNS, rollingMuddleNS, rollingMuddleNS], 
@@ -669,6 +218,12 @@ const classes = [
       { text: 'Add one rolling [Add Target] card',
         changes: { 
           add: [rollingAddTargetNS], 
+          remove: []}, 
+        checked: [false]
+      },
+      { text: 'Ignore negative scenario effects and add two (+1) cards',
+        changes: { 
+          add: [plus1NS, plus1NS], 
           remove: []}, 
         checked: [false]
       }

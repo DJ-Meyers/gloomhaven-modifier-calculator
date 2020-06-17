@@ -1,13 +1,13 @@
-import Plus1 from '../../assets/images/attack-modifiers/Cthulu/Plus1.png';
-import Plus2 from '../../assets/images/attack-modifiers/Cthulu/Plus2.png';
-import Plus1Air from '../../assets/images/attack-modifiers/Cthulu/Plus1Air.png';
-import RollingPoison from '../../assets/images/attack-modifiers/Cthulu/RollingPoison.png';
-import RollingCurse from '../../assets/images/attack-modifiers/Cthulu/RollingCurse.png';
-import RollingImmobilize from '../../assets/images/attack-modifiers/Cthulu/RollingImmobilize.png';
-import RollingStun from '../../assets/images/attack-modifiers/Cthulu/RollingStun.png';
-import Plus0 from '../../assets/images/attack-modifiers/Cthulu/Plus0.png';
+import Plus1 from '../../resources/images/attack-modifiers/Cthulu/Plus1.png';
+import Plus2 from '../../resources/images/attack-modifiers/Cthulu/Plus2.png';
+import Plus1Air from '../../resources/images/attack-modifiers/Cthulu/Plus1Air.png';
+import RollingPoison from '../../resources/images/attack-modifiers/Cthulu/RollingPoison.png';
+import RollingCurse from '../../resources/images/attack-modifiers/Cthulu/RollingCurse.png';
+import RollingImmobilize from '../../resources/images/attack-modifiers/Cthulu/RollingImmobilize.png';
+import RollingStun from '../../resources/images/attack-modifiers/Cthulu/RollingStun.png';
+import Plus0 from '../../resources/images/attack-modifiers/Cthulu/Plus0.png';
 
-import { none, air, poison, curse, immobilize, stun } from './effects';
+import { none, air, poison, curse, immobilize, stun } from '../../resources/general/effects';
 
 export const plus1PH = { modifier: '+1', effect: none, rolling: false, source: 'ph', img: Plus1 };
 export const plus2PH = { modifier: '+2', effect: none, rolling: false, source: 'ph', img: Plus2 };

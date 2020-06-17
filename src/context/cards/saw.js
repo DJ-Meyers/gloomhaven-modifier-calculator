@@ -1,12 +1,12 @@
-import RollingPlus2 from '../../assets/images/attack-modifiers/Saw/RollingPlus2.png';
-import Plus1Immobilize from '../../assets/images/attack-modifiers/Saw/Plus1Immobilize.png';
-import RollingWound from '../../assets/images/attack-modifiers/Saw/RollingWound.png';
-import RollingStun from '../../assets/images/attack-modifiers/Saw/RollingStun.png';
-import RollingHeal3Self from '../../assets/images/attack-modifiers/Saw/RollingHeal3Self.png';
-import Plus0RefreshItem from '../../assets/images/attack-modifiers/Saw/Plus0RefreshItem.png';
-import Plus2 from '../../assets/images/attack-modifiers/Saw/Plus2.png';
+import RollingPlus2 from '../../resources/images/attack-modifiers/Saw/RollingPlus2.png';
+import Plus1Immobilize from '../../resources/images/attack-modifiers/Saw/Plus1Immobilize.png';
+import RollingWound from '../../resources/images/attack-modifiers/Saw/RollingWound.png';
+import RollingStun from '../../resources/images/attack-modifiers/Saw/RollingStun.png';
+import RollingHeal3Self from '../../resources/images/attack-modifiers/Saw/RollingHeal3Self.png';
+import Plus0RefreshItem from '../../resources/images/attack-modifiers/Saw/Plus0RefreshItem.png';
+import Plus2 from '../../resources/images/attack-modifiers/Saw/Plus2.png';
 
-import { none, immobilize, wound, healSelf, stun, refreshItem  } from './effects';
+import { none, immobilize, wound, healSelf, stun, refreshItem  } from '../../resources/general/effects';
 
 export const plus2SB = { modifier: '+2', effect: none, rolling: false, source: 'sb', img: Plus2 };
 export const plus1ImmobilizeSB = { modifier: '+1', effect: immobilize, rolling: false, source: 'sb', img: Plus1Immobilize };

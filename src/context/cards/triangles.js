@@ -1,15 +1,15 @@
-import Plus2 from '../../assets/images/attack-modifiers/Triangles/Plus2.png';
-import Plus0Fire from '../../assets/images/attack-modifiers/Triangles/Plus0Fire.png';
-import Plus0Ice from '../../assets/images/attack-modifiers/Triangles/Plus0Ice.png';
-import Plus0Air from '../../assets/images/attack-modifiers/Triangles/Plus0Air.png';
-import Plus0Earth from '../../assets/images/attack-modifiers/Triangles/Plus0Earth.png';
-import Plus1Push1 from '../../assets/images/attack-modifiers/Triangles/Plus1Push1.png';
-import Plus1Wound from '../../assets/images/attack-modifiers/Triangles/Plus1Wound.png';
-import Plus0Stun from '../../assets/images/attack-modifiers/Triangles/Plus0Stun.png';
-import Plus0AddTarget from '../../assets/images/attack-modifiers/Triangles/Plus0AddTarget.png';
-import Plus1 from '../../assets/images/attack-modifiers/Triangles/Plus1.png';
+import Plus2 from '../../resources/images/attack-modifiers/Triangles/Plus2.png';
+import Plus0Fire from '../../resources/images/attack-modifiers/Triangles/Plus0Fire.png';
+import Plus0Ice from '../../resources/images/attack-modifiers/Triangles/Plus0Ice.png';
+import Plus0Air from '../../resources/images/attack-modifiers/Triangles/Plus0Air.png';
+import Plus0Earth from '../../resources/images/attack-modifiers/Triangles/Plus0Earth.png';
+import Plus1Push1 from '../../resources/images/attack-modifiers/Triangles/Plus1Push1.png';
+import Plus1Wound from '../../resources/images/attack-modifiers/Triangles/Plus1Wound.png';
+import Plus0Stun from '../../resources/images/attack-modifiers/Triangles/Plus0Stun.png';
+import Plus0AddTarget from '../../resources/images/attack-modifiers/Triangles/Plus0AddTarget.png';
+import Plus1 from '../../resources/images/attack-modifiers/Triangles/Plus1.png';
 
-import { none, fire, ice, air, earth, push, wound, stun, addTarget } from './effects';
+import { none, fire, ice, air, earth, push, wound, stun, addTarget } from '../../resources/general/effects';
 
 export const plus1EL = { modifier: '+1', effect: none, rolling: false, source: 'el', img: Plus1 };
 export const plus2EL = { modifier: '+2', effect: none, rolling: false, source: 'el', img: Plus2 };

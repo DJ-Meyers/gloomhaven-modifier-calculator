@@ -1,4 +1,4 @@
-import { plus0Base, plus1Base, minus1Base, plus2Base, minus2Base, times2Base, times0Base } from '../cards/base';
+import { plus0Base, plus1Base, minus1Base, plus2Base, minus2Base, times2Base, times0Base } from '../classes/Base';
 
 const startingDeck = [
   plus0Base,

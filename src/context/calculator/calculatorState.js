@@ -2,7 +2,7 @@ import React, { useReducer } from 'react';
 import CalculatorContext from './calculatorContext';
 import CalculatorReducer from './calculatorReducer';
 import { UPDATE_RESULTS, SET_TRIALS } from '../Types';
-import { effectsArray, none, attackEffects, anyAttackEffect, debuffEffects, anyDebuff, buffEffects, anyBuff, elementEffects, anyElement, anyEffect } from '../cards/effects';
+import { effectsArray, none, attackEffects, anyAttackEffect, debuffEffects, anyDebuff, buffEffects, anyBuff, elementEffects, anyElement, anyEffect } from '../../resources/general/effects';
 
 const CalculatorState = props => {
 

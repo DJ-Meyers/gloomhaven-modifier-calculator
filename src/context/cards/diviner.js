@@ -1,17 +1,17 @@
-import Plus1 from '../../assets/images/attack-modifiers/Diviner/Plus1.png';
-import Plus3Shield1Self from '../../assets/images/attack-modifiers/Diviner/Plus3Shield1Self.png';
-import Plus1Shield1Ally from '../../assets/images/attack-modifiers/Diviner/Plus1Shield1Ally.png';
-import Plus2Dark from '../../assets/images/attack-modifiers/Diviner/Plus2Dark.png';
-import Plus2Light from '../../assets/images/attack-modifiers/Diviner/Plus2Light.png';
-import Plus3Muddle from '../../assets/images/attack-modifiers/Diviner/Plus3Muddle.png';
-import Plus2Curse from '../../assets/images/attack-modifiers/Diviner/Plus2Curse.png';
-import Plus2RegenerateSelf from '../../assets/images/attack-modifiers/Diviner/Plus2RegenerateSelf.png';
-import Plus1Heal2Ally from '../../assets/images/attack-modifiers/Diviner/Plus1Heal2Ally.png';
-import RollingHeal1Self from '../../assets/images/attack-modifiers/Diviner/RollingHeal1Self.png';
-import RollingCurse from '../../assets/images/attack-modifiers/Diviner/RollingCurse.png';
+import Plus1 from '../../resources/images/attack-modifiers/Diviner/Plus1.png';
+import Plus3Shield1Self from '../../resources/images/attack-modifiers/Diviner/Plus3Shield1Self.png';
+import Plus1Shield1Ally from '../../resources/images/attack-modifiers/Diviner/Plus1Shield1Ally.png';
+import Plus2Dark from '../../resources/images/attack-modifiers/Diviner/Plus2Dark.png';
+import Plus2Light from '../../resources/images/attack-modifiers/Diviner/Plus2Light.png';
+import Plus3Muddle from '../../resources/images/attack-modifiers/Diviner/Plus3Muddle.png';
+import Plus2Curse from '../../resources/images/attack-modifiers/Diviner/Plus2Curse.png';
+import Plus2RegenerateSelf from '../../resources/images/attack-modifiers/Diviner/Plus2RegenerateSelf.png';
+import Plus1Heal2Ally from '../../resources/images/attack-modifiers/Diviner/Plus1Heal2Ally.png';
+import RollingHeal1Self from '../../resources/images/attack-modifiers/Diviner/RollingHeal1Self.png';
+import RollingCurse from '../../resources/images/attack-modifiers/Diviner/RollingCurse.png';
 
 
-import { none, dark, light, curse, shieldSelf, shieldAlly, muddle, regenerateSelf, healAlly, healSelf } from './effects';
+import { none, dark, light, curse, shieldSelf, shieldAlly, muddle, regenerateSelf, healAlly, healSelf } from '../../resources/general/effects';
 
 export const plus1DR = { modifier: '+1', effect: none, rolling: false, source: 'dr', img: Plus1 };
 export const plus3Shield1SelfDR = { modifier: '+3', effect: shieldSelf, rolling: false, source: 'dr', img: Plus3Shield1Self };

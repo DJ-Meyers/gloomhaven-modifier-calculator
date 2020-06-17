@@ -1,13 +1,13 @@
-import RollingPlus1 from '../../assets/images/attack-modifiers/Sun/RollingPlus1.png';
-import RollingHeal1Self from '../../assets/images/attack-modifiers/Sun/RollingHeal1Self.png';
-import RollingStun from '../../assets/images/attack-modifiers/Sun/RollingStun.png';
-import RollingLight from '../../assets/images/attack-modifiers/Sun/RollingLight.png';
-import RollingShield1Self from '../../assets/images/attack-modifiers/Sun/RollingShield1Self.png';
-import Plus1 from '../../assets/images/attack-modifiers/Sun/Plus1.png';
-import Plus0 from '../../assets/images/attack-modifiers/Sun/Plus0.png';
-import Plus2 from '../../assets/images/attack-modifiers/Sun/Plus2.png';
+import RollingPlus1 from '../../resources/images/attack-modifiers/Sun/RollingPlus1.png';
+import RollingHeal1Self from '../../resources/images/attack-modifiers/Sun/RollingHeal1Self.png';
+import RollingStun from '../../resources/images/attack-modifiers/Sun/RollingStun.png';
+import RollingLight from '../../resources/images/attack-modifiers/Sun/RollingLight.png';
+import RollingShield1Self from '../../resources/images/attack-modifiers/Sun/RollingShield1Self.png';
+import Plus1 from '../../resources/images/attack-modifiers/Sun/Plus1.png';
+import Plus0 from '../../resources/images/attack-modifiers/Sun/Plus0.png';
+import Plus2 from '../../resources/images/attack-modifiers/Sun/Plus2.png';
 
-import { none, healSelf, stun, light, shieldSelf } from './effects';
+import { none, healSelf, stun, light, shieldSelf } from '../../resources/general/effects';
 
 export const rollingPlus1SK = { modifier: '+1', effect: none, rolling: true, source: 'sk', img: RollingPlus1 };
 export const rollingHeal1SelfSK = { modifier: '+0', effect: healSelf, rolling: true, source: 'sk', img: RollingHeal1Self };

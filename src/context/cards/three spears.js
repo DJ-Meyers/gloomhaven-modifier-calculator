@@ -1,13 +1,13 @@
-import RollingPlus1 from '../../assets/images/attack-modifiers/Three Spears/RollingPlus1.png';
-import RollingMuddle from '../../assets/images/attack-modifiers/Three Spears/RollingMuddle.png';
-import RollingPierce3 from '../../assets/images/attack-modifiers/Three Spears/RollingPierce3.png';
-import RollingStun from '../../assets/images/attack-modifiers/Three Spears/RollingStun.png';
-import RollingAddTarget from '../../assets/images/attack-modifiers/Three Spears/RollingAddTarget.png';
-import Plus0RefreshItem from '../../assets/images/attack-modifiers/Three Spears/Plus0RefreshItem.png';
-import Plus1 from '../../assets/images/attack-modifiers/Three Spears/Plus1.png';
-import Plus2 from '../../assets/images/attack-modifiers/Three Spears/Plus2.png';
+import RollingPlus1 from '../../resources/images/attack-modifiers/Three Spears/RollingPlus1.png';
+import RollingMuddle from '../../resources/images/attack-modifiers/Three Spears/RollingMuddle.png';
+import RollingPierce3 from '../../resources/images/attack-modifiers/Three Spears/RollingPierce3.png';
+import RollingStun from '../../resources/images/attack-modifiers/Three Spears/RollingStun.png';
+import RollingAddTarget from '../../resources/images/attack-modifiers/Three Spears/RollingAddTarget.png';
+import Plus0RefreshItem from '../../resources/images/attack-modifiers/Three Spears/Plus0RefreshItem.png';
+import Plus1 from '../../resources/images/attack-modifiers/Three Spears/Plus1.png';
+import Plus2 from '../../resources/images/attack-modifiers/Three Spears/Plus2.png';
 
-import { none, muddle, pierce, stun, addTarget, refreshItem } from './effects';
+import { none, muddle, pierce, stun, addTarget, refreshItem } from '../../resources/general/effects';
 
 export const rollingPlus1QM = { modifier: '+1', effect: none, rolling: true, source: 'qm', img: RollingPlus1 };
 export const rollingMuddleQM = { modifier: '+0', effect: muddle, rolling: true, source: 'qm', img: RollingMuddle };

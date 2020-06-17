@@ -1,15 +1,15 @@
-import Plus1Immobilize from '../../assets/images/attack-modifiers/Music Notes/Plus1Immobilize.png';
-import Plus1Disarm from '../../assets/images/attack-modifiers/Music Notes/Plus1Disarm.png';
-import Plus2Wound from '../../assets/images/attack-modifiers/Music Notes/Plus2Wound.png';
-import Plus2Poison from '../../assets/images/attack-modifiers/Music Notes/Plus2Poison.png';
-import Plus2Curse from '../../assets/images/attack-modifiers/Music Notes/Plus2Curse.png';
-import Plus3Muddle from '../../assets/images/attack-modifiers/Music Notes/Plus3Muddle.png';
-import Plus0Stun from '../../assets/images/attack-modifiers/Music Notes/Plus0Stun.png';
-import RollingPlus1 from '../../assets/images/attack-modifiers/Music Notes/RollingPlus1.png';
-import RollingCurse from '../../assets/images/attack-modifiers/Music Notes/RollingCurse.png';
-import Plus4 from '../../assets/images/attack-modifiers/Music Notes/Plus4.png';
+import Plus1Immobilize from '../../resources/images/attack-modifiers/Music Notes/Plus1Immobilize.png';
+import Plus1Disarm from '../../resources/images/attack-modifiers/Music Notes/Plus1Disarm.png';
+import Plus2Wound from '../../resources/images/attack-modifiers/Music Notes/Plus2Wound.png';
+import Plus2Poison from '../../resources/images/attack-modifiers/Music Notes/Plus2Poison.png';
+import Plus2Curse from '../../resources/images/attack-modifiers/Music Notes/Plus2Curse.png';
+import Plus3Muddle from '../../resources/images/attack-modifiers/Music Notes/Plus3Muddle.png';
+import Plus0Stun from '../../resources/images/attack-modifiers/Music Notes/Plus0Stun.png';
+import RollingPlus1 from '../../resources/images/attack-modifiers/Music Notes/RollingPlus1.png';
+import RollingCurse from '../../resources/images/attack-modifiers/Music Notes/RollingCurse.png';
+import Plus4 from '../../resources/images/attack-modifiers/Music Notes/Plus4.png';
 
-import { none, immobilize, disarm, wound, poison, curse, muddle, stun  } from './effects';
+import { none, immobilize, disarm, wound, poison, curse, muddle, stun  } from '../../resources/general/effects';
 
 export const plus1ImmobilizeSS = { modifier: '+1', effect: immobilize, rolling: false, source: 'ss', img: Plus1Immobilize };
 export const plus1DisarmSS = { modifier: '+1', effect: disarm, rolling: false, source: 'ss', img: Plus1Disarm };

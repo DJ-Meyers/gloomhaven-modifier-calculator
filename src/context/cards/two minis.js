@@ -1,11 +1,11 @@
-import Plus2 from '../../assets/images/attack-modifiers/Two Minis/Plus2.png';
-import Plus1Wound from '../../assets/images/attack-modifiers/Two Minis/Plus1Wound.png';
-import Plus1Immobilize from '../../assets/images/attack-modifiers/Two Minis/Plus1Immobilize.png';
-import RollingHeal1Self from '../../assets/images/attack-modifiers/Two Minis/RollingHeal1Self.png';
-import RollingEarth from '../../assets/images/attack-modifiers/Two Minis/RollingEarth.png';
-import Plus1 from '../../assets/images/attack-modifiers/Two Minis/Plus1.png';
+import Plus2 from '../../resources/images/attack-modifiers/Two Minis/Plus2.png';
+import Plus1Wound from '../../resources/images/attack-modifiers/Two Minis/Plus1Wound.png';
+import Plus1Immobilize from '../../resources/images/attack-modifiers/Two Minis/Plus1Immobilize.png';
+import RollingHeal1Self from '../../resources/images/attack-modifiers/Two Minis/RollingHeal1Self.png';
+import RollingEarth from '../../resources/images/attack-modifiers/Two Minis/RollingEarth.png';
+import Plus1 from '../../resources/images/attack-modifiers/Two Minis/Plus1.png';
 
-import { none, wound, immobilize, healSelf, earth } from './effects';
+import { none, wound, immobilize, healSelf, earth } from '../../resources/general/effects';
 
 export const plus1BT = { modifier: '+1', effect: none, rolling: false, source: 'bt', img: Plus1 };
 export const plus2BT = { modifier: '+2', effect: none, rolling: false, source: 'bt', img: Plus2 };

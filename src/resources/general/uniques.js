@@ -1,4 +1,4 @@
-import classes from '../perks/Classes';
+import classes from '../../context/perks/Classes';
 
 export const getKey = card => {
   return `${card.modifier}-${card.source}-${card.effect}-${card.rolling}`;

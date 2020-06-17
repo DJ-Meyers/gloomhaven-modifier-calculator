@@ -1,15 +1,15 @@
-import Plus1 from '../../assets/images/attack-modifiers/Circles/Plus1.png';
-import Plus2 from '../../assets/images/attack-modifiers/Circles/Plus2.png';
-import RollingWound from '../../assets/images/attack-modifiers/Circles/RollingWound.png';
-import RollingPoison from '../../assets/images/attack-modifiers/Circles/RollingPoison.png';
-import RollingHeal1Self from '../../assets/images/attack-modifiers/Circles/RollingHeal1Self.png';
-import RollingFire from '../../assets/images/attack-modifiers/Circles/RollingFire.png';
-import RollingAir from '../../assets/images/attack-modifiers/Circles/RollingAir.png';
-import RollingDark from '../../assets/images/attack-modifiers/Circles/RollingDark.png';
-import RollingEarth from '../../assets/images/attack-modifiers/Circles/RollingEarth.png';
-import Plus0 from '../../assets/images/attack-modifiers/Circles/Plus0.png';
+import Plus1 from '../../resources/images/attack-modifiers/Circles/Plus1.png';
+import Plus2 from '../../resources/images/attack-modifiers/Circles/Plus2.png';
+import RollingWound from '../../resources/images/attack-modifiers/Circles/RollingWound.png';
+import RollingPoison from '../../resources/images/attack-modifiers/Circles/RollingPoison.png';
+import RollingHeal1Self from '../../resources/images/attack-modifiers/Circles/RollingHeal1Self.png';
+import RollingFire from '../../resources/images/attack-modifiers/Circles/RollingFire.png';
+import RollingAir from '../../resources/images/attack-modifiers/Circles/RollingAir.png';
+import RollingDark from '../../resources/images/attack-modifiers/Circles/RollingDark.png';
+import RollingEarth from '../../resources/images/attack-modifiers/Circles/RollingEarth.png';
+import Plus0 from '../../resources/images/attack-modifiers/Circles/Plus0.png';
 
-import { none, wound, poison, healSelf, fire, air, dark, earth } from './effects';
+import { none, wound, poison, healSelf, fire, air, dark, earth } from '../../resources/general/effects';
 
 export const plus1SU = { modifier: '+1', effect: none, rolling: false, source: 'su', img: Plus1 };
 export const plus2SU = { modifier: '+2', effect: none, rolling: false, source: 'su', img: Plus2 };

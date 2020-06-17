@@ -3,8 +3,8 @@ import DeckContext from './deckContext';
 import DeckReducer from './deckReducer';
 
 import { DISCARD, UNDISCARD, UPDATE_UNIQUES, MODIFY_DECK, RESET_DECK } from '../Types';
-import startingDeck from './startingDeck';
-import uniques from './uniques';
+import startingDeck from '../../resources/general/startingDeck';
+import uniques from '../../resources/general/uniques';
 
 
 

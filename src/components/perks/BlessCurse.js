@@ -3,10 +3,10 @@ import { Button, Grid, Image, Popup } from 'semantic-ui-react';
 import DeckContext from '../../context/deck/deckContext';
 import PerksContext from '../../context/perks/perksContext';
 
-import Bless from '../../assets/images/icons/Effects/Bless.png';
-import Curse from '../../assets/images/icons/Effects/Curse.png';
-import Minus1 from '../../assets/images/icons/Effects/Minus1.png';
-import { bless, curse, playerMinus1 } from '../../context/cards/base';
+import Bless from '../../resources/images/icons/Effects/Bless.png';
+import Curse from '../../resources/images/icons/Effects/Curse.png';
+import Minus1 from '../../resources/images/icons/Effects/Minus1.png';
+import { bless, curse, playerMinus1 } from '../../resources/classes/Base';
 
 const BlessCurse = () => { 
 
