@@ -21,7 +21,7 @@ const rollingAddTargetNS = { modifier: '+0', effect: addTarget, rolling: true, s
 const plus1NS = { modifier: '+1', effect: none, rolling: false, source: 'ns', img: Plus1 };
 const minus1DarkNS = { modifier: '-1', effect: dark, rolling: false, source: 'ns', img: Minus1Dark };
 
-export const EclipseCards = [plus1DarkNS, plus1InvisibleNS, rollingMuddleNS, rollingHeal1SelfNS, rollingCurseNS, rollingAddTargetNS, plus1NS, minus1DarkNS];
+export const EclipseCards = [minus1DarkNS, plus1DarkNS, plus1InvisibleNS, rollingMuddleNS, rollingHeal1SelfNS, rollingCurseNS, rollingAddTargetNS, plus1NS];
 
 export default { 
   key: 'NS', 

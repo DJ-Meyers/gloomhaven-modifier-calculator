@@ -17,7 +17,7 @@ const plus2EarthDM = { modifier: '+2', effect: earth, rolling: false, source: 'd
 const plus2FireDM = { modifier: '+2', effect: fire, rolling: false, source: 'dm', img: Plus2Fire };
 const plus2MuddleDM = { modifier: '+2', effect: muddle, rolling: false, source: 'dm', img: Plus2Muddle };
 
-const DemolitionistCards = [plus0AdjacentSuffer1DM, plus0PoisonDM, plus2DM, plus2EarthDM, plus2FireDM, plus2MuddleDM];
+const DemolitionistCards = [plus2MuddleDM, plus0PoisonDM, plus2DM, plus2EarthDM, plus2FireDM, plus0AdjacentSuffer1DM];
 
 export default 
 { 

@@ -25,7 +25,7 @@ const rollingDarkSU = { modifier: '+0', effect: dark, rolling: true, source: 'su
 const rollingEarthSU = { modifier: '+0', effect: earth, rolling: true, source: 'su', img: RollingEarth };
 const plus0SU = { modifier: '+0', effect: none, rolling: false, source: 'su', img: Plus0 };
 
-const CirclesCards = [plus1SU, plus2SU, rollingWoundSU, rollingPoisonSU, rollingHeal1SelfSU, rollingFireSU, rollingAirSU, rollingDarkSU, rollingEarthSU, plus0SU];
+const CirclesCards = [plus0SU, plus1SU, plus2SU, rollingWoundSU, rollingPoisonSU, rollingHeal1SelfSU, rollingFireSU, rollingAirSU, rollingDarkSU, rollingEarthSU];
 
 export default { 
   key: 'SU', 

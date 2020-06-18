@@ -21,7 +21,7 @@ const plus0RefreshItemQM = { modifier: '+0', effect: refreshItem, rolling: false
 const plus1QM = { modifier: '+1', effect: none, rolling: false, source: 'qm', img: Plus1 };
 const plus2QM = { modifier: '+2', effect: none, rolling: false, source: 'qm', img: Plus2 };
 
-const ThreeSpearsCards = [rollingPlus1QM, rollingMuddleQM, rollingPierce3QM, rollingStunQM, rollingAddTargetQM, plus0RefreshItemQM, plus1QM, plus2QM ];
+const ThreeSpearsCards = [plus2QM, rollingPlus1QM, rollingMuddleQM, rollingPierce3QM, rollingStunQM, rollingAddTargetQM, plus0RefreshItemQM, plus1QM];
 
 export default { 
   key: 'QM', 

@@ -19,7 +19,7 @@ const rollingStunSB = { modifier: '+0', effect: stun, rolling: true, source: 'sb
 const rollingHeal3SelfSB = { modifier: '+0', effect: healSelf, rolling: true, source: 'sb', img: RollingHeal3Self };
 const refreshItemSB = { modifier: '+0', effect: refreshItem, rolling: false, source: 'sb', img: Plus0RefreshItem };
 
-const SawCards = [plus2SB, plus1ImmobilizeSB, rollingPlus2SB, rollingWoundSB, rollingStunSB, rollingHeal3SelfSB, refreshItemSB];
+const SawCards = [plus2SB, rollingPlus2SB, plus1ImmobilizeSB, rollingWoundSB, rollingStunSB, rollingHeal3SelfSB, refreshItemSB];
 
 export default { 
   key: 'SB', 

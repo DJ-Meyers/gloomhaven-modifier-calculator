@@ -25,7 +25,7 @@ const plus4SS = { modifier: '+4', effect: none, rolling: false, source: 'ss', im
 const rollingPlus1SS = { modifier: '+1', effect: none, rolling: true, source: 'ss', img: RollingPlus1 };
 const rollingCurseSS = { modifier: '+0', effect: curse, rolling: true, source: 'ss', img: RollingCurse };
 
-const MusicNotesCards = [plus1ImmobilizeSS, plus1DisarmSS, plus2WoundSS, plus2PoisonSS, plus2CurseSS, plus3MuddleSS, plus0StunSS, plus4SS, rollingPlus1SS, rollingCurseSS];
+const MusicNotesCards = [plus4SS, plus1ImmobilizeSS, plus1DisarmSS, plus2WoundSS, plus2PoisonSS, plus2CurseSS, plus3MuddleSS, plus0StunSS, rollingPlus1SS, rollingCurseSS];
 
 export default { 
   key: 'SS', 

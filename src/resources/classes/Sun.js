@@ -21,7 +21,7 @@ const plus1SK = { modifier: '+1', effect: none, rolling: false, source: 'sk', im
 const plus0SK = { modifier: '+0', effect: none, rolling: false, source: 'sk', img: Plus0 };
 const plus2SK = { modifier: '+2', effect: none, rolling: false, source: 'sk', img: Plus2 };
 
-const SunCards = [rollingPlus1SK, rollingHeal1SelfSK, rollingStunSK, rollingLightSK, rollingShield1SelfSK, plus1SK, plus0SK, plus2SK];
+const SunCards = [plus0SK, plus2SK, rollingPlus1SK, rollingHeal1SelfSK, rollingStunSK, rollingLightSK, rollingShield1SelfSK, plus1SK];
 
 export default { 
   key: 'SK', 

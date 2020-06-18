@@ -23,7 +23,7 @@ const plus2AirHA = { modifier: '+2', effect: air, rolling: false, source: 'ha', 
 const plus2MuddleHA = { modifier: '+2', effect: muddle, rolling: false, source: 'ha', img: Plus2Muddle };
 const plus3HA = { modifier: '+3', effect: none, rolling: false, source: 'ha', img: Plus3 };
 
-const HatchetCards = [plus0StunHA, plus1ImmobilizeHA, plus1PoisonHA, plus1Push2HA, plus1StunHA, plus1WoundHA, plus2AirHA, plus2MuddleHA, plus3HA];
+const HatchetCards = [plus2MuddleHA, plus1PoisonHA, plus1WoundHA, plus1ImmobilizeHA, plus1Push2HA, plus0StunHA, plus1StunHA, plus2AirHA, plus3HA];
 
 export default 
 { 

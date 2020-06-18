@@ -21,7 +21,7 @@ const rollingImmobilizePH = { modifier: '+0', effect: immobilize, rolling: true,
 const rollingStunPH = { modifier: '+0', effect: stun, rolling: true, source: 'ph', img: RollingStun };
 const plus0PH = { modifier: '+0', effect: none, rolling: false, source: 'ph', img: Plus0 };
 
-const CthuluCards = [plus1PH, plus2PH, plus1AirPH, rollingPoisonPH, rollingCursePH, rollingImmobilizePH, rollingStunPH, plus0PH];
+const CthuluCards = [plus0PH, plus1PH, plus2PH, plus1AirPH, rollingPoisonPH, rollingCursePH, rollingImmobilizePH, rollingStunPH];
 
 export default   { 
   key: 'PH', 

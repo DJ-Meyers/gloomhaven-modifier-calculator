@@ -27,7 +27,7 @@ export const plus1Heal2AllyDR = { modifier: '+1', effect: healAlly, rolling: fal
 export const rollingHeal1SelfDR = { modifier: '+0', effect: healSelf, rolling: true, source: 'dr', img: RollingHeal1Self };
 export const rollingCurseDR = { modifier: '+0', effect: curse, rolling: true, source: 'dr', img: RollingCurse };
 
-export const DivinerCards = [plus1DR, plus3Shield1SelfDR, plus1Shield1AllyDR, plus2DarkDR, plus2LightDR, plus3MuddleDR, plus2CurseDR, plus2RegenerateSelfDR, plus1Heal2AllyDR, rollingHeal1SelfDR, rollingCurseDR];
+export const DivinerCards = [plus3Shield1SelfDR, plus1Shield1AllyDR, plus2DarkDR, plus2LightDR, plus3MuddleDR, plus2CurseDR, plus2RegenerateSelfDR, plus1Heal2AllyDR, rollingHeal1SelfDR, rollingCurseDR, plus1DR];
 
 export default { 
   key: 'DR', 

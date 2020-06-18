@@ -17,7 +17,7 @@ export const plus1WoundBT = { modifier: '+1', effect: wound, rolling: false, sou
 export const rollingHeal1SelfBT = { modifier: '+0', effect: healSelf, rolling: false, source: 'bt', img: RollingHeal1Self };
 export const rollingEarthBT = { modifier: '+0', effect: earth, rolling: false, source: 'bt', img: RollingEarth };
 
-export const TwoMinisCards = [plus1BT, plus2BT, plus1ImmobilizeBT, plus1WoundBT, rollingHeal1SelfBT, rollingEarthBT];
+export const TwoMinisCards = [plus1BT, plus2BT, plus1WoundBT, plus1ImmobilizeBT, rollingHeal1SelfBT, rollingEarthBT];
 
 export default { 
   key: 'BT', 

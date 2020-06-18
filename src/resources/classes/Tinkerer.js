@@ -23,7 +23,7 @@ export const plus0AddTargetTI = { modifier: '+0', effect: addTarget, rolling: fa
 export const rollingFireTI = { modifier: '+0', effect: fire, rolling: true, source: 'ti', img: RollingFire };
 export const rollingMuddleTI = { modifier: '+0', effect: muddle, rolling: true, source: 'ti', img: RollingMuddle };
 
-export const TinkererCards = [plus0TI, plus1TI, plus3TI, plus1WoundTI, plus1ImmobilizeTI, plus1Heal2SelfTI, plus0AddTargetTI, rollingFireTI, rollingMuddleTI];
+export const TinkererCards = [plus0TI, plus1TI, plus3TI, rollingFireTI, rollingMuddleTI, plus1WoundTI, plus1ImmobilizeTI, plus1Heal2SelfTI, plus0AddTargetTI];
 
 export default { 
   key: 'TI', 
