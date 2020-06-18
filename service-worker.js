@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/gloomhaven-perk-calculator/precache-manifest.16e8ec21dffed155b0a22427aab273d9.js"
+  "/gloomhaven-perk-calculator/precache-manifest.9953e6648c1963e87732bd9d1f652ecd.js"
 );
 
 self.addEventListener('message', (event) => {

@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1d1aeed1edf99b8fdf4a9d3c830925d5",
+    "revision": "3d2701cadc2e407a19a1345365fc289c",
     "url": "/gloomhaven-perk-calculator/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/gloomhaven-perk-calculator/static/css/2.9c4f24d0.chunk.css"
   },
   {
-    "revision": "f1893445f6712b8ae07d",
+    "revision": "c3bd1e30e7303b238efe",
     "url": "/gloomhaven-perk-calculator/static/css/main.36a9c55f.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/gloomhaven-perk-calculator/static/js/2.68870028.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f1893445f6712b8ae07d",
-    "url": "/gloomhaven-perk-calculator/static/js/main.ff2eb18f.chunk.js"
+    "revision": "c3bd1e30e7303b238efe",
+    "url": "/gloomhaven-perk-calculator/static/js/main.a43b8a2b.chunk.js"
   },
   {
     "revision": "97901df7a0be10c685db",
