@@ -24,6 +24,8 @@ import TwoMinis from './Two Minis';
 import Diviner from './Diviner';
 
 // Jaws of the Lion
+import Demolitionist from './Demolitionist';
+import Hatchet from './Hatchet';
 
 const ClassList = [
   Base,
@@ -44,7 +46,9 @@ const ClassList = [
   ThreeSpears,
   Triangles,
   TwoMinis,
-  Diviner
+  Diviner,
+  Demolitionist,
+  Hatchet
 ];
 
 export default ClassList;

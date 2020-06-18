@@ -13,9 +13,9 @@ export const healAlly = 'Heal Ally';
 export const regenerateSelf = 'Regenerate Self';
 export const addTarget = 'Add Target';
 export const refreshItem = 'Refresh Item';
+export const adjacentEnemiesSuffer1 = 'Adjacents Suffer 1';
 export const anyAttackEffect = 'Any Attack Effect';
-export const attackEffects = [push, pull, pierce, shieldSelf, shieldAlly, healSelf, healAlly, regenerateSelf, addTarget, refreshItem];
-
+export const attackEffects = [push, pull, pierce, shieldSelf, shieldAlly, healSelf, healAlly, regenerateSelf, addTarget, refreshItem, adjacentEnemiesSuffer1];
 
 // Debuffs
 export const poison = 'Poison';
@@ -59,6 +59,7 @@ export const effectsArray = [
   {id: addTarget, bin: addTarget, count: 0}, 
   {id: refreshItem, bin: refreshItem, count: 0},
   {id: regenerateSelf, bin: regenerateSelf, count: 0},
+  {id: adjacentEnemiesSuffer1, bin: adjacentEnemiesSuffer1, count: 0},
   {id: anyAttackEffect, bin: anyAttackEffect, count: 0},
   {id: poison, bin: poison, count: 0}, 
   {id: wound, bin: wound, count: 0}, 

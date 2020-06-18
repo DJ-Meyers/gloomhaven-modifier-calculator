@@ -1,12 +1,12 @@
-import RollingPierce3 from '../../resources/images/attack-modifiers/Brute/RollingPierce3.png';
-import RollingStun from '../../resources/images/attack-modifiers/Brute/RollingStun.png';
-import RollingDisarm from '../../resources/images/attack-modifiers/Brute/RollingDisarm.png';
-import RollingMuddle from '../../resources/images/attack-modifiers/Brute/RollingMuddle.png';
-import RollingAddTarget from '../../resources/images/attack-modifiers/Brute/RollingAddTarget.png';
-import Plus1Shield1Self from '../../resources/images/attack-modifiers/Brute/Plus1Shield1Self.png';
-import Plus1 from '../../resources/images/attack-modifiers/Brute/Plus1.png';
-import Plus3 from '../../resources/images/attack-modifiers/Brute/Plus3.png';
-import RollingPush1 from '../../resources/images/attack-modifiers/Brute/RollingPush1.png';
+import RollingPierce3 from '../images/attack-modifiers/Brute/RollingPierce3.png';
+import RollingStun from '../images/attack-modifiers/Brute/RollingStun.png';
+import RollingDisarm from '../images/attack-modifiers/Brute/RollingDisarm.png';
+import RollingMuddle from '../images/attack-modifiers/Brute/RollingMuddle.png';
+import RollingAddTarget from '../images/attack-modifiers/Brute/RollingAddTarget.png';
+import Plus1Shield1Self from '../images/attack-modifiers/Brute/Plus1Shield1Self.png';
+import Plus1 from '../images/attack-modifiers/Brute/Plus1.png';
+import Plus3 from '../images/attack-modifiers/Brute/Plus3.png';
+import RollingPush1 from '../images/attack-modifiers/Brute/RollingPush1.png';
 
 import BruteIcon from '../images/icons/characters/Brute.png';
 
