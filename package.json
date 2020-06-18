@@ -1,6 +1,6 @@
 {
-  "homepage": "http://dj-meyers.github.io/gloomhaven-modifier-calculator",
-  "name": "gloomhaven-modifier-calculator",
+  "homepage": "http://dj-meyers.github.io/rolling-advantage",
+  "name": "rolling-advantage",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
