@@ -12,13 +12,10 @@ export default class Navbar extends React.Component {
       <Menu inverted color='grey' style={{ borderRadius: '0px' }}>
         <Container>
           <Menu.Item as="span" header>
-            <Link to="/RollingAdvantage">
+            <Link to="/">
               <Icon name="home" /> Rolling Advantage
             </Link>
           </Menu.Item>
-          {/* <Menu.Item as="span">
-            <Link to="/About">About</Link>
-          </Menu.Item> */}
         </Container>
       </Menu>
     );
