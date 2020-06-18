@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/gloomhaven-perk-calculator/static/css/main.36a9c55f.chunk.css",
-    "main.js": "/gloomhaven-perk-calculator/static/js/main.a43b8a2b.chunk.js",
-    "main.js.map": "/gloomhaven-perk-calculator/static/js/main.a43b8a2b.chunk.js.map",
-    "runtime-main.js": "/gloomhaven-perk-calculator/static/js/runtime-main.fc8446eb.js",
-    "runtime-main.js.map": "/gloomhaven-perk-calculator/static/js/runtime-main.fc8446eb.js.map",
+    "main.js": "/gloomhaven-perk-calculator/static/js/main.72846730.chunk.js",
+    "main.js.map": "/gloomhaven-perk-calculator/static/js/main.72846730.chunk.js.map",
+    "runtime-main.js": "/gloomhaven-perk-calculator/static/js/runtime-main.109ae064.js",
+    "runtime-main.js.map": "/gloomhaven-perk-calculator/static/js/runtime-main.109ae064.js.map",
     "static/css/2.9c4f24d0.chunk.css": "/gloomhaven-perk-calculator/static/css/2.9c4f24d0.chunk.css",
-    "static/js/2.68870028.chunk.js": "/gloomhaven-perk-calculator/static/js/2.68870028.chunk.js",
-    "static/js/2.68870028.chunk.js.map": "/gloomhaven-perk-calculator/static/js/2.68870028.chunk.js.map",
+    "static/js/2.70300fda.chunk.js": "/gloomhaven-perk-calculator/static/js/2.70300fda.chunk.js",
+    "static/js/2.70300fda.chunk.js.map": "/gloomhaven-perk-calculator/static/js/2.70300fda.chunk.js.map",
     "index.html": "/gloomhaven-perk-calculator/index.html",
-    "precache-manifest.9953e6648c1963e87732bd9d1f652ecd.js": "/gloomhaven-perk-calculator/precache-manifest.9953e6648c1963e87732bd9d1f652ecd.js",
+    "precache-manifest.9f42a80ecc78078862746994a6965d7a.js": "/gloomhaven-perk-calculator/precache-manifest.9f42a80ecc78078862746994a6965d7a.js",
     "service-worker.js": "/gloomhaven-perk-calculator/service-worker.js",
     "static/css/2.9c4f24d0.chunk.css.map": "/gloomhaven-perk-calculator/static/css/2.9c4f24d0.chunk.css.map",
     "static/css/main.36a9c55f.chunk.css.map": "/gloomhaven-perk-calculator/static/css/main.36a9c55f.chunk.css.map",
-    "static/js/2.68870028.chunk.js.LICENSE.txt": "/gloomhaven-perk-calculator/static/js/2.68870028.chunk.js.LICENSE.txt",
+    "static/js/2.70300fda.chunk.js.LICENSE.txt": "/gloomhaven-perk-calculator/static/js/2.70300fda.chunk.js.LICENSE.txt",
     "static/media/Angry Face.png": "/gloomhaven-perk-calculator/static/media/Angry Face.96eba28c.png",
     "static/media/Base.png": "/gloomhaven-perk-calculator/static/media/Base.34075a97.png",
     "static/media/Bless.png": "/gloomhaven-perk-calculator/static/media/Bless.7725a53e.png",
@@ -115,10 +115,10 @@
     "static/media/semantic.min.css": "/gloomhaven-perk-calculator/static/media/outline-icons.ef60a4f6.woff"
   },
   "entrypoints": [
-    "static/js/runtime-main.fc8446eb.js",
+    "static/js/runtime-main.109ae064.js",
     "static/css/2.9c4f24d0.chunk.css",
-    "static/js/2.68870028.chunk.js",
+    "static/js/2.70300fda.chunk.js",
     "static/css/main.36a9c55f.chunk.css",
-    "static/js/main.a43b8a2b.chunk.js"
+    "static/js/main.72846730.chunk.js"
   ]
 }
