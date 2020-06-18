@@ -27,6 +27,7 @@ import Diviner from './Diviner';
 import Demolitionist from './Demolitionist';
 import Hatchet from './Hatchet';
 import RedGuard from './Red Guard';
+import Voidwarden from './Voidwarden';
 
 const ClassList = [
   Base,
@@ -50,7 +51,8 @@ const ClassList = [
   Diviner,
   Demolitionist,
   Hatchet,
-  RedGuard
+  RedGuard,
+  Voidwarden
 ];
 
 export default ClassList;

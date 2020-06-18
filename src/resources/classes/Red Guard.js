@@ -80,13 +80,13 @@ export default
     { text: 'Replace one (+0) card with one (+1) [Immobilize] card', 
       changes: { 
         add: [plus1ImmobilizeRG], 
-        remove: []}, 
+        remove: [plus0Base]}, 
       checked: [false]
     },
     { text: 'Replace one (+0) card with one (+1) [Wound] card', 
       changes: { 
         add: [plus1WoundRG], 
-        remove: []}, 
+        remove: [plus0Base]}, 
       checked: [false]
     }
   ]
