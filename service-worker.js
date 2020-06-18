@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/RollingAdvantage/precache-manifest.d3d8f00e0236789dffe56baa26353973.js"
+  "/RollingAdvantage/precache-manifest.6e411925e726744b0565dc9403c44d5c.js"
 );
 
 self.addEventListener('message', (event) => {
