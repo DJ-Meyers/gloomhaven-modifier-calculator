@@ -30,7 +30,7 @@ function App() {
                 <Navbar />
                 <Container style={{ marginTop: '2rem' }}>
                   <Switch>
-                    <Route exact path="/RollingAdvantage" component={Home} />
+                    <Route exact path="/gloomhaven-perk-calculator" component={Home} />
                     {/* <Route exact path="/About" component={About} /> */}
                   </Switch>
                 </Container>

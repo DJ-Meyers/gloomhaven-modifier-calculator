@@ -24,7 +24,7 @@ export const bless = { modifier: '*2', effect: none, rolling: false, source: 'sp
 export const curse = { modifier: '*0', effect: none, rolling: false, source: 'special', img: Curse };
 export const playerMinus1 = { modifier: '-1', effect: none, rolling: false, source: 'special', img: PlayerMinus1 };
 
-const BaseCards = [plus0Base, plus1Base, minus1Base, plus2Base, minus2Base, times2Base, times0Base, bless, curse, playerMinus1];
+const BaseCards = [times0Base, minus2Base, minus1Base, plus0Base, plus1Base, plus2Base, times2Base, bless, curse, playerMinus1];
 
 export default { 
   key: 'base', 
