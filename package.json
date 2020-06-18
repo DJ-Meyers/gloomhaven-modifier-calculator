@@ -1,6 +1,6 @@
 {
   "homepage": "http://dj-meyers.github.io/gloomhaven-perk-calculator",
-  "name": "gloomhaven-modifier-calculator",
+  "name": "gloomhaven-perk-calculator",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
