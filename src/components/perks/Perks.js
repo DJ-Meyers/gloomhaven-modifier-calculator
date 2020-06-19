@@ -1,17 +1,26 @@
 import React, { Fragment } from 'react';
-import { Header, List, Checkbox } from 'semantic-ui-react';
+import { Header, List, Checkbox, Button } from 'semantic-ui-react';
 
 const Perks = (props) => { 
 
   const insertIcon = (text) => {
-         
-    // let effects = (text.match(/\[.+?\]/g) || [] )
-    // let effects = (text.match(/\[([^)]+)\]/g) || [] )
-    //   .map(str => console.log(str));
   
     return (
     <span>{text}</span>
     );
+  };
+
+  const toggleAllPerks = (perks) => {
+    perks.forEach(perk => {
+      perk.checked.forEach((checkbox, index) => {
+
+        props.toggle(perk, index);
+
+        if (!perk.checked[index]) props.apply(perk);
+        else props.undo(perk);
+        
+      });
+    });
   };
 
   return (
@@ -45,6 +54,11 @@ const Perks = (props) => {
                 </List.Item>)
             })}
           </List>
+          {props.character.perks.length > 0 ? 
+            <Header>
+              <Button fluid compact onClick={()=>{ toggleAllPerks(props.character.perks) }} className='toggle' >Toggle all</Button> 
+            </Header>
+            : <Fragment />}
         </Fragment>
       }
       
