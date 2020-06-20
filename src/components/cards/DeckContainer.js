@@ -8,7 +8,9 @@ const DeckContainer = () => {
   const deckContext = useContext(DeckContext);
   let {
     deckUniques,
+    deck,
     discardUniques,
+    discardPile,
     updateUniques,
     discard,
     undiscard
@@ -26,11 +28,11 @@ const DeckContainer = () => {
       <Header size='medium'>Attack Modifiers</Header>
       <Grid columns='equal'>
         <Grid.Column>
-          <Header size='small'>Deck</Header>
+  <Header size='small'>Deck ({deck.length})</Header>
           <Deck uniques={deckUniques} onClick={discard}/>
         </Grid.Column>
         <Grid.Column>
-          <Header size='small'>Discard</Header>
+          <Header size='small'>Discard ({discardPile.length})</Header>
           <Deck uniques={discardUniques} onClick={undiscard}/>
         </Grid.Column>
       </Grid>
