@@ -13,7 +13,7 @@ const CalculatorContainer = () => {
   const calculatorContext = useContext(CalculatorContext);
   let {
     averageDamage,
-    killPct,
+    stDev,
     negativeDrawPct,
     calculateDamage,
     trials,
@@ -41,7 +41,7 @@ const CalculatorContainer = () => {
       <Grid>
         <Grid.Column>
           <Trials trials={trials} setTrials={setTrials} />
-          <Results values={{averageDamage, killPct, negativeDrawPct}}/>
+          <Results values={{averageDamage, stDev, negativeDrawPct}}/>
           <Grid columns='equal'>
             <Grid.Column className='centered'>
               <DetailsContainer />

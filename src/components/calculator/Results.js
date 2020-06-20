@@ -9,7 +9,7 @@ const Results = (props) => {
         <Grid.Column className='centered'>
           <Statistic value={`${props.values.averageDamage === null ? '-' : props.values.averageDamage.toFixed(2)}`} label='Average Damage' size='mini'/>
           <Divider />
-          <Statistic value={`${props.values.killPct === null ? '-' : props.values.killPct.toFixed(2)}%`} label='Kill %' size='mini'/>
+          <Statistic value={`${props.values.stDev === null ? '-' : props.values.stDev.toFixed(2)}`} label='Standard Deviation' size='mini'/>
           <Divider />
           <Statistic value={`${props.values.negativeDrawPct === null ? '-' : props.values.negativeDrawPct.toFixed(2)}%`} label='Negative Draw %' size='mini'/>
           <Divider />

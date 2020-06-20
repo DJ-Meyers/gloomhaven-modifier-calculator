@@ -9,7 +9,7 @@ const CalculatorState = props => {
   // Default values for enemy/attack/scenario level etc
   const initialState = {
     averageDamage: null,
-    killPct: null,
+    stDev: null,
     negativeDrawPct: null,
     trials: 30000,
     dmgValues: [],
@@ -94,7 +94,6 @@ const CalculatorState = props => {
   const calculateNormal = (attack, deck) => {
     let totalDamage = 0;
     let negativeDraws = 0;
-    let kills = 0;
     let dmg = attack.attackDamage;
     let dmgValues = [];
     let maxDmg = 0;
@@ -123,12 +122,11 @@ const CalculatorState = props => {
       dmgValues.push(dmg);
       maxDmg = Math.max(maxDmg, dmg);
 
-      if (dmg >= attack.enemyHP) kills++;
       if (dmg < Math.max(attack.attackDamage - Math.max(attack.enemyShield - attack.attackPierce, 0), 0)) negativeDraws++;
     }
     const averageDamage = totalDamage / state.trials;
     const negativeDrawPct = 100 * negativeDraws / state.trials;
-    const killPct = 100 * kills / state.trials;
+    const stDev = getStandardDeviation(dmgValues, averageDamage, state.trials);
 
     const dmgBins = convertToDmgHistogram(dmgValues, maxDmg);
     const effectBins = convertToEffectHistogram(effects);
@@ -138,7 +136,7 @@ const CalculatorState = props => {
       payload: {
         averageDamage: averageDamage,
         negativeDrawPct: negativeDrawPct,
-        killPct: killPct,
+        stDev: stDev,
         dmgValues: dmgValues,
         maxDmg: maxDmg,
         effects: effects,
@@ -151,7 +149,6 @@ const CalculatorState = props => {
   const calculateAdvDis = (attack, deck, isAdv) => {
     let totalDamage = 0;
     let negativeDraws = 0;
-    let kills = 0;
     let dmg = -1;
     let dmgValues = [];
     let maxDmg = 0;
@@ -311,13 +308,13 @@ const CalculatorState = props => {
       maxDmg = Math.max(maxDmg, dmg);
       countEffects(thisEffects, effects);
 
-      if (dmg >= attack.enemyHP) kills++;
       if (dmg < Math.max(attack.attackDamage - Math.max(attack.enemyShield - attack.attackPierce, 0), 0)) negativeDraws++;
     }
 
     const averageDamage = totalDamage / state.trials;
     const negativeDrawPct = 100 * negativeDraws / state.trials;
-    const killPct = 100 * kills / state.trials;
+    const stDev = getStandardDeviation(dmgValues, averageDamage, state.trials);
+
     const dmgBins = convertToDmgHistogram(dmgValues, maxDmg);
     const effectBins = convertToEffectHistogram(effects);
 
@@ -326,7 +323,7 @@ const CalculatorState = props => {
       payload: {
         averageDamage: averageDamage,
         negativeDrawPct: negativeDrawPct,
-        killPct: killPct,
+        stDev: stDev,
         dmgValues: dmgValues,
         maxDmg: maxDmg,
         effects: effects,
@@ -340,7 +337,7 @@ const CalculatorState = props => {
     <CalculatorContext.Provider
       value={{
         averageDamage: state.averageDamage,
-        killPct: state.killPct,
+        stDev: state.stDev,
         negativeDrawPct: state.negativeDrawPct,
         trials: state.trials,
         dmgValues: state.dmgValues,
@@ -357,6 +354,12 @@ const CalculatorState = props => {
 };
 
 export default CalculatorState;
+
+function getStandardDeviation(dmgValues, averageDamage, trials) {
+  let sumVariance = 0;
+  dmgValues.forEach(val => sumVariance += Math.pow(val - averageDamage, 2));
+  return  Math.sqrt(sumVariance / trials);
+}
 
 function shuffle(array) {
   let currIndex = array.length;
