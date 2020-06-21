@@ -84,5 +84,11 @@ export default   {
         remove: []}, 
       checked: [false, false]
     },
+    { text: 'Ignore negative scenario effects and add one (+1) card', 
+      changes: { 
+        add: [plus1PH], 
+        remove: []}, 
+      checked: [false]
+    }
   ]
 }
