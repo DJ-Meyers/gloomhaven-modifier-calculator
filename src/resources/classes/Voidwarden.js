@@ -11,13 +11,13 @@ import VoidwardenIcon from '../images/icons/characters/Voidwarden.png';
 import { dark, ice, healAlly, poison, none, curse} from '../general/effects';
 import { minus1Base, plus0Base, minus2Base } from './Base';
 
-const plus1DarkVW = { modifier: '+1', effect: dark, rolling: false, source: 'vw', img: Plus1Dark };
-const plus1IceVW = { modifier: '+1', effect: ice, rolling: false, source: 'vw', img: Plus1Ice };
-const plus0Heal1AllyVW = { modifier: '+0', effect: healAlly, rolling: false, source: 'vw', img: Plus0Heal1Ally };
-const plus1Heal1AllyVW = { modifier: '+1', effect: healAlly, rolling: false, source: 'vw', img: Plus1Heal1Ally };
-const plus1PoisonVW = { modifier: '+1', effect: poison, rolling: false, source: 'vw', img: Plus1Poison };
-const plus3VW = { modifier: '+3', effect: none, rolling: false, source: 'vw', img: Plus3 };
-const plus1CurseVW = { modifier: '+1', effect: curse, rolling: false, source: 'vw', img: Plus1Curse };
+const plus1DarkVW = { modifier: '+1', effect: [dark], rolling: false, source: 'vw', img: Plus1Dark };
+const plus1IceVW = { modifier: '+1', effect: [ice], rolling: false, source: 'vw', img: Plus1Ice };
+const plus0Heal1AllyVW = { modifier: '+0', effect: [healAlly], rolling: false, source: 'vw', img: Plus0Heal1Ally };
+const plus1Heal1AllyVW = { modifier: '+1', effect: [healAlly], rolling: false, source: 'vw', img: Plus1Heal1Ally };
+const plus1PoisonVW = { modifier: '+1', effect: [poison], rolling: false, source: 'vw', img: Plus1Poison };
+const plus3VW = { modifier: '+3', effect: [none], rolling: false, source: 'vw', img: Plus3 };
+const plus1CurseVW = { modifier: '+1', effect: [curse], rolling: false, source: 'vw', img: Plus1Curse };
 
 const VoidwardenCards = [plus1DarkVW, plus1IceVW, plus0Heal1AllyVW, plus1Heal1AllyVW, plus1PoisonVW, plus3VW, plus1CurseVW];
 

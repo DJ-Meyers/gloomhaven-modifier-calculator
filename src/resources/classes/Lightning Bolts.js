@@ -11,13 +11,13 @@ import LightningBoltsIcon from '../images/icons/characters/Lightning Bolts.png';
 import { none, wound, stun, fire, disarm, healSelf } from '../general/effects';
 import { minus1Base, plus0Base } from './Base';
 
-const rollingPlus2BE = { modifier: '+2', effect: none, rolling: true, source: 'be', img: RollingPlus2 };
-const rollingWoundBE = { modifier: '+0', effect: wound, rolling: true, source: 'be', img: RollingWound };
-const rollingStunBE = { modifier: '+0', effect: stun, rolling: true, source: 'be', img: RollingStun };
-const rollingPlus1DisarmBE = { modifier: '+1', effect: disarm, rolling: true, source: 'be', img: RollingPlus1Disarm };
-const rollingHeal1SelfBE = { modifier: '+0', effect: healSelf, rolling: true, source: 'be', img: RollingHeal1Self };
-const plus2FireBE = { modifier: '+2', effect: fire, rolling: false, source: 'be', img: Plus2Fire };
-const plus1BE = { modifier: '+1', effect: none, rolling: false, source: 'be', img: Plus1 };
+const rollingPlus2BE = { modifier: '+2', effect: [none], rolling: true, source: 'be', img: RollingPlus2 };
+const rollingWoundBE = { modifier: '+0', effect: [wound], rolling: true, source: 'be', img: RollingWound };
+const rollingStunBE = { modifier: '+0', effect: [stun], rolling: true, source: 'be', img: RollingStun };
+const rollingPlus1DisarmBE = { modifier: '+1', effect: [disarm], rolling: true, source: 'be', img: RollingPlus1Disarm };
+const rollingHeal1SelfBE = { modifier: '+0', effect: [healSelf], rolling: true, source: 'be', img: RollingHeal1Self };
+const plus2FireBE = { modifier: '+2', effect: [fire], rolling: false, source: 'be', img: Plus2Fire };
+const plus1BE = { modifier: '+1', effect: [none], rolling: false, source: 'be', img: Plus1 };
 
 const LightningBoltsCards = [plus1BE, rollingPlus2BE, rollingWoundBE, rollingStunBE, rollingPlus1DisarmBE, rollingHeal1SelfBE, plus2FireBE];
 

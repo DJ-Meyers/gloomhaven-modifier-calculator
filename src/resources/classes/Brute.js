@@ -13,15 +13,15 @@ import BruteIcon from '../images/icons/characters/Brute.png';
 import { none, muddle, stun, disarm, addTarget, pierce, shieldSelf, push } from '../general/effects';
 import { minus1Base } from './Base';
 
-const rollingPierce3BR = { modifier: '+0', effect: pierce, rolling: true, source: 'br', img: RollingPierce3 };
-const rollingStunBR = { modifier: '+0', effect: stun, rolling: true, source: 'br', img: RollingStun };
-const rollingDisarmBR = { modifier: '+0', effect: disarm, rolling: true, source: 'br', img: RollingDisarm };
-const rollingMuddleBR = { modifier: '+0', effect: muddle, rolling: true, source: 'br', img: RollingMuddle };
-const rollingAddTargetBR = { modifier: '+0', effect: addTarget, rolling: true, source: 'br', img: RollingAddTarget };
-const plus1Shield1SelfBR = { modifier: '+1', effect: shieldSelf, rolling: false, source: 'br', img: Plus1Shield1Self };
-const plus1BR = { modifier: '+1', effect: none, rolling: false, source: 'br', img: Plus1 };
-const plus3BR = { modifier: '+3', effect: none, rolling: false, source: 'br', img: Plus3 };
-const rollingPush1BR = { modifier: '+0', effect: push, rolling: true, source: 'br', img: RollingPush1 };
+const rollingPierce3BR = { modifier: '+0', effect: [pierce], rolling: true, source: 'br', img: RollingPierce3 };
+const rollingStunBR = { modifier: '+0', effect: [stun], rolling: true, source: 'br', img: RollingStun };
+const rollingDisarmBR = { modifier: '+0', effect: [disarm], rolling: true, source: 'br', img: RollingDisarm };
+const rollingMuddleBR = { modifier: '+0', effect: [muddle], rolling: true, source: 'br', img: RollingMuddle };
+const rollingAddTargetBR = { modifier: '+0', effect: [addTarget], rolling: true, source: 'br', img: RollingAddTarget };
+const plus1Shield1SelfBR = { modifier: '+1', effect: [shieldSelf], rolling: false, source: 'br', img: Plus1Shield1Self };
+const plus1BR = { modifier: '+1', effect: [none], rolling: false, source: 'br', img: Plus1 };
+const plus3BR = { modifier: '+3', effect: [none], rolling: false, source: 'br', img: Plus3 };
+const rollingPush1BR = { modifier: '+0', effect: [push], rolling: true, source: 'br', img: RollingPush1 };
 
 const BruteCards = [plus1BR, plus3BR, rollingPush1BR, rollingPierce3BR, rollingStunBR, rollingDisarmBR, rollingMuddleBR, rollingAddTargetBR, plus1Shield1SelfBR];
 

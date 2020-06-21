@@ -14,16 +14,16 @@ import CirclesIcon from '../images/icons/characters/Circles.png';
 import { none, wound, poison, healSelf, fire, air, dark, earth } from '../general/effects';
 import { minus1Base, minus2Base } from './Base';
 
-const plus1SU = { modifier: '+1', effect: none, rolling: false, source: 'su', img: Plus1 };
-const plus2SU = { modifier: '+2', effect: none, rolling: false, source: 'su', img: Plus2 };
-const rollingWoundSU = { modifier: '+0', effect: wound, rolling: true, source: 'su', img: RollingWound };
-const rollingPoisonSU = { modifier: '+0', effect: poison, rolling: true, source: 'su', img: RollingPoison };
-const rollingHeal1SelfSU = { modifier: '+0', effect: healSelf, rolling: true, source: 'su', img: RollingHeal1Self };
-const rollingFireSU = { modifier: '+0', effect: fire, rolling: true, source: 'su', img: RollingFire };
-const rollingAirSU = { modifier: '+0', effect: air, rolling: true, source: 'su', img: RollingAir };
-const rollingDarkSU = { modifier: '+0', effect: dark, rolling: true, source: 'su', img: RollingDark };
-const rollingEarthSU = { modifier: '+0', effect: earth, rolling: true, source: 'su', img: RollingEarth };
-const plus0SU = { modifier: '+0', effect: none, rolling: false, source: 'su', img: Plus0 };
+const plus1SU = { modifier: '+1', effect: [none], rolling: false, source: 'su', img: Plus1 };
+const plus2SU = { modifier: '+2', effect: [none], rolling: false, source: 'su', img: Plus2 };
+const rollingWoundSU = { modifier: '+0', effect: [wound], rolling: true, source: 'su', img: RollingWound };
+const rollingPoisonSU = { modifier: '+0', effect: [poison], rolling: true, source: 'su', img: RollingPoison };
+const rollingHeal1SelfSU = { modifier: '+0', effect: [healSelf], rolling: true, source: 'su', img: RollingHeal1Self };
+const rollingFireSU = { modifier: '+0', effect: [fire], rolling: true, source: 'su', img: RollingFire };
+const rollingAirSU = { modifier: '+0', effect: [air], rolling: true, source: 'su', img: RollingAir };
+const rollingDarkSU = { modifier: '+0', effect: [dark], rolling: true, source: 'su', img: RollingDark };
+const rollingEarthSU = { modifier: '+0', effect: [earth], rolling: true, source: 'su', img: RollingEarth };
+const plus0SU = { modifier: '+0', effect: [none], rolling: false, source: 'su', img: Plus0 };
 
 const CirclesCards = [plus0SU, plus1SU, plus2SU, rollingWoundSU, rollingPoisonSU, rollingHeal1SelfSU, rollingFireSU, rollingAirSU, rollingDarkSU, rollingEarthSU];
 

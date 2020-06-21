@@ -12,14 +12,14 @@ import ScoundrelIcon from '../images/icons/characters/Scoundrel.png';
 import { none, pierce, poison, muddle, invisible } from '../general/effects';
 import { minus1Base, plus0Base, minus2Base } from './Base';
 
-const plus0SC = { modifier: '+0', effect: none, rolling: false, source: 'sc', img: Plus0 };
-const plus1SC = { modifier: '+1', effect: none, rolling: false, source: 'sc', img: Plus1 };
-const plus2SC = { modifier: '+2', effect: none, rolling: false, source: 'sc', img: Plus2 };
-const rollingPlus1SC = { modifier: '+1', effect: none, rolling: true, source: 'sc', img: RollingPlus1 };
-const rollingPierce3SC = { modifier: '+0', effect: pierce, rolling: true, source: 'sc', img: RollingPierce3 };
-const rollingPoisonSC = { modifier: '+0', effect: poison, rolling: true, source: 'sc', img: RollingPoison };
-const rollingMuddleSC = { modifier: '+0', effect: muddle, rolling: true, source: 'sc', img: RollingMuddle };
-const rollingInvisibleSC = { modifier: '+0', effect: invisible, rolling: true, source: 'sc', img: RollingInvisible };
+const plus0SC = { modifier: '+0', effect: [none], rolling: false, source: 'sc', img: Plus0 };
+const plus1SC = { modifier: '+1', effect: [none], rolling: false, source: 'sc', img: Plus1 };
+const plus2SC = { modifier: '+2', effect: [none], rolling: false, source: 'sc', img: Plus2 };
+const rollingPlus1SC = { modifier: '+1', effect: [none], rolling: true, source: 'sc', img: RollingPlus1 };
+const rollingPierce3SC = { modifier: '+0', effect: [pierce], rolling: true, source: 'sc', img: RollingPierce3 };
+const rollingPoisonSC = { modifier: '+0', effect: [poison], rolling: true, source: 'sc', img: RollingPoison };
+const rollingMuddleSC = { modifier: '+0', effect: [muddle], rolling: true, source: 'sc', img: RollingMuddle };
+const rollingInvisibleSC = { modifier: '+0', effect: [invisible], rolling: true, source: 'sc', img: RollingInvisible };
 
 const ScoundrelCards = [plus0SC, plus1SC, plus2SC, rollingPlus1SC, rollingPierce3SC, rollingPoisonSC, rollingMuddleSC, rollingInvisibleSC];
 

@@ -12,14 +12,14 @@ import SunIcon from '../images/icons/characters/Sun.png';
 import { none, healSelf, stun, light, shieldSelf } from '../general/effects';
 import { minus1Base, plus0Base, minus2Base } from './Base';
 
-const rollingPlus1SK = { modifier: '+1', effect: none, rolling: true, source: 'sk', img: RollingPlus1 };
-const rollingHeal1SelfSK = { modifier: '+0', effect: healSelf, rolling: true, source: 'sk', img: RollingHeal1Self };
-const rollingStunSK = { modifier: '+0', effect: stun, rolling: true, source: 'sk', img: RollingStun };
-const rollingLightSK = { modifier: '+0', effect: light, rolling: true, source: 'sk', img: RollingLight };
-const rollingShield1SelfSK = { modifier: '+0', effect: shieldSelf, rolling: true, source: 'sk', img: RollingShield1Self };
-const plus1SK = { modifier: '+1', effect: none, rolling: false, source: 'sk', img: Plus1 };
-const plus0SK = { modifier: '+0', effect: none, rolling: false, source: 'sk', img: Plus0 };
-const plus2SK = { modifier: '+2', effect: none, rolling: false, source: 'sk', img: Plus2 };
+const rollingPlus1SK = { modifier: '+1', effect: [none], rolling: true, source: 'sk', img: RollingPlus1 };
+const rollingHeal1SelfSK = { modifier: '+0', effect: [healSelf], rolling: true, source: 'sk', img: RollingHeal1Self };
+const rollingStunSK = { modifier: '+0', effect: [stun], rolling: true, source: 'sk', img: RollingStun };
+const rollingLightSK = { modifier: '+0', effect: [light], rolling: true, source: 'sk', img: RollingLight };
+const rollingShield1SelfSK = { modifier: '+0', effect: [shieldSelf], rolling: true, source: 'sk', img: RollingShield1Self };
+const plus1SK = { modifier: '+1', effect: [none], rolling: false, source: 'sk', img: Plus1 };
+const plus0SK = { modifier: '+0', effect: [none], rolling: false, source: 'sk', img: Plus0 };
+const plus2SK = { modifier: '+2', effect: [none], rolling: false, source: 'sk', img: Plus2 };
 
 const SunCards = [plus0SK, plus2SK, rollingPlus1SK, rollingHeal1SelfSK, rollingStunSK, rollingLightSK, rollingShield1SelfSK, plus1SK];
 

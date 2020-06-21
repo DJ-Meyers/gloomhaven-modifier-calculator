@@ -12,14 +12,14 @@ import CragheartIcon from '../images/icons/characters/Cragheart.png';
 import { none, immobilize, muddle, push, earth, air } from '../general/effects';
 import { plus0Base, minus1Base } from './Base';
 
-const plus1CH = { modifier: '+1', effect: none, rolling: false, source: 'ch', img: Plus1 };
-const minus2CH = { modifier: '-2', effect: none, rolling: false, source: 'ch', img: Minus2 };
-const plus2CH = { modifier: '+2', effect: none, rolling: false, source: 'ch', img: Plus2 };
-const plus1ImmobilizeCH = { modifier: '+1', effect: immobilize, rolling: false, source: 'ch', img: Plus1Immobilize };
-const plus2MuddleCH = { modifier: '+2', effect: muddle, rolling: false, source: 'ch', img: Plus2Muddle };
-const rollingPush2CH = { modifier: '+0', effect: push, rolling: true, source: 'ch', img: RollingPush2 };
-const rollingEarthCH = { modifier: '+0', effect: earth, rolling: true, source: 'ch', img: RollingEarth };
-const rollingAirCH = { modifier: '+0', effect: air, rolling: true, source: 'ch', img: RollingAir };
+const plus1CH = { modifier: '+1', effect: [none], rolling: false, source: 'ch', img: Plus1 };
+const minus2CH = { modifier: '-2', effect: [none], rolling: false, source: 'ch', img: Minus2 };
+const plus2CH = { modifier: '+2', effect: [none], rolling: false, source: 'ch', img: Plus2 };
+const plus1ImmobilizeCH = { modifier: '+1', effect: [immobilize], rolling: false, source: 'ch', img: Plus1Immobilize };
+const plus2MuddleCH = { modifier: '+2', effect: [muddle], rolling: false, source: 'ch', img: Plus2Muddle };
+const rollingPush2CH = { modifier: '+0', effect: [push], rolling: true, source: 'ch', img: RollingPush2 };
+const rollingEarthCH = { modifier: '+0', effect: [earth], rolling: true, source: 'ch', img: RollingEarth };
+const rollingAirCH = { modifier: '+0', effect: [air], rolling: true, source: 'ch', img: RollingAir };
 
 const CragheartCards = [plus1CH, minus2CH, plus2CH, plus1ImmobilizeCH, plus2MuddleCH, rollingPush2CH, rollingEarthCH, rollingAirCH];
 

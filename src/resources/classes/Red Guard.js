@@ -11,13 +11,13 @@ import RedGuardIcon from '../images/icons/characters/Red Guard.png';
 import { none, fire, light, shieldSelf, immobilize, wound } from '../general/effects';
 import { minus1Base, plus0Base, minus2Base, plus1Base } from './Base';
 
-const plus1RG = { modifier: '+1', effect: none, rolling: false, source: 'rg', img: Plus1 };
-const plus2FireRG = { modifier: '+2', effect: fire, rolling: false, source: 'rg', img: Plus2Fire };
-const plus2LightRG = { modifier: '+2', effect: light, rolling: false, source: 'rg', img: Plus2Light };
-const plus1FireLightRG = { modifier: '+1', effect: fire, rolling: false, source: 'rg', img: Plus1FireLight };
-const plus1Shield1SelfRG = { modifier: '+1', effect: shieldSelf, rolling: false, source: 'rg', img: Plus1Shield1Self };
-const plus1ImmobilizeRG = { modifier: '+1', effect: immobilize, rolling: false, source: 'rg', img: Plus1Immobilize };
-const plus1WoundRG = { modifier: '+1', effect: wound, rolling: false, source: 'rg', img: Plus1Wound };
+const plus1RG = { modifier: '+1', effect: [none], rolling: false, source: 'rg', img: Plus1 };
+const plus2FireRG = { modifier: '+2', effect: [fire], rolling: false, source: 'rg', img: Plus2Fire };
+const plus2LightRG = { modifier: '+2', effect: [light], rolling: false, source: 'rg', img: Plus2Light };
+const plus1FireLightRG = { modifier: '+1', effect: [fire, light], rolling: false, source: 'rg', img: Plus1FireLight };
+const plus1Shield1SelfRG = { modifier: '+1', effect: [shieldSelf], rolling: false, source: 'rg', img: Plus1Shield1Self };
+const plus1ImmobilizeRG = { modifier: '+1', effect: [immobilize], rolling: false, source: 'rg', img: Plus1Immobilize };
+const plus1WoundRG = { modifier: '+1', effect: [wound], rolling: false, source: 'rg', img: Plus1Wound };
 
 const RedGuardCards = [plus1RG, plus2FireRG, plus2LightRG, plus1FireLightRG, plus1Shield1SelfRG, plus1ImmobilizeRG, plus1WoundRG];
 

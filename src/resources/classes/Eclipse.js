@@ -12,14 +12,14 @@ import EclipseIcon from '../images/icons/characters/Eclipse.png';
 import { none, dark, invisible, muddle, healSelf, curse, addTarget } from '../general/effects';
 import { minus1Base, plus0Base } from './Base';
 
-const plus1DarkNS = { modifier: '+1', effect: dark, rolling: false, source: 'ns', img: Plus1Dark };
-const plus1InvisibleNS = { modifier: '+1', effect: invisible, rolling: false, source: 'ns', img: Plus1Invisible };
-const rollingMuddleNS = { modifier: '+0', effect: muddle, rolling: true, source: 'ns', img: RollingMuddle };
-const rollingHeal1SelfNS = { modifier: '+0', effect: healSelf, rolling: true, source: 'ns', img: RollingHeal1Self };
-const rollingCurseNS = { modifier: '+0', effect: curse, rolling: true, source: 'ns', img: RollingCurse };
-const rollingAddTargetNS = { modifier: '+0', effect: addTarget, rolling: true, source: 'ns', img: RollingAddTarget };
-const plus1NS = { modifier: '+1', effect: none, rolling: false, source: 'ns', img: Plus1 };
-const minus1DarkNS = { modifier: '-1', effect: dark, rolling: false, source: 'ns', img: Minus1Dark };
+const plus1DarkNS = { modifier: '+1', effect: [dark], rolling: false, source: 'ns', img: Plus1Dark };
+const plus1InvisibleNS = { modifier: '+1', effect: [invisible], rolling: false, source: 'ns', img: Plus1Invisible };
+const rollingMuddleNS = { modifier: '+0', effect: [muddle], rolling: true, source: 'ns', img: RollingMuddle };
+const rollingHeal1SelfNS = { modifier: '+0', effect: [healSelf], rolling: true, source: 'ns', img: RollingHeal1Self };
+const rollingCurseNS = { modifier: '+0', effect: [curse], rolling: true, source: 'ns', img: RollingCurse };
+const rollingAddTargetNS = { modifier: '+0', effect: [addTarget], rolling: true, source: 'ns', img: RollingAddTarget };
+const plus1NS = { modifier: '+1', effect: [none], rolling: false, source: 'ns', img: Plus1 };
+const minus1DarkNS = { modifier: '-1', effect: [dark], rolling: false, source: 'ns', img: Minus1Dark };
 
 export const EclipseCards = [minus1DarkNS, plus1DarkNS, plus1InvisibleNS, rollingMuddleNS, rollingHeal1SelfNS, rollingCurseNS, rollingAddTargetNS, plus1NS];
 

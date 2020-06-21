@@ -13,15 +13,15 @@ import MindthiefIcon from '../images/icons/characters/Mindthief.png';
 import { none, stun, ice, muddle, immobilize, pull, disarm } from '../general/effects';
 import { minus1Base, plus0Base, plus1Base } from './Base';
 
-const plus2MT = { modifier: '+2', effect: none, rolling: false, source: 'mt', img: Plus2 };
-const plus0MT = { modifier: '+0', effect: none, rolling: false, source: 'mt', img: Plus0 };
-const plus2IceMT = { modifier: '+2', effect: ice, rolling: false, source: 'mt', img: Plus2Ice };
-const rollingPlus1MT = { modifier: '+1', effect: none, rolling: true, source: 'mt', img: RollingPlus1 };
-const rollingPull1MT = { modifier: '+0', effect: pull, rolling: true, source: 'mt', img: RollingPull1 };
-const rollingMuddleMT = { modifier: '+0', effect: muddle, rolling: true, source: 'mt', img: RollingMuddle };
-const rollingImmobilizeMT = { modifier: '+0', effect: immobilize, rolling: true, source: 'mt', img: RollingImmobilize };
-const rollingStunMT = { modifier: '+0', effect: stun, rolling: true, source: 'mt', img: RollingStun };
-const rollingDisarmMT = { modifier: '+0', effect: disarm, rolling: true, source: 'mt', img: RollingDisarm };
+const plus2MT = { modifier: '+2', effect: [none], rolling: false, source: 'mt', img: Plus2 };
+const plus0MT = { modifier: '+0', effect: [none], rolling: false, source: 'mt', img: Plus0 };
+const plus2IceMT = { modifier: '+2', effect: [ice], rolling: false, source: 'mt', img: Plus2Ice };
+const rollingPlus1MT = { modifier: '+1', effect: [none], rolling: true, source: 'mt', img: RollingPlus1 };
+const rollingPull1MT = { modifier: '+0', effect: [pull], rolling: true, source: 'mt', img: RollingPull1 };
+const rollingMuddleMT = { modifier: '+0', effect: [muddle], rolling: true, source: 'mt', img: RollingMuddle };
+const rollingImmobilizeMT = { modifier: '+0', effect: [immobilize], rolling: true, source: 'mt', img: RollingImmobilize };
+const rollingStunMT = { modifier: '+0', effect: [stun], rolling: true, source: 'mt', img: RollingStun };
+const rollingDisarmMT = { modifier: '+0', effect: [disarm], rolling: true, source: 'mt', img: RollingDisarm };
 
 const MindthiefCards = [plus2MT, plus0MT, plus2IceMT, rollingPlus1MT, rollingPull1MT, rollingMuddleMT, rollingImmobilizeMT, rollingStunMT, rollingDisarmMT];
 

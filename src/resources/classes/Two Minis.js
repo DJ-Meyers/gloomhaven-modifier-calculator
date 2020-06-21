@@ -10,12 +10,12 @@ import TwoMinisIcon from '../images/icons/characters/Two Minis.png';
 import { none, wound, immobilize, healSelf, earth } from '../general/effects';
 import { minus1Base, plus0Base } from './Base';
 
-export const plus1BT = { modifier: '+1', effect: none, rolling: false, source: 'bt', img: Plus1 };
-export const plus2BT = { modifier: '+2', effect: none, rolling: false, source: 'bt', img: Plus2 };
-export const plus1ImmobilizeBT = { modifier: '+1', effect: immobilize, rolling: false, source: 'bt', img: Plus1Immobilize };
-export const plus1WoundBT = { modifier: '+1', effect: wound, rolling: false, source: 'bt', img: Plus1Wound };
-export const rollingHeal1SelfBT = { modifier: '+0', effect: healSelf, rolling: false, source: 'bt', img: RollingHeal1Self };
-export const rollingEarthBT = { modifier: '+0', effect: earth, rolling: false, source: 'bt', img: RollingEarth };
+export const plus1BT = { modifier: '+1', effect: [none], rolling: false, source: 'bt', img: Plus1 };
+export const plus2BT = { modifier: '+2', effect: [none], rolling: false, source: 'bt', img: Plus2 };
+export const plus1ImmobilizeBT = { modifier: '+1', effect: [immobilize], rolling: false, source: 'bt', img: Plus1Immobilize };
+export const plus1WoundBT = { modifier: '+1', effect: [wound], rolling: false, source: 'bt', img: Plus1Wound };
+export const rollingHeal1SelfBT = { modifier: '+0', effect: [healSelf], rolling: false, source: 'bt', img: RollingHeal1Self };
+export const rollingEarthBT = { modifier: '+0', effect: [earth], rolling: false, source: 'bt', img: RollingEarth };
 
 export const TwoMinisCards = [plus1BT, plus2BT, plus1WoundBT, plus1ImmobilizeBT, rollingHeal1SelfBT, rollingEarthBT];
 

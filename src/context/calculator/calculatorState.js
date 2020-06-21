@@ -113,7 +113,9 @@ const CalculatorState = props => {
         dmg += applyModifier(card, attack);
         if (card.rolling === true) dmg -= attack.attackDamage;
         currentIndex++;
-        thisEffects.push(card.effect);
+        card.effect.forEach(eff =>{
+          thisEffects.push(eff);
+        });
       } while (card.rolling === true);
 
       countEffects(thisEffects, effects);
@@ -172,8 +174,12 @@ const CalculatorState = props => {
         // ADV: If two rolling modifier cards were drawn, continue to draw cards until a rolling modifier is not drawn and then add together all drawn effects
         if (isAdv) {
           dmg += dmg1 + dmg2 - 2 * attack.attackDamage;
-          thisEffects.push(card1.effect);
-          thisEffects.push(card2.effect);
+          card1.effect.forEach(eff => {
+            thisEffects.push(eff);
+          });
+          card2.effect.forEach(eff => {
+            thisEffects.push(eff);
+          });
         }
         // DIS: If two rolling modifier cards were drawn, continue to draw cards until a rolling modifier is not played and then only apply the effect of the last card drawn
         else {
@@ -189,7 +195,9 @@ const CalculatorState = props => {
             // ADV: Add together all effects
             if (isAdv) {
               dmg += applyModifier(nextCard, attack) - attack.attackDamage;
-              thisEffects.push(nextCard.effect);
+              nextCard.effect.forEach(eff => {
+                thisEffects.push(eff);
+              });
             }
             // DIS: Only apply the effect of the last card drawn
             else {
@@ -201,7 +209,9 @@ const CalculatorState = props => {
             else if (isMiss(nextCard)) dmg = 0;
             else dmg += applyModifier(nextCard, attack);
 
-            thisEffects.push(nextCard.effect);
+            nextCard.effect.forEach(eff => {
+              thisEffects.push(eff);
+            });
           }
 
           currentIndex++;
@@ -224,18 +234,26 @@ const CalculatorState = props => {
             else dmg += applyModifier(card1, attack);
           }
           // The player receives both effects regardless of damage dealt
-          thisEffects.push(card1.effect);
-          thisEffects.push(card2.effect);
+          card1.effect.forEach(eff => {
+            thisEffects.push(eff);
+          });
+          card2.effect.forEach(eff => {
+            thisEffects.push(eff);
+          });
         }
         // DIS: Rolling modifiers are disregarded in the case of Disadvantage
         else {
           if (card1.rolling === true) {
             dmg = dmg2;
-            thisEffects.push(card2.effect);
+            card2.effect.forEach(eff => {
+              thisEffects.push(eff);
+            });
           }
           else {
             dmg = dmg1;
-            thisEffects.push(card1.effect);
+            card1.effect.forEach(eff => {
+              thisEffects.push(eff);
+            });
           }
         }
       }
@@ -245,26 +263,36 @@ const CalculatorState = props => {
           // First choose highest damage
           if (dmg1 > dmg2) {
             dmg = dmg1;
-            thisEffects.push(card1.effect);
+            card1.effect.forEach(eff => {
+              thisEffects.push(eff);
+            });
           }
           else if (dmg2 > dmg1) {
             dmg = dmg2;
-            thisEffects.push(card2.effect);
+            card2.effect.forEach(eff => {
+              thisEffects.push(eff);
+            });
           }
           else if (dmg1 === dmg2) {
             // Then choose an effect over no effect
             if (card1.effect === none && card2.effect !== none) {
               dmg = dmg2;
-              thisEffects.push(card2.effect);
+              card2.effect.forEach(eff => {
+                thisEffects.push(eff);
+              });
             }
             else if (card1.effect !== none && card2.effect === none) {
               dmg = dmg1;
-              thisEffects.push(card1.effect);
+              card1.effect.forEach(eff => {
+                thisEffects.push(eff);
+              });
             }
             // Then choose whichever card was drawn first
             else {
               dmg = dmg1;
-              thisEffects.push(card1.effect)
+              card1.effect.forEach(eff => {
+                thisEffects.push(eff);
+              });
             }
           }
           else {
@@ -275,26 +303,36 @@ const CalculatorState = props => {
           // First choose lowest damage
           if (dmg1 > dmg2) {
             dmg = dmg2;
-            thisEffects.push(card2.effect);
+            card2.effect.forEach(eff => {
+              thisEffects.push(eff);
+            });
           }
           else if (dmg2 > dmg1) {
             dmg = dmg1;
-            thisEffects.push(card1.effect);
+            card1.effect.forEach(eff => {
+              thisEffects.push(eff);
+            });
           }
           else if (dmg1 === dmg2) {
             // Then choose no effect over an effect
             if (card1.effect === none && card2.effect !== none) {
               dmg = dmg1;
-              thisEffects.push(card1.effect);
+              card1.effect.forEach(eff => {
+                thisEffects.push(eff);
+              });
             }
             else if (card1.effect !== none && card2.effect === none) {
               dmg = dmg2;
-              thisEffects.push(card2.effect);
+              card2.effect.forEach(eff => {
+                thisEffects.push(eff);
+              });
             }
             // Then choose whichever card was drawn first
             else {
               dmg = dmg1;
-              thisEffects.push(card1.effect)
+              card1.effect.forEach(eff => {
+                thisEffects.push(eff);
+              });
             }
           }
           else {

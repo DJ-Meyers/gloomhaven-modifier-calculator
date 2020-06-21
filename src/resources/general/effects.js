@@ -6,16 +6,13 @@ export const anyEffect = 'Any Effect';
 export const push = 'Push';
 export const pull = 'Pull';
 export const pierce = 'Pierce';
-export const shieldSelf = 'Shield Self';
 export const shieldAlly = 'Shield Ally';
-export const healSelf = 'Heal Self';
 export const healAlly = 'Heal Ally';
-export const regenerateSelf = 'Regenerate Self';
 export const addTarget = 'Add Target';
 export const refreshItem = 'Refresh Item';
 export const adjacentEnemiesSuffer1 = 'Adjacents Suffer 1';
 export const anyAttackEffect = 'Any Attack Effect';
-export const attackEffects = [push, pull, pierce, shieldSelf, shieldAlly, healSelf, healAlly, regenerateSelf, addTarget, refreshItem, adjacentEnemiesSuffer1];
+export const attackEffects = [addTarget, adjacentEnemiesSuffer1, healAlly, pierce, pull, push, refreshItem, shieldAlly];
 
 // Debuffs
 export const poison = 'Poison';
@@ -29,11 +26,12 @@ export const anyDebuff = 'Any Debuff';
 export const debuffEffects = [poison, wound, immobilize, disarm, stun, muddle, curse];
 
 // Buffs
+export const healSelf = 'Heal Self';
 export const invisible = 'Invisible';
-export const strengthen = 'Strengthen';
-export const bless = 'Bless';
+export const shieldSelf = 'Shield Self';
+export const regenerateSelf = 'Regenerate Self';
 export const anyBuff = 'Any Buff';
-export const buffEffects = [invisible, strengthen, bless];
+export const buffEffects = [healSelf, invisible, shieldSelf, regenerateSelf];
 
 // Elements
 export const fire = 'Fire';
@@ -49,18 +47,17 @@ export const elementEffects = [fire, ice, air, earth, light, dark];
 export const effectsArray = [
   {id: none, bin: none, count: 0},
   {id: anyEffect, bin: anyEffect, count: 0}, 
-  {id: push, bin: push, count: 0},
-  {id: pull, bin: pull, count: 0}, 
-  {id: pierce, bin: pierce, count: 0}, 
-  {id: shieldSelf, bin: shieldSelf, count: 0}, 
-  {id: shieldAlly, bin: shieldAlly, count: 0}, 
-  {id: healSelf, bin: healSelf, count: 0}, 
-  {id: healAlly, bin: healAlly, count: 0}, 
+
   {id: addTarget, bin: addTarget, count: 0}, 
-  {id: refreshItem, bin: refreshItem, count: 0},
-  {id: regenerateSelf, bin: regenerateSelf, count: 0},
   {id: adjacentEnemiesSuffer1, bin: adjacentEnemiesSuffer1, count: 0},
+  {id: healAlly, bin: healAlly, count: 0}, 
+  {id: pierce, bin: pierce, count: 0}, 
+  {id: pull, bin: pull, count: 0}, 
+  {id: push, bin: push, count: 0},
+  {id: refreshItem, bin: refreshItem, count: 0},
+  {id: shieldAlly, bin: shieldAlly, count: 0}, 
   {id: anyAttackEffect, bin: anyAttackEffect, count: 0},
+
   {id: poison, bin: poison, count: 0}, 
   {id: wound, bin: wound, count: 0}, 
   {id: immobilize, bin: immobilize, count: 0}, 
@@ -69,10 +66,13 @@ export const effectsArray = [
   {id: muddle, bin: muddle, count: 0}, 
   {id: curse, bin: curse, count: 0},
   {id: anyDebuff, bin: anyDebuff, count: 0}, 
+
+  {id: healSelf, bin: healSelf, count: 0}, 
   {id: invisible, bin: invisible, count: 0}, 
-  {id: strengthen, bin: strengthen, count: 0}, 
-  {id: bless, bin: bless, count: 0},
+  {id: shieldSelf, bin: shieldSelf, count: 0}, 
+  {id: regenerateSelf, bin: regenerateSelf, count: 0},
   {id: anyBuff, bin: anyBuff, count: 0}, 
+
   {id: fire, bin: fire, count: 0}, 
   {id: ice, bin: ice, count: 0}, 
   {id: air, bin: air, count: 0}, 

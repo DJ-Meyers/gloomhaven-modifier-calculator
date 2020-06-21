@@ -12,14 +12,14 @@ import ThreeSpearsIcon from '../images/icons/characters/Three Spears.png';
 import { none, muddle, pierce, stun, addTarget, refreshItem } from '../general/effects';
 import { minus1Base, plus0Base } from './Base';
 
-const rollingPlus1QM = { modifier: '+1', effect: none, rolling: true, source: 'qm', img: RollingPlus1 };
-const rollingMuddleQM = { modifier: '+0', effect: muddle, rolling: true, source: 'qm', img: RollingMuddle };
-const rollingPierce3QM = { modifier: '+0', effect: pierce, rolling: true, source: 'qm', img: RollingPierce3 };
-const rollingStunQM = { modifier: '+0', effect: stun, rolling: true, source: 'qm', img: RollingStun };
-const rollingAddTargetQM = { modifier: '+0', effect: addTarget, rolling: true, source: 'qm', img: RollingAddTarget };
-const plus0RefreshItemQM = { modifier: '+0', effect: refreshItem, rolling: false, source: 'qm', img: Plus0RefreshItem };
-const plus1QM = { modifier: '+1', effect: none, rolling: false, source: 'qm', img: Plus1 };
-const plus2QM = { modifier: '+2', effect: none, rolling: false, source: 'qm', img: Plus2 };
+const rollingPlus1QM = { modifier: '+1', effect: [none], rolling: true, source: 'qm', img: RollingPlus1 };
+const rollingMuddleQM = { modifier: '+0', effect: [muddle], rolling: true, source: 'qm', img: RollingMuddle };
+const rollingPierce3QM = { modifier: '+0', effect: [pierce], rolling: true, source: 'qm', img: RollingPierce3 };
+const rollingStunQM = { modifier: '+0', effect: [stun], rolling: true, source: 'qm', img: RollingStun };
+const rollingAddTargetQM = { modifier: '+0', effect: [addTarget], rolling: true, source: 'qm', img: RollingAddTarget };
+const plus0RefreshItemQM = { modifier: '+0', effect: [refreshItem], rolling: false, source: 'qm', img: Plus0RefreshItem };
+const plus1QM = { modifier: '+1', effect: [none], rolling: false, source: 'qm', img: Plus1 };
+const plus2QM = { modifier: '+2', effect: [none], rolling: false, source: 'qm', img: Plus2 };
 
 const ThreeSpearsCards = [plus2QM, rollingPlus1QM, rollingMuddleQM, rollingPierce3QM, rollingStunQM, rollingAddTargetQM, plus0RefreshItemQM, plus1QM];
 

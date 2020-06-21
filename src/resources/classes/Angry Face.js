@@ -12,14 +12,14 @@ import AngryFaceIcon from '../images/icons/characters/Angry Face.png';
 import { none, muddle, poison, wound, immobilize, stun, addTarget } from '../general/effects';
 import { minus1Base, plus0Base } from './Base.js';
 
-const plus1DS = { modifier: '+1', effect: none, rolling: false, source: 'ds', img: Plus1 };
-const rollingPlus1DS = { modifier: '+1', effect: none, rolling: true, source: 'ds', img: RollingPlus1 };
-const plus2MuddleDS = { modifier: '+2', effect: muddle, rolling: false, source: 'ds', img: Plus2Muddle };
-const plus1PoisonDS = { modifier: '+1', effect: poison, rolling: false, source: 'ds', img: Plus1Poison };
-const plus1WoundDS = { modifier: '+1', effect: wound, rolling: false, source: 'ds', img: Plus1Wound };
-const plus1ImmobilizeDS = { modifier: '+1', effect: immobilize, rolling: false, source: 'ds', img: Plus1Immobilize };
-const plus0StunDS = { modifier: '+0', effect: stun, rolling: false, source: 'ds', img: Stun };
-const rollingAddTargetDS = { modifier: '+0', effect: addTarget, rolling: false, source: 'ds', img: RollingAddTarget };
+const plus1DS = { modifier: '+1', effect: [none], rolling: false, source: 'ds', img: Plus1 };
+const rollingPlus1DS = { modifier: '+1', effect: [none], rolling: true, source: 'ds', img: RollingPlus1 };
+const plus2MuddleDS = { modifier: '+2', effect: [muddle], rolling: false, source: 'ds', img: Plus2Muddle };
+const plus1PoisonDS = { modifier: '+1', effect: [poison], rolling: false, source: 'ds', img: Plus1Poison };
+const plus1WoundDS = { modifier: '+1', effect: [wound], rolling: false, source: 'ds', img: Plus1Wound };
+const plus1ImmobilizeDS = { modifier: '+1', effect: [immobilize], rolling: false, source: 'ds', img: Plus1Immobilize };
+const plus0StunDS = { modifier: '+0', effect: [stun], rolling: false, source: 'ds', img: Stun };
+const rollingAddTargetDS = { modifier: '+0', effect: [addTarget], rolling: false, source: 'ds', img: RollingAddTarget };
 
 const AngryFaceCards = [plus1DS, rollingPlus1DS, plus2MuddleDS, plus1PoisonDS, plus1WoundDS, plus1ImmobilizeDS, plus0StunDS, rollingAddTargetDS];
 

@@ -13,15 +13,15 @@ import HatchetIcon from '../images/icons/characters/Hatchet.png';
 import { none, muddle, poison, stun, air, push, wound, immobilize } from '../general/effects';
 import { minus1Base, plus0Base, plus1Base } from './Base';
 
-const plus0StunHA = { modifier: '+0', effect: stun, rolling: false, source: 'ha', img: Plus0Stun };
-const plus1ImmobilizeHA = { modifier: '+1', effect: immobilize, rolling: false, source: 'ha', img: Plus1Immobilize };
-const plus1PoisonHA = { modifier: '+1', effect: poison, rolling: false, source: 'ha', img: Plus1Poison };
-const plus1Push2HA = { modifier: '+1', effect: push, rolling: false, source: 'ha', img: Plus1Push2 };
-const plus1StunHA = { modifier: '+1', effect: stun, rolling: false, source: 'ha', img: Plus1Stun };
-const plus1WoundHA = { modifier: '+1', effect: wound, rolling: false, source: 'ha', img: Plus1Wound };
-const plus2AirHA = { modifier: '+2', effect: air, rolling: false, source: 'ha', img: Plus2Air };
-const plus2MuddleHA = { modifier: '+2', effect: muddle, rolling: false, source: 'ha', img: Plus2Muddle };
-const plus3HA = { modifier: '+3', effect: none, rolling: false, source: 'ha', img: Plus3 };
+const plus0StunHA = { modifier: '+0', effect: [stun], rolling: false, source: 'ha', img: Plus0Stun };
+const plus1ImmobilizeHA = { modifier: '+1', effect: [immobilize], rolling: false, source: 'ha', img: Plus1Immobilize };
+const plus1PoisonHA = { modifier: '+1', effect: [poison], rolling: false, source: 'ha', img: Plus1Poison };
+const plus1Push2HA = { modifier: '+1', effect: [push], rolling: false, source: 'ha', img: Plus1Push2 };
+const plus1StunHA = { modifier: '+1', effect: [stun], rolling: false, source: 'ha', img: Plus1Stun };
+const plus1WoundHA = { modifier: '+1', effect: [wound], rolling: false, source: 'ha', img: Plus1Wound };
+const plus2AirHA = { modifier: '+2', effect: [air], rolling: false, source: 'ha', img: Plus2Air };
+const plus2MuddleHA = { modifier: '+2', effect: [muddle], rolling: false, source: 'ha', img: Plus2Muddle };
+const plus3HA = { modifier: '+3', effect: [none], rolling: false, source: 'ha', img: Plus3 };
 
 const HatchetCards = [plus2MuddleHA, plus1PoisonHA, plus1WoundHA, plus1ImmobilizeHA, plus1Push2HA, plus0StunHA, plus1StunHA, plus2AirHA, plus3HA];
 

@@ -11,13 +11,13 @@ import SawIcon from '../images/icons/characters/Saw.png';
 import { none, immobilize, wound, healSelf, stun, refreshItem  } from '../general/effects';
 import { minus1Base, plus0Base } from './Base';
 
-const plus2SB = { modifier: '+2', effect: none, rolling: false, source: 'sb', img: Plus2 };
-const plus1ImmobilizeSB = { modifier: '+1', effect: immobilize, rolling: false, source: 'sb', img: Plus1Immobilize };
-const rollingPlus2SB = { modifier: '+2', effect: none, rolling: true, source: 'sb', img: RollingPlus2 };
-const rollingWoundSB = { modifier: '+0', effect: wound, rolling: true, source: 'sb', img: RollingWound };
-const rollingStunSB = { modifier: '+0', effect: stun, rolling: true, source: 'sb', img: RollingStun };
-const rollingHeal3SelfSB = { modifier: '+0', effect: healSelf, rolling: true, source: 'sb', img: RollingHeal3Self };
-const refreshItemSB = { modifier: '+0', effect: refreshItem, rolling: false, source: 'sb', img: Plus0RefreshItem };
+const plus2SB = { modifier: '+2', effect: [none], rolling: false, source: 'sb', img: Plus2 };
+const plus1ImmobilizeSB = { modifier: '+1', effect: [immobilize], rolling: false, source: 'sb', img: Plus1Immobilize };
+const rollingPlus2SB = { modifier: '+2', effect: [none], rolling: true, source: 'sb', img: RollingPlus2 };
+const rollingWoundSB = { modifier: '+0', effect: [wound], rolling: true, source: 'sb', img: RollingWound };
+const rollingStunSB = { modifier: '+0', effect: [stun], rolling: true, source: 'sb', img: RollingStun };
+const rollingHeal3SelfSB = { modifier: '+0', effect: [healSelf], rolling: true, source: 'sb', img: RollingHeal3Self };
+const refreshItemSB = { modifier: '+0', effect: [refreshItem], rolling: false, source: 'sb', img: Plus0RefreshItem };
 
 const SawCards = [plus2SB, rollingPlus2SB, plus1ImmobilizeSB, rollingWoundSB, rollingStunSB, rollingHeal3SelfSB, refreshItemSB];
 

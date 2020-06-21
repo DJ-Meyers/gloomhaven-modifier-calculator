@@ -10,12 +10,12 @@ import DemolitionistIcon from '../images/icons/characters/Demolitionist.png';
 import { none, muddle, poison, earth, fire, adjacentEnemiesSuffer1 } from '../general/effects';
 import { minus1Base, plus0Base, minus2Base, plus1Base } from './Base';
 
-const plus0AdjacentSuffer1DM = { modifier: '+0', effect: adjacentEnemiesSuffer1, rolling: false, source: 'dm', img: Plus0AdjacentSuffer1 };
-const plus0PoisonDM = { modifier: '+0', effect: poison, rolling: false, source: 'dm', img: Plus0Poison };
-const plus2DM = { modifier: '+2', effect: none, rolling: false, source: 'dm', img: Plus2 };
-const plus2EarthDM = { modifier: '+2', effect: earth, rolling: false, source: 'dm', img: Plus2Earth };
-const plus2FireDM = { modifier: '+2', effect: fire, rolling: false, source: 'dm', img: Plus2Fire };
-const plus2MuddleDM = { modifier: '+2', effect: muddle, rolling: false, source: 'dm', img: Plus2Muddle };
+const plus0AdjacentSuffer1DM = { modifier: '+0', effect: [adjacentEnemiesSuffer1], rolling: false, source: 'dm', img: Plus0AdjacentSuffer1 };
+const plus0PoisonDM = { modifier: '+0', effect: [poison], rolling: false, source: 'dm', img: Plus0Poison };
+const plus2DM = { modifier: '+2', effect: [none], rolling: false, source: 'dm', img: Plus2 };
+const plus2EarthDM = { modifier: '+2', effect: [earth], rolling: false, source: 'dm', img: Plus2Earth };
+const plus2FireDM = { modifier: '+2', effect: [fire], rolling: false, source: 'dm', img: Plus2Fire };
+const plus2MuddleDM = { modifier: '+2', effect: [muddle], rolling: false, source: 'dm', img: Plus2Muddle };
 
 const DemolitionistCards = [plus2MuddleDM, plus0PoisonDM, plus2DM, plus2EarthDM, plus2FireDM, plus0AdjacentSuffer1DM];
 

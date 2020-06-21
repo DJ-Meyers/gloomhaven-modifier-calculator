@@ -12,14 +12,14 @@ import CthuluIcon from '../images/icons/characters/Cthulu.png';
 import { none, air, poison, curse, immobilize, stun } from '../general/effects';
 import { minus2Base, minus1Base, plus0Base } from './Base';
 
-const plus1PH = { modifier: '+1', effect: none, rolling: false, source: 'ph', img: Plus1 };
-const plus2PH = { modifier: '+2', effect: none, rolling: false, source: 'ph', img: Plus2 };
-const plus1AirPH = { modifier: '+1', effect: air, rolling: false, source: 'ph', img: Plus1Air };
-const rollingPoisonPH = { modifier: '+0', effect: poison, rolling: true, source: 'ph', img: RollingPoison };
-const rollingCursePH = { modifier: '+0', effect: curse, rolling: true, source: 'ph', img: RollingCurse };
-const rollingImmobilizePH = { modifier: '+0', effect: immobilize, rolling: true, source: 'ph', img: RollingImmobilize };
-const rollingStunPH = { modifier: '+0', effect: stun, rolling: true, source: 'ph', img: RollingStun };
-const plus0PH = { modifier: '+0', effect: none, rolling: false, source: 'ph', img: Plus0 };
+const plus1PH = { modifier: '+1', effect: [none], rolling: false, source: 'ph', img: Plus1 };
+const plus2PH = { modifier: '+2', effect: [none], rolling: false, source: 'ph', img: Plus2 };
+const plus1AirPH = { modifier: '+1', effect: [air], rolling: false, source: 'ph', img: Plus1Air };
+const rollingPoisonPH = { modifier: '+0', effect: [poison], rolling: true, source: 'ph', img: RollingPoison };
+const rollingCursePH = { modifier: '+0', effect: [curse], rolling: true, source: 'ph', img: RollingCurse };
+const rollingImmobilizePH = { modifier: '+0', effect: [immobilize], rolling: true, source: 'ph', img: RollingImmobilize };
+const rollingStunPH = { modifier: '+0', effect: [stun], rolling: true, source: 'ph', img: RollingStun };
+const plus0PH = { modifier: '+0', effect: [none], rolling: false, source: 'ph', img: Plus0 };
 
 const CthuluCards = [plus0PH, plus1PH, plus2PH, plus1AirPH, rollingPoisonPH, rollingCursePH, rollingImmobilizePH, rollingStunPH];
 

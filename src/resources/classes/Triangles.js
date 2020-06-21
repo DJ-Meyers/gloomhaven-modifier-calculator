@@ -14,16 +14,16 @@ import TrianglesIcon from '../images/icons/characters/Triangles.png';
 import { none, fire, ice, air, earth, push, wound, stun, addTarget } from '../general/effects';
 import { minus1Base, plus0Base } from './Base';
 
-const plus1EL = { modifier: '+1', effect: none, rolling: false, source: 'el', img: Plus1 };
-const plus2EL = { modifier: '+2', effect: none, rolling: false, source: 'el', img: Plus2 };
-const plus0FireEL = { modifier: '+0', effect: fire, rolling: false, source: 'el', img: Plus0Fire };
-const plus0IceEL = { modifier: '+0', effect: ice, rolling: false, source: 'el', img: Plus0Ice };
-const plus0AirEL = { modifier: '+0', effect: air, rolling: false, source: 'el', img: Plus0Air };
-const plus0EarthEL = { modifier: '+0', effect: earth, rolling: false, source: 'el', img: Plus0Earth };
-const plus1PushEL = { modifier: '+1', effect: push, rolling: false, source: 'el', img: Plus1Push1 };
-const plus1WoundEL = { modifier: '+1', effect: wound, rolling: false, source: 'el', img: Plus1Wound };
-const plus0StunEL = { modifier: '+0', effect: stun, rolling: false, source: 'el', img: Plus0Stun };
-const plus0AddTargetEL = { modifier: '+0', effect: addTarget, rolling: false, source: 'el', img: Plus0AddTarget };
+const plus1EL = { modifier: '+1', effect: [none], rolling: false, source: 'el', img: Plus1 };
+const plus2EL = { modifier: '+2', effect: [none], rolling: false, source: 'el', img: Plus2 };
+const plus0FireEL = { modifier: '+0', effect: [fire], rolling: false, source: 'el', img: Plus0Fire };
+const plus0IceEL = { modifier: '+0', effect: [ice], rolling: false, source: 'el', img: Plus0Ice };
+const plus0AirEL = { modifier: '+0', effect: [air], rolling: false, source: 'el', img: Plus0Air };
+const plus0EarthEL = { modifier: '+0', effect: [earth], rolling: false, source: 'el', img: Plus0Earth };
+const plus1PushEL = { modifier: '+1', effect: [push], rolling: false, source: 'el', img: Plus1Push1 };
+const plus1WoundEL = { modifier: '+1', effect: [wound], rolling: false, source: 'el', img: Plus1Wound };
+const plus0StunEL = { modifier: '+0', effect: [stun], rolling: false, source: 'el', img: Plus0Stun };
+const plus0AddTargetEL = { modifier: '+0', effect: [addTarget], rolling: false, source: 'el', img: Plus0AddTarget };
 
 const TrianglesCards = [plus1EL, plus2EL, plus0FireEL, plus0IceEL, plus0AirEL, plus0EarthEL, plus1PushEL, plus1WoundEL, plus0StunEL, plus0AddTargetEL];
 

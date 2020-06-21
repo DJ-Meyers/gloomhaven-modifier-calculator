@@ -13,16 +13,16 @@ import BaseIcon from '../images/icons/characters/Base.png';
 
 import { none } from '../general/effects';
 
-export const plus0Base = { modifier: '+0', effect: none, rolling: false, source: 'base', img: Plus0 };
-export const plus1Base = { modifier: '+1', effect: none, rolling: false, source: 'base', img: Plus1 };
-export const minus1Base = { modifier: '-1', effect: none, rolling: false, source: 'base', img: Minus1 };
-export const plus2Base = { modifier: '+2', effect: none, rolling: false, source: 'base', img: Plus2 };
-export const minus2Base = { modifier: '-2', effect: none, rolling: false, source: 'base', img: Minus2 };
-export const times2Base = { modifier: '*2', effect: none, rolling: false, source: 'base', img: Times2 };
-export const times0Base = { modifier: '*0', effect: none, rolling: false, source: 'base', img: Times0 };
-export const bless = { modifier: '*2', effect: none, rolling: false, source: 'special', img: Bless };
-export const curse = { modifier: '*0', effect: none, rolling: false, source: 'special', img: Curse };
-export const playerMinus1 = { modifier: '-1', effect: none, rolling: false, source: 'special', img: PlayerMinus1 };
+export const plus0Base = { modifier: '+0', effect: [none], rolling: false, source: 'base', img: Plus0 };
+export const plus1Base = { modifier: '+1', effect: [none], rolling: false, source: 'base', img: Plus1 };
+export const minus1Base = { modifier: '-1', effect: [none], rolling: false, source: 'base', img: Minus1 };
+export const plus2Base = { modifier: '+2', effect: [none], rolling: false, source: 'base', img: Plus2 };
+export const minus2Base = { modifier: '-2', effect: [none], rolling: false, source: 'base', img: Minus2 };
+export const times2Base = { modifier: '*2', effect: [none], rolling: false, source: 'base', img: Times2 };
+export const times0Base = { modifier: '*0', effect: [none], rolling: false, source: 'base', img: Times0 };
+export const bless = { modifier: '*2', effect: [none], rolling: false, source: 'special', img: Bless };
+export const curse = { modifier: '*0', effect: [none], rolling: false, source: 'special', img: Curse };
+export const playerMinus1 = { modifier: '-1', effect: [none], rolling: false, source: 'special', img: PlayerMinus1 };
 
 const BaseCards = [times0Base, minus2Base, minus1Base, plus0Base, plus1Base, plus2Base, times2Base, bless, curse, playerMinus1];
 

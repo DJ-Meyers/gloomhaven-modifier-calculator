@@ -14,16 +14,16 @@ import MusicNotesIcon from '../images/icons/characters/Music Notes.png';
 import { none, immobilize, disarm, wound, poison, curse, muddle, stun  } from '../general/effects';
 import { minus1Base, minus2Base, plus0Base, plus1Base } from './Base';
 
-const plus1ImmobilizeSS = { modifier: '+1', effect: immobilize, rolling: false, source: 'ss', img: Plus1Immobilize };
-const plus1DisarmSS = { modifier: '+1', effect: disarm, rolling: false, source: 'ss', img: Plus1Disarm };
-const plus2WoundSS = { modifier: '+2', effect: wound, rolling: false, source: 'ss', img: Plus2Wound };
-const plus2PoisonSS = { modifier: '+2', effect: poison, rolling: false, source: 'ss', img: Plus2Poison };
-const plus2CurseSS = { modifier: '+2', effect: curse, rolling: false, source: 'ss', img: Plus2Curse };
-const plus3MuddleSS = { modifier: '+3', effect: muddle, rolling: false, source: 'ss', img: Plus3Muddle };
-const plus0StunSS = { modifier: '+0', effect: stun, rolling: false, source: 'ss', img: Plus0Stun };
-const plus4SS = { modifier: '+4', effect: none, rolling: false, source: 'ss', img: Plus4 };
-const rollingPlus1SS = { modifier: '+1', effect: none, rolling: true, source: 'ss', img: RollingPlus1 };
-const rollingCurseSS = { modifier: '+0', effect: curse, rolling: true, source: 'ss', img: RollingCurse };
+const plus1ImmobilizeSS = { modifier: '+1', effect: [immobilize], rolling: false, source: 'ss', img: Plus1Immobilize };
+const plus1DisarmSS = { modifier: '+1', effect: [disarm], rolling: false, source: 'ss', img: Plus1Disarm };
+const plus2WoundSS = { modifier: '+2', effect: [wound], rolling: false, source: 'ss', img: Plus2Wound };
+const plus2PoisonSS = { modifier: '+2', effect: [poison], rolling: false, source: 'ss', img: Plus2Poison };
+const plus2CurseSS = { modifier: '+2', effect: [curse], rolling: false, source: 'ss', img: Plus2Curse };
+const plus3MuddleSS = { modifier: '+3', effect: [muddle], rolling: false, source: 'ss', img: Plus3Muddle };
+const plus0StunSS = { modifier: '+0', effect: [stun], rolling: false, source: 'ss', img: Plus0Stun };
+const plus4SS = { modifier: '+4', effect: [none], rolling: false, source: 'ss', img: Plus4 };
+const rollingPlus1SS = { modifier: '+1', effect: [none], rolling: true, source: 'ss', img: RollingPlus1 };
+const rollingCurseSS = { modifier: '+0', effect: [curse], rolling: true, source: 'ss', img: RollingCurse };
 
 const MusicNotesCards = [plus4SS, plus1ImmobilizeSS, plus1DisarmSS, plus2WoundSS, plus2PoisonSS, plus2CurseSS, plus3MuddleSS, plus0StunSS, rollingPlus1SS, rollingCurseSS];
 
