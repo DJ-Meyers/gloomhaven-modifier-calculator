@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/gloomhaven-modifier-calculator/precache-manifest.f96830e871094bce1919aaeaebe8d3f0.js"
+  "/gloomhaven-modifier-calculator/precache-manifest.b6c218b058f587ffc86298180e4d8d7c.js"
 );
 
 self.addEventListener('message', (event) => {
