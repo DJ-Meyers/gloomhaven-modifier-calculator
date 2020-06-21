@@ -1,6 +1,8 @@
 import React, { Fragment } from 'react';
 import { Header, List, Checkbox, Button } from 'semantic-ui-react';
 
+let toggleState = false;
+
 const Perks = (props) => { 
 
   const insertIcon = (text) => {
@@ -11,13 +13,19 @@ const Perks = (props) => {
   };
 
   const toggleAllPerks = (perks) => {
+    toggleState = !toggleState;
+
     perks.forEach(perk => {
       perk.checked.forEach((checkbox, index) => {
 
-        props.toggle(perk, index);
-
-        if (!perk.checked[index]) props.apply(perk);
-        else props.undo(perk);
+        if (!perk.checked[index] && toggleState === true) {
+          props.toggle(perk, index);
+          props.apply(perk);
+        }
+        else if (perk.checked[index] && toggleState === false) {
+          props.toggle(perk, index);
+          props.undo(perk);
+        }
         
       });
     });
