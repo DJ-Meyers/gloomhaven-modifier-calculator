@@ -11,7 +11,7 @@ import RollingDisarm from '../images/attack-modifiers/Mindthief/RollingDisarm.pn
 import MindthiefIcon from '../images/icons/characters/Mindthief.png';
 
 import { none, stun, ice, muddle, immobilize, pull, disarm } from '../general/effects';
-import { minus1Base, plus0Base, plus1Base } from './Base';
+import { minus1Base, plus0Base, plus1Base, minus2Base } from './Base';
 
 const plus2MT = { modifier: '+2', effect: [none], rolling: false, source: 'mt', img: Plus2 };
 const plus0MT = { modifier: '+0', effect: [none], rolling: false, source: 'mt', img: Plus0 };
@@ -48,6 +48,12 @@ export default {
       changes: { 
         add: [plus2MT, plus2MT], 
         remove: [plus1Base, plus1Base]}, 
+      checked: [false]
+    },
+    { text: 'Replace one (-2) cards with one (+0) cards',
+      changes: { 
+        add: [plus0MT], 
+        remove: [minus2Base]}, 
       checked: [false]
     },
     { text: 'Add one (+2) [Ice] card',
