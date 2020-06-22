@@ -110,7 +110,11 @@ const CalculatorState = props => {
       // Draw another card if rolling
       do {
         card = deck[currentIndex];
-        dmg += applyModifier(card, attack);
+
+        if (isCrit(card)) dmg *= 2;
+        else if (isMiss(card)) dmg = 0;
+        else dmg += applyModifier(card, attack);
+
         if (card.rolling === true) dmg -= attack.attackDamage;
         currentIndex++;
         card.effect.forEach(eff =>{
