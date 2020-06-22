@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d2342bfb976ff2684e48a4f18193df46",
+    "revision": "977a6a316f3ed24ddc849cd0ddd035db",
     "url": "/gloomhaven-modifier-calculator/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/gloomhaven-modifier-calculator/static/css/2.84cdd8f1.chunk.css"
   },
   {
-    "revision": "a185defd651964c71369",
+    "revision": "3121cf0d83ab15865eaf",
     "url": "/gloomhaven-modifier-calculator/static/css/main.36a9c55f.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/gloomhaven-modifier-calculator/static/js/2.68870028.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a185defd651964c71369",
-    "url": "/gloomhaven-modifier-calculator/static/js/main.96094b67.chunk.js"
+    "revision": "3121cf0d83ab15865eaf",
+    "url": "/gloomhaven-modifier-calculator/static/js/main.fb331fc0.chunk.js"
   },
   {
     "revision": "5fcd7db1bc43acbb7a3a",

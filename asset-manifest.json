@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/gloomhaven-modifier-calculator/static/css/main.36a9c55f.chunk.css",
-    "main.js": "/gloomhaven-modifier-calculator/static/js/main.96094b67.chunk.js",
-    "main.js.map": "/gloomhaven-modifier-calculator/static/js/main.96094b67.chunk.js.map",
+    "main.js": "/gloomhaven-modifier-calculator/static/js/main.fb331fc0.chunk.js",
+    "main.js.map": "/gloomhaven-modifier-calculator/static/js/main.fb331fc0.chunk.js.map",
     "runtime-main.js": "/gloomhaven-modifier-calculator/static/js/runtime-main.3206a289.js",
     "runtime-main.js.map": "/gloomhaven-modifier-calculator/static/js/runtime-main.3206a289.js.map",
     "static/css/2.84cdd8f1.chunk.css": "/gloomhaven-modifier-calculator/static/css/2.84cdd8f1.chunk.css",
     "static/js/2.68870028.chunk.js": "/gloomhaven-modifier-calculator/static/js/2.68870028.chunk.js",
     "static/js/2.68870028.chunk.js.map": "/gloomhaven-modifier-calculator/static/js/2.68870028.chunk.js.map",
     "index.html": "/gloomhaven-modifier-calculator/index.html",
-    "precache-manifest.a651d03edc4cf13a3562dd1f34b4508c.js": "/gloomhaven-modifier-calculator/precache-manifest.a651d03edc4cf13a3562dd1f34b4508c.js",
+    "precache-manifest.80375a171992552cf530af647158ae62.js": "/gloomhaven-modifier-calculator/precache-manifest.80375a171992552cf530af647158ae62.js",
     "service-worker.js": "/gloomhaven-modifier-calculator/service-worker.js",
     "static/css/2.84cdd8f1.chunk.css.map": "/gloomhaven-modifier-calculator/static/css/2.84cdd8f1.chunk.css.map",
     "static/css/main.36a9c55f.chunk.css.map": "/gloomhaven-modifier-calculator/static/css/main.36a9c55f.chunk.css.map",
@@ -119,6 +119,6 @@
     "static/css/2.84cdd8f1.chunk.css",
     "static/js/2.68870028.chunk.js",
     "static/css/main.36a9c55f.chunk.css",
-    "static/js/main.96094b67.chunk.js"
+    "static/js/main.fb331fc0.chunk.js"
   ]
 }
