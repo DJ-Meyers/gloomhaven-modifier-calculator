@@ -155,6 +155,7 @@ const CalculatorState = props => {
     let dmgValues = [];
     let maxDmg = 0;
     let effects = effectsArray.slice();
+    let attackDamage = parseInt(attack.attackDamage);
     effects.forEach(e => e.count = 0);
     
     for (let i = 0; i < state.trials; i++){
@@ -173,7 +174,7 @@ const CalculatorState = props => {
       if (card1.rolling === true && card2.rolling === true) {
         // ADV: If two rolling modifier cards were drawn, continue to draw cards until a rolling modifier is not drawn and then add together all drawn effects
         if (isAdv) {
-          dmg += dmg1 + dmg2 - 2 * attack.attackDamage;
+          dmg += dmg1 + dmg2 - 2 * attackDamage;
           card1.effect.forEach(eff => {
             thisEffects.push(eff);
           });
@@ -183,7 +184,7 @@ const CalculatorState = props => {
         }
         // DIS: If two rolling modifier cards were drawn, continue to draw cards until a rolling modifier is not played and then only apply the effect of the last card drawn
         else {
-          dmg = attack.attackDamage;
+          dmg = attackDamage;
         }
 
         // Draw until a non-rolling modifier is drawn.
@@ -194,7 +195,7 @@ const CalculatorState = props => {
           if (nextCard.rolling === true) {
             // ADV: Add together all effects
             if (isAdv) {
-              dmg += applyModifier(nextCard, attack) - attack.attackDamage;
+              dmg += applyModifier(nextCard, attack) - attackDamage;
               nextCard.effect.forEach(eff => {
                 thisEffects.push(eff);
               });
@@ -222,13 +223,13 @@ const CalculatorState = props => {
         if (isAdv) {
           if (card1.rolling === true)
           {
-            dmg += applyModifier(card1, attack) - attack.attackDamage;
+            dmg += applyModifier(card1, attack) - attackDamage;
             if (isCrit(card2)) dmg *= 2;
             else if (isMiss(card2)) dmg = 0;
             else dmg += applyModifier(card2, attack);
           }
           else {
-            dmg += applyModifier(card2, attack) - attack.attackDamage;
+            dmg += applyModifier(card2, attack) - attackDamage;
             if (isCrit(card1)) dmg *= 2;
             else if (isMiss(card1)) dmg = 0;
             else dmg += applyModifier(card1, attack);
@@ -427,14 +428,17 @@ function isCrit(card) {
 function applyModifier(card, attack) {
   let operation = card.modifier.charAt(0);
   let modifier = parseInt(card.modifier.charAt(1));
+  let damage = parseInt(attack.attackDamage);
+  let shield = parseInt(attack.enemyShield);
+  let pierce = parseInt(attack.attackPierce);
   
   switch (operation) {
     case '+':
-      return Math.max(parseInt(attack.attackDamage) + parseInt(modifier) - Math.max(attack.enemyShield - attack.attackPierce, 0), 0);
+      return Math.max(damage + modifier - Math.max(shield - pierce, 0), 0);
     case '-':
-      return Math.max(attack.attackDamage - modifier - Math.max(attack.enemyShield - attack.attackPierce, 0), 0);
+      return Math.max(damage - modifier - Math.max(shield - pierce, 0), 0);
     case '*':
-      return Math.max(attack.attackDamage * modifier - Math.max(attack.enemyShield - attack.attackPierce, 0), 0);
+      return Math.max(damage * modifier - Math.max(shield - pierce, 0), 0);
     default:
       return -1;
   }
